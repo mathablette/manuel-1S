@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Fonctions de référence" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Fonctions de référence" data-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="6"
+data-left="$1_S$-$A_2$"
+data-main-width="900">
+
+<!-- Sens de variatons -->
+<div class="box" data-title="Sens de variation" data-time="2m">
+    <div class="titled hide" data-title="\boxD Définition : fonction croissante" data-color="#660000">
+		Une fonction $f$ définie sur un intervalle $I$ est  *{bold::croissante} lorsque pour tous les réels $a$ et $b$ dans $I$ : 
+<br>
+si $a < b$ alors $f(a) \leqslant f(b)$ (l'ordre est respecté)
+    
+	</div>
+        
+    <div class="titled hide" data-title="\boxD Définition : fonction strictement croissante" data-color="#660000">
+		Une fonction $f$ définie sur un intervalle $I$ est  *{bold::strictement croissante} lorsque pour tous les réels $a$ et $b$ dans $I$ : 
+si $a < b$ alors $f(a) < f(b)$ (l'ordre est respecté)
+    
+	</div>  
+        
+    <div class="titled hide" data-title="\boxD Définition : fonction décroissante" data-color="#660000">
+		Une fonction $f$ définie sur un intervalle $I$ est  *{bold::décroissante} lorsque pour tous les réels $a$ et $b$ dans $I$ : 
+<br>
+si $a < b$ alors $f(a) \geqslant f(b)$ (l'ordre n'est pas respecté)
+    
+	</div>
+        
+    <div class="titled hide" data-title="\boxD Définition : fonction strictement décroissante" data-color="#660000">
+		Une fonction $f$ définie sur un intervalle $I$ est  *{bold::strictement décroissante} lorsque pour tous les réels $a$ et $b$ dans $I$ : 
+si $a < b$ alors $f(a) > f(b)$ (l'ordre n'est pas respecté)
+    
+	</div> 
+        
+        <div class="styled">
+        <div class="num">Soit $f_1(x) =3x - 9$. Donner son ensemble de définition. Démontrer que $f_1$ est croissante sur $\mathbb{R}$.</div>
+        <div class="num">Soit $f_2(x) =-2x + 1$. Donner son ensemble de définition. Démontrer que $f_2$ est décroissante sur $\mathbb{R}$.</div> 
+        <div class="num">Soit $f_3(x) =2x^2$. Démontrer que $f_3$ est croissante sur $[0;+\infty[$ et décroissante sur $]-\infty;0]$.</div> 
+        <div class="num">Soit $f_4(x) =-4x^2$. Démontrer que $f_4$ est décroissante sur $[0;+\infty[$ et croissante sur $]-\infty;0]$.</div> 
+        <div class="num">Soit $f_5(x) =2\sqrt{x}$. Démontrer que $f_5$ est croissante sur $[0;+\infty[$.</div>  
+        <div class="num" data-valign-num="7px">Soit $f_6(x) =\dfrac{-3}{x}$. Démontrer que $f_6$ est croissante sur $]0;+\infty[$.</div>  
+        </div>
+</div>    
+    
+<!-- fonction carré -->
+<div class="box" data-title="Fonction carré" data-time="2m">
+    <div class="titled hide" data-title="\boxD \boxP Définition et propriétés : fiche d'identité" data-color="#660066">
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+        $\bullet$ La fonction *{bold::carré} est la fonction définie sur $\mathbb{R}$ par : $x \mapsto x^2$ <br>
+        $\bullet$ La fonction *{bold::carré} est croissante sur $[0;+\infty[$ <br>
+        $\bullet$ La fonction *{bold::carré} est décroissante sur $]-\infty;0]$ <br>
+        $\bullet$ Dans un repère orthogonal, la courbe représentative de la fonction carré est une *{bold::parabole} de sommet $O(0;0)$ et d'axe de symétrie l'axe des ordonnées.    
+        &    
+         <div class="figure" data-width="8" data-height="6" style="margin-left: 50px">
+                painterGrid(3)
+                showMark()
+                markUpdate(4,1,1,1,1,2,0,0)
+                f1 = curveFunction('x^2',-10,10,0.001)
+                lineWidth(f1,3)
+                foreground(f1,'#ff0000')
+            </div>   
+        </div>
+	</div>
+    
+	<div class="styled">
+        On considère la fonction $f$ définie par $f(x) = (x+1)^2$ de courbe représentative $\mathcal{C}_f$.
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num">Donner son ensemble de définition.</div> &
+            <div class="num">Expliquer pourquoi pour tout $x \in \mathbb{R}$, $f(x) \geqslant 0$</div> ||
+            <div class="num">Pour quelle(s) valeur(s) de $x$, $f(x)$ est minimal et donner ce minimum.</div> &
+            <div class="num">Déterminer les valeurs de $x$ vérifiant $f(x) = 4$.</div> ||
+            <div class="num">Déterminer les valeurs de $x$ vérifiant $f(x) = 1$.</div> &
+            <div class="num">Déterminer les valeurs de $x$ vérifiant $f(x) = 9$.</div> ||
+            <div class="num">Construire le tableau de variation de $f$.</div> &
+            <div class="num">Dans un repère orthonormé, tracer $\mathcal{C}_f$. </div> ||
+        </div>
+	</div>
+</div>	
+
+
+
+<div class="newpage"></div>
+    
+<!-- fonction inverse -->
+<div class="box" data-title="Fonction inverse" data-time="2m">
+    <div class="titled hide" data-title="\boxD \boxP Définition et propriétés : fiche d'identité" data-color="#660066">
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+        $\bullet$a fonction *{bold::inverse} est la fonction définie sur $\mathbb{R}\backslash\{0\}$ par  : $x \mapsto \dfrac{1}{x}$ <br>
+        $\bullet$ La fonction *{bold::inverse} est décroissante sur $]0;+\infty[$ et sur $]-\infty;0[$ <br>
+        $\bullet$ Dans un repère orthogonal, la courbe représentative de la fonction inverse est une *{bold::hyperbole} de centre de symétrie $O(0;0)$.    
+        &    
+         <div class="figure" data-width="8" data-height="6" style="margin-left: 50px">
+                painterGrid(3)
+                showMark()
+                markUpdate(4,3,1,1,1,1,0,0)
+                f1 = curveFunction('1/x',0,10,0.001)
+                lineWidth(f1,3)
+                foreground(f1,'#ff0000')
+                f2 = curveFunction('1/x',-10,0,0.001)
+                lineWidth(f2,3)
+                foreground(f2,'#ff0000')
+            </div>   
+        </div>
+	</div>
+    
+	<div class="styled">
+        On considère la fonction $f$ définie par $\displaystyle f(x) = \frac{1}{x-2}$ 
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num">Donner son ensemble de définition $\mathcal{D}_f$.</div> &
+            <div class="num">Etudier le signe de $f(x)$ sur $\mathcal{D}_f$</div> ||
+            <div class="num">Déterminer la valeur de $x$ vérifiant $f(x) = 1$.</div> &
+            <div class="num">Déterminer la valeur de $x$ vérifiant $f(x) = -1$.</div> ||
+            <div class="num">Construire le tableau de variation de $f$.</div> &
+            <div class="num">Dans un repère orthonormé, tracer la courbe représentative de $f$. </div> ||
+        </div>
+	</div>
+</div>	
+    
+
+<!-- fonction racine carrée -->
+<div class="box" data-title="Fonction racine carrée" data-time="2m">
+    <div class="titled hide" data-title="\boxD \boxP Définition et propriétés : fiche d'identité" data-color="#660066">
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+        $\bullet$ La fonction *{bold::racine carrée} est la fonction définie sur $[0;+\infty[$ par  : $x \mapsto \sqrt{x}$ <br>
+        $\bullet$ La fonction *{bold::racine carrée}  a pour ensemble de définition $[0;+\infty[$ <br>
+        $\bullet$ La fonction *{bold::racine carrée} est croissante sur $[0;+\infty[$ <br>    
+        &    
+         <div class="figure" data-width="9" data-height="5" style="margin-left: 50px">
+                painterGrid(3)
+                showMark()
+                markUpdate(1,1,1,1,1,1,0,0)
+                f1 = curveFunction('sqrt(x)',0,10,0.001)
+                lineWidth(f1,3)
+                foreground(f1,'#ff0000')
+            </div>   
+        </div>
+	</div>
+    
+	<div class="styled">
+        On considère la fonction $f$ définie par $\displaystyle f(x) = \sqrt{x+2}$ 
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num">Donner son ensemble de définition $\mathcal{D}_f$.</div> &
+            <div class="num">Etudier le signe de $f(x)$ sur $\mathcal{D}_f$</div> ||
+            <div class="num">Déterminer la valeur de $x$ vérifiant $f(x) = 5$.</div> &
+            <div class="num">Déterminer la valeur de $x$ vérifiant $f(x) = 0$.</div> ||
+            <div class="num">Construire le tableau de variation de $f$.</div> &
+            <div class="num">Dans un repère orthonormé, tracer la courbe représentative de $f$. </div> ||
+        </div>
+	</div>
+</div>	
+    
+<!-- Position relative de courbes -->
+<div class="box" data-title="Position relative de courbes" data-time="2m">
+	
+    <div class="styled">
+        On considère les fonctions $f_1(x) = x^2$ , $f_2(x) = x$ et $f_3(x) = \sqrt{x}$.
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num">  Dans un même repère, tracer les courbes représentatives de $f_1$, $f_2$ et $f_3$ respectivement en rouge, bleu et vert.</div> &
+            <div class="num"> Démontrer que pour tout $x \in [0,1]$ on a
+ 
+  $x^2 \leqslant x \leqslant \sqrt{x}$. Que constate-t-ton sur les représentations graphiques ?</div> &
+            <div class="num">  Démontrer que pour tout $x \in [1,+\infty[$ on a
+ 
+  $\sqrt{x} \leqslant x \leqslant x$. Que constate-t-ton sur les représentations graphiques ?</div> 
+            
+        </div>
+	</div>
+</div>	    
+  
+<div class="newpage"></div>    
+    
+<!-- Valeur absolue d'un nombre réel -->
+<div class="box" data-title="Valeur absolue d'un nombre réel" data-time="2m">
+	<div class="titled hide" data-title="\boxD Définition : valeur absolue" data-color="#660000">
+		La *{bold::valeur absolue} d'un nombre réel $x$ est le nombre $|x|$ tel que : <br>
+        $\bullet$ $|x| = x$ si $x \geqslant 0$ <br>
+        $\bullet$ $|x| = -x$ si $x \leqslant 0$ vspace{10}
+        La *{bold::valeur absolue} $|x|$ correspond à la distance à zéro de $x$.
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#660000">
+		<div class="table" cells="*,*|w25%" data-table-style="width: 100%">
+            \num1 $|x| \leqslant 0$ & \num2 $\sqrt{x^2} = |x|$ & \num3 $|x| = |-x|$ & \num4 $|x| = 0 \Leftrightarrow x = 0$
+        </div>    
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Propriétés : distance" data-color="#660000">
+        Sur la droite des réels muni d'un repère d'origine $O$ :
+		<div class="table" cells="*,*|w50%" data-table-style="width: 100%">
+            \num1 si $M(x)$ alors $OM = |x|$ & \num2 si $A(a)$ et $B(b)$ alors $AB = |a-b| = |b-a|$
+        </div>    
+	</div>
+    
+    
+    <div class="styled">
+        Calculer les expressions suivantes :
+		<div class="table" cells="*,*|w50%" data-table-style="width: 100%">
+            <div class="num">  $A = |2 +2\times5 - 9 + 1 -5|$</div> &
+             <div class="num"> $B = |2\times 6 - 100\div 10 - 9|$</div> ||
+            <div class="num">  $C = |-(6-8)\times (-2-3) - (15-5)\div (-7+2)|$</div> &
+             <div class="num"> $D = |-2\times (-2) \times (-3) - (18-3)\div 3|$</div> 
+        </div>
+	</div>
+    
+    <div class="styled">
+         Résoudre dans $\mathbb{R}$ les équations suivantes :
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num">  $|5x -9| = 8$</div> &
+             <div class="num"> $|2 - x| = -1$</div> &
+            <div class="num">  $\sqrt{(7x -9)^2} = 3$</div> ||
+             <div class="num"> $\sqrt{4x^2 + 9 + 12x} = 2$</div> &
+            <div class="num">  $\sqrt{-70x + 25x^2 + 49 } = 10$</div> &
+             <div class="num"> $|2x - 8| = |5x - 8|$</div> ||
+            <div class="num">  $|x - 7| = 2|3x - 1|$</div> &
+             <div class="num"> $\sqrt{(8 -9x)^2} = \sqrt{(4x - 2)^2}$</div> &
+             <div class="num"> $\displaystyle \frac{|x - 2|}{|5 - 8x|} = 1$</div> ||
+            <div class="num">  $\displaystyle \frac{|5x - 1|}{|2 - x|} = 2$</div> &
+             <div class="num"> $\displaystyle \frac{\sqrt{(3x-2)^2} }{\sqrt{(1 + 2x)^2} } = 3$</div> &
+        </div>
+        
+        <div class="table" cells="*,*|w50%" data-table-style="width: 100%">
+            <div class="num">  $\sqrt{18x + x^2 + 81} = \sqrt{16 + 36x^2 - 48x}$</div> &
+            <div class="num">  $\sqrt{18x + x^2 + 81} = \sqrt{16 + 36x^2 - 48x}$</div>
+          </div>  
+	</div>
+</div>	      
+    
+<!-- fonction valeur absolue -->
+<div class="box" data-title="Fonction valeur absolue" data-time="2m">
+    <div class="titled hide" data-title="\boxD \boxP Définition et propriétés : fiche d'identité" data-color="#660066">
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+        $\bullet$ La fonction *{bold::valeur absolue} est la fonction définie sur $\mathbb{R}$ par : $x \mapsto |x| = \sqrt{x^2}$ <br>
+        $\bullet$ Elle est croissante sur $[0;+\infty[$ <br>
+        $\bullet$ Elle est décroissante sur $]-\infty;0]$ <br>
+        $\bullet$ Sa courbe représentative est symétrique par rapport à l'axe des ordonnées.    
+        &    
+         <div class="figure" data-width="8" data-height="4" style="margin-left: 50px">
+                painterGrid(3)
+                showMark()
+                markUpdate(4,1,1,1,1,1,0,0)
+                f1 = curveFunction('x',0,10,0.001)
+                lineWidth(f1,3)
+                foreground(f1,'#ff0000')
+                f2 = curveFunction('-x',-10,0,0.001)
+                lineWidth(f2,3)
+                foreground(f2,'#ff0000')
+            </div>   
+        </div>
+	</div>
+    
+	<div class="styled">
+        On considère la fonction $f$ définie par $\displaystyle f(x) = |x-5|$ de courbe représentative $\mathcal{C}_f$.
+		<div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num">Donner son ensemble de définition.</div> &
+            <div class="num">Expliquer pourquoi pour tout $x \in \mathbb{R}$, $f(x) \geqslant 0$</div> ||
+            <div class="num">Pour quelle(s) valeur(s) de $x$, $f(x)$ est minimal et donner ce minimum.</div> &
+            <div class="num">Déterminer les valeurs de $x$ vérifiant $f(x) = 5$.</div> ||
+            <div class="num">Déterminer $x$ tels que $f(x) = -2$.</div> &
+            <div class="num">Déterminer les variations de $f$ puis tracer $\mathcal{C}_f$.</div> ||
+        </div>
+	</div>
+</div>	       
+
+<div class="newpage"></div>
+    
+<!-- Fonction $u + k$ -->
+<div class="box" data-title="Fonction $u + k$" data-time="2m">
+    
+    <div class="styled">
+    Soit $u$ une fonction définie sur $D_u$ et $k$ un nombre réel. 
+    </div>
+    
+	<div class="titled hide" data-title="\boxD Définition" data-color="#660000">
+		La fonction $u+k$ est définie sur $D_u$ et par : *{\boxed::$(u+k)(x) = u(x) + k$}
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Propriété : courbe représentative" data-color="#006666">
+		Dans un repère $(O,\overrightarrow{i},\overrightarrow{j})$, si $u$ a pour courbe représentative $C_u$ alors la courbe représentative  $C_{u+k}$ de $u+k$ est l'image de  $C_u$ par la translation de vecteur $k\overrightarrow{j}$.
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Propriété : variations" data-color="#006666">
+		Si $u$ est monotone (croissante ou décroissante) sur un intervalle $I$ alors $u+k$ a le même sens de variation que $u$ sur $I$.
+	</div>
+    
+   
+    <div class="styled">
+        Dans des repères différents, tracer les courbes représentatives de  : 
+		<div class="table" cells="*,*|w25%" data-table-style="width: 100%">
+            <div class="num">  $f_1(x) = x^2+2$</div> &
+            <div class="num"> $f_2(x) = |x|- 4$</div> &
+             <div class="num"> $f_3(x) =  \sqrt{x} - 1$</div> &
+            <div class="num" data-valign-num="7px">   $\displaystyle f_4(x) = \frac{1}{x} - 5 $ </div> &
+        </div>
+	</div>
+    
+    <div class="styled">
+         Construire le tableau de variations de  : 
+		<div class="table" cells="*,*|w50%" data-table-style="width: 100%">
+            <div class="num">  $f_5(x) = x^2 + 9$ sur $]-\infty; 0]$</div> &
+            <div class="num" data-valign-num="7px"> $\displaystyle f_6(x) = \frac{4}{x} + 2$ sur $]-\infty; 0[$</div> ||
+             <div class="num"> $\displaystyle f_7(x) = \sqrt{x} - 1$ sur $[0; +\infty[$</div> &
+        </div>
+	</div>
+</div>	
+    
+    
+<!-- Fonction $ku$ -->
+<div class="box" data-title="Fonction $ku$" data-time="2m">
+    
+    <div class="styled">
+    Soit $u$ une fonction définie sur $D_u$ et $k$ un nombre réel. 
+    </div>
+    
+	<div class="titled hide" data-title="\boxD Définition" data-color="#660000">
+		La fonction $ku$ est définie sur $D_u$ et par : *{\boxed::$(ku)(x) = k \times u(x)$}
+	</div>
+    
+    
+    <div class="titled hide" data-title="\boxP Propriété : variations" data-color="#006666">
+		Si $k > 0$ alors $u$ et $ku$ ont la même monotonie (croissante ou décroissante) sur un intervalle $I$. <br>
+        Si $k < 0$ alors $u$ et $ku$ sont de monotonie contraire (croissante ou décroissante) sur un intervalle $I$.      
+	</div>
+    
+   
+    <div class="styled">
+        Construire un tableau de variation des fonctions suivantes sur leur ensemble de définition : 
+		<div class="table" cells="*,*|w25%" data-table-style="width: 100%">
+            <div class="num">  $f_1(x) = 3x^2$</div> &
+            <div class="num"> $f_2(x) = |x|- 4$</div> &
+             <div class="num"> $f_3(x) =  \sqrt{x} - 1$</div> &
+            <div class="num" data-valign-num="7px">   $\displaystyle f_4(x) = \frac{1}{x} - 5 $ </div> 
+        </div>
+	</div>
+    
+</div>	  
+        
+<!-- Fonction $sqrt{u}$ -->
+<div class="box" data-title="Fonction $\sqrt{u}$" data-time="2m">
+    
+    <div class="styled">
+    Soit $u$ une fonction définie sur $D_u$ telle pour tout $x \in D_u$ ; $u(x) \geqslant 0$. 
+    </div>
+    
+	<div class="titled hide" data-title="\boxD Définition" data-color="#660000">
+		La fonction $\sqrt{u}$ est définie sur $D_u$ et par : $(\sqrt{u})(x) =\sqrt{u(x)}$
+	</div>
+    
+    
+    <div class="titled hide" data-title="\boxP Propriété : variations" data-color="#006666">
+		Si $u$ est monotone sur un intervalle $I$ et si pour tout $x \in I$, $u(x) \geqslant 0$ alors la fonction $\sqrt{u}$ a le même sens de variation que $u$ sur $I$.    
+	</div>
+    
+   
+    <div class="styled">
+        Construire un tableau de variation des fonctions suivantes sur leur ensemble de définition : 
+		<div class="table" cells="*,*|w25%" data-table-style="width: 100%">
+            <div class="num">  $f_1(x) = 3x^2$</div> &
+            <div class="num"> $f_2(x) = |x|- 4$</div> &
+             <div class="num"> $f_3(x) =  \sqrt{x} - 1$</div> &
+            <div class="num" data-valign-num="7px">   $\displaystyle f_4(x) = \frac{1}{x} - 5 $ </div> 
+        </div>
+	</div>
+    
+</div>	
+    
+    
+<div class="newpage"></div>
+    
+ <!-- Fonction $\frac{1}{u}$ -->
+<div class="box" data-title="Fonction $\frac{1}{u}$" data-time="2m">
+    
+    <div class="styled">
+    Soit $u$ une fonction définie sur $D_u$ telle pour tout $x \in D_u$ ; $u(x) \not= 0$. 
+    </div>
+    
+	<div class="titled hide" data-title="\boxD Définition" data-color="#660000">
+		La fonction $\frac{1}{u}$ est définie sur $D_u$ et par : $(\frac{1}{u})(x) =\frac{1}{u(x)}$
+	</div>
+    
+    
+    <div class="titled hide" data-title="\boxP Propriété : variations" data-color="#006666">
+		Si $u$ est monotone sur un intervalle $I$ et si pour tout $x \in I$, $u(x) \not= 0$ alors la fonction $\displaystyle \frac{1}{u}$ a le  sens de variation contraire à celui de $u$ sur $I$. 
+	</div>
+    
+   
+    <div class="styled">
+        Construire un tableau de variation des fonctions suivantes sur leur ensemble de définition : 
+		<div class="table" cells="*,*|w25%" data-table-style="width: 100%">
+            <div class="num">  $f_1(x) = 3x^2$</div> &
+            <div class="num"> $f_2(x) = |x|- 4$</div> &
+             <div class="num"> $f_3(x) =  \sqrt{x} - 1$</div> &
+            <div class="num" data-valign-num="7px">   $\displaystyle f_4(x) = \frac{1}{x} - 5 $ </div> 
+        </div>
+	</div>
+    
+</div>	
+    
+    
+<!-- Fonctions somme et produit -->
+<div class="box" data-title="Fonctions somme et produit" data-time="2m">
+    <div class="styled">
+    Soient $f$ et $g$ deux fonctions définies sur un intervalle $I$ de $\mathbb{R}$. La *{bold::fonction somme} de $f$ et $g$, notée $f+g$, est définie sur $I$ et par : $(f+g)(x) = f(x) + g(x)$. La *{bold::fonction produit} de $f$ et $g$, notée $fg$, est définie sur $I$ et par : $(fg)(x) = f(x) \times g(x)$. Les affirmations suivantes sont-elles vraies ou fausses ? Justifier.
+    <div class="num">Si $f$ et $g$ sont croissantes sur $I$ alors $f+g$ est croissante sur $I$.</div>    
+   <div class="num">Si $f$ et $g$ sont croissantes sur $I$ alors $fg$ est croissante sur $I$.</div>   
+    </div>
+ 
+</div>    
+    
+<!-- Fonctions somme et produit -->
+<div class="box" data-title="Fonctions somme et produit" data-time="2m">
+    <div class="styled">
+    Soient $f$ et $g$ deux fonctions définies sur un intervalle $I$ de $\mathbb{R}$. La *{bold::fonction somme} de $f$ et $g$, notée $f+g$, est définie sur $I$ et par : $(f+g)(x) = f(x) + g(x)$. La *{bold::fonction produit} de $f$ et $g$, notée $fg$, est définie sur $I$ et par : $(fg)(x) = f(x) \times g(x)$. Les affirmations suivantes sont-elles vraies ou fausses ? Justifier.
+    <div class="num">Si $f$ et $g$ sont croissantes sur $I$ alors $f+g$ est croissante sur $I$.</div>    
+   <div class="num">Si $f$ et $g$ sont croissantes sur $I$ alors $fg$ est croissante sur $I$.</div>   
+    </div>
+ 
+</div>        
+        
+</body>
+</html>

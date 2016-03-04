@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Necessite ant 1.5 au min et le JDK 1.4 -->
+<project default="doAll" name="1S" basedir="..">
+
+	<!-- répertoire pour les documents -->
+	<property name="docs.dir" location="${basedir}/1S Documents/" />
+	<property name="docs.file" value="1S_première_s" />
+
+	<!-- Sommaire -->
+	<property name="sommaire.dir" value="${basedir}/1S Documents" />
+	<property name="sommaire.file" value="sommaire" />
+
+	<!-- Chapitre A1 -->
+	<property name="a1.dir" value="${basedir}/A1 - Fonction du second degré" />
+	<property name="a1.file" value="1s_a1_fonction_second_degré" />
+
+	<!-- Chapitre A2 -->
+	<property name="a2.dir" value="${basedir}/A2 - Fonctions de référence" />
+	<property name="a2.file" value="1s_a2_fonctions_de_reférence" />
+
+
+	<target name="doAll">
+		<antcall target="mergePdf"/>
+	</target>
+
+	<target name="mergePdf">
+		<delete file="${docs.dir}/${docs.file}.pdf"/>
+		<echoxml file="1s_pdfsam.tmp.xml">
+			<filelist>
+				<file value="${sommaire.dir}/${sommaire.file}.pdf" />
+				<file value="${a1.dir}/${a1.file}.pdf" />
+				<file value="${a2.dir}/${a2.file}.pdf" />
+			</filelist>
+		</echoxml>
+		<java jar="/Applications/pdfsam.app/Contents/Resources/Java/lib/pdfsam-console-2.3.1e.jar" fork="true" failonerror="true" output="output">
+			<jvmarg value="-Dlog4j.configuration=console-log4j.xml"/>
+			<arg value="-o"/>
+			<arg value="${docs.dir}/${docs.file}.pdf"/>
+			<arg value="-l"/>
+			<arg value="1s_pdfsam.tmp.xml"/>
+			<arg value="-pdfversion"/>
+			<arg value="3"/>
+			<arg value="concat"/>
+		</java>
+		<delete file="1s_pdfsam.tmp.xml"/>
+		<delete file="output"/>
+		<echo message="Création du fichier de cours ${docs.file}.pdf terminée"/>
+	</target>
+
+</project>
