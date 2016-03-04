@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+
+
+<FilesMatch ".img">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

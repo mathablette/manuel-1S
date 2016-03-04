@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link id="apple_icon" rel="apple-touch-icon-precomposed" href="http://mathablette.fr/imgs/mathablette0_144.png"/>
+   <link id="page_icon" rel="icon" type="image/png" href="http://mathablette.fr/imgs/mathablette0.png" />
+   <link id="android_icon"  rel="shortcut icon" sizes="196x196" href="http://mathablette.fr/imgs/mathablette0_196.png"/>
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="viewport" content="user-scalable = no" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   
+   
+    
+    <script  id="jquery"  type="text/javascript" src="http://mathablette.fr/lib/jquery.js?1"></script>
+    <script  id="mathablette"  type="text/javascript" src="http://mathablette.fr/lib/les5der.js"></script>
+    
+     <title>Pfmath - Documents html dynamiques et évolués à portée de main</title>
+    <style>
+   @font-face {
+	font-family: "Computer Modern";
+   src: url("http://mathablette.fr/fonts/cmunss.otf");
+  }
+ @font-face {
+    font-family: "Computer Modern";
+  src: url("http://mathablette.fr/fonts/cmunsx.otf");
+   font-weight: bold;
+ }
+ @font-face {
+  font-family: "Computer Modern";
+   src: url("http://mathablette.fr/fonts/cmunsi.otf");
+   font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url("http://mathablette.fr/fonts/cmunbxo.otf");
+   font-weight: bold;
+   font-style: italic, oblique;
+ }
+        body{background: #ffffff;width: 920px;margin: auto;font-size: 11pt;font-family: serif;color: #000000;font-family: 'Computer Modern';font-size: 11pt;}
+         .title{border: solid 2px #000000;font-size: 10pt;margin-bottom: 5px;margin-left: 10px;margin-top: 10px;background: #eeeeee;border-radius: 12px;height: 40px;width: 900px}
+     .section{border-bottom: solid 1px #000000;font-variant: small-caps;font-size: 14pt;margin-top: 15px;margin-left: 15px;font-weight: bold;width: 895px;padding-bottom: 3px}
+        .content{margin-left: 0px;margin-top: 10px}
+        .activityinfo{color: #888888;font-size: 9pt}
+        .activity{color: #000000;font-size: 11pt;margin-left: 20px}
+        .redbutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#ccaaaa, #660000);
+            background-image:-webkit-linear-gradient(45deg,#ccaaaa, #660000);
+            border: solid 1px #660000;
+            cursor: pointer;
+        }
+        .greenbutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#aaccaa, #006600);
+            background-image:-webkit-linear-gradient(45deg,#aaccaa, #006600);
+            border: solid 1px #006600;
+            cursor: pointer;
+        }
+        .bluebutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#aaaacc, #000066);
+            background-image:-webkit-linear-gradient(45deg,#aaaacc, #000066);
+            border: solid 1px #000066;
+            cursor: pointer;
+        }
+    .blackbutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#aaaaaa, #222222);
+            background-image:-webkit-linear-gradient(45deg,#aaaaaa, #222222);
+            border: solid 1px #000000;
+            cursor: pointer;
+    }
+    .blackbutton2{
+            color: #eeeeee;
+            text-decoration: none;
+            font-size: 7pt;
+            padding: 2px 5px;
+            height: 20px;
+            border-radius: 3px;
+            background-image:linear-gradient(45deg,#aaaaaa, #222222);
+            background-image:-webkit-linear-gradient(45deg,#aaaaaa, #222222);
+            border: solid 1px #000000;
+            cursor: pointer;
+    }
+    .adminbutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#aaeeee, #226666);
+            background-image:-webkit-linear-gradient(45deg,#aaeeee, #226666);
+            border: solid 1px #008888;
+            cursor: pointer;
+    }
+    .snapmathbutton{
+            color: #eeeeee;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#aaaaee, #222266);
+            background-image:-webkit-linear-gradient(45deg,#aaaaee, #222266);
+            border: solid 1px #000088;
+            cursor: pointer;
+    }
+    .greybutton{
+            color: #000000;
+            text-decoration: none;
+            padding: 4px 10px;
+            height: 32px;
+            border-radius: 6px;
+            background-image:linear-gradient(45deg,#cccccc, #999999);
+            background-image:-webkit-linear-gradient(45deg,#cccccc, #999999);
+            border: solid 1px #000000;
+            cursor: pointer;
+    }
+    A:link {text-decoration: none; color: #000000;font-weight: bold}
+    A:visited {text-decoration: none; color: #000000;font-weight: bold}
+    A:active {text-decoration: none; color: #000000;font-weight: bold}
+    A:hover {text-decoration: underline;color: #000000;font-weight: bold}
+
+        .banner{
+            text-align: center;height: 30px;line-height: 30px;
+            border-left: 2px solid #000000;
+            border-right: 2px solid #000000;
+            border-top: 2px solid #000000;
+            border-top-left-radius: 14px;border-top-right-radius: 14px;background: #dddddd;
+            cursor: pointer;font-family: Arial;
+            font-size: 10pt;
+            color: #e0163c;
+            font-weight: bold;
+        }
+        
+        .numchapitre
+        {
+            width: 50px;text-align: center;border: 1px solid #000;height: 20px;font-weight: bold;color: #eeeeee;background: #e0163c;font-size: 12pt
+        }
+        .nomchapitre
+        {
+            width: 800px;border: 1px solid #000;padding-left: 5px;height: 20px;font-size: 12pt;font-variant: small-caps;font-weight: bold;color: #eeeeee;background: #e0163c
+        }
+        .numexo
+        {
+            width: 80px;text-align: center;background: #e0b2ba;border: 1px solid #e0163c;font-weight: bold;height: 20px;color: #e0163c
+        }
+        .nomexo
+        {
+            height: 20px;padding-left: 5px;background: #e0b2ba;border: 1px solid #e0163c;font-weight: bold;cursor: pointer;height: 20px;color: #e0163c
+        }
+
+		.dateinfo
+		{
+			vertical-align: top;font-weight: bold;width: 80px;text-align: center;font-size: 11pt;border-right: 3px solid #444444
+		}
+		.contentinfo
+		{
+			vertical-align: top;font-size: 11pt;padding-right: 40px;padding-left: 5px;
+		}
+		.ainfo
+		{
+			font-weight: bold;font-style: italic;
+		}
+		.exoinfo
+		{
+			color: #e0163c;border-color: #e0163c;
+		}
+		.tcinfo
+		{
+			color: #163ce0;border-color: #163ce0;
+		}
+		.pginfo
+		{
+			color: #226622;border-color: #226622;
+		}
+		.geoinfo
+		{
+			color: #444444;border-color: #444444;
+		}
+		
+
+    </style>
+</head>
+<body style="background: #eeeeee">
+	<div style="margin-top: 5px;padding: 5px;border: 2px solid #444444;border-radius: 8px;background: #ffffff;padding-left: 10px;padding-right: 10px">
+		<a href="http://pfmath.mathablette.fr">pfmath.mathablette.fr</a> propose différents outils autour de la création de documents html évolués, dynamiques appelés documents <span style="color: #e0163c">pfmath</span>. Ces outils et les documents <span style="color: #e0163c">pfmath</span> sont tous
+		gratuits, utilisables sur n'importe quels dispositifs (tablette, ordinateur, smartphone) et n'importe quels systèmes (IOS, Android, Mac, Linux, Windows). Ces outils
+		fonctionnent sur un simple navigateur internet comme Firefox ou Chrome. Aucune installation n'est donc nécessaire. De plus ces documents sont conçus pour être facilement video-projetables. <br>
+		Vous avez des questions, des remarques, des commentaires, des suggestions, des remerciements ou des encouragements pourquoi pas, n'hésitez pas à me contacter à l'adresse <a href="mailto:mathablette@gmail.com">mathablette@gmail.com</a> surtout que ces outils sont en constante évolution.<br>
+		<span style="font-weight: bold">Cliquer sur le cadre de votre choix pour accèder à l'outil en question. En cliquant sur <img src="http://mathablette.fr/imgs/video.png" style="width: 20px;vertical-align: -3px" > vous pouvez avoir accès à des vidéos explicatives de l'outil en question.</span>
+	</div>
+	
+	<div style="margin: auto;margin-top: 10px">
+		<table style="width: 100%">
+			<tr>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #006666;border-radius: 8px;height: 180px;background: #DDEEEE;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à la documentation de pfmath" onclick="window.open('http://mathablette.fr/pfmath/index.html')">
+						<span style="font-weight: bold"><img title="Documentation générale" style="width: 16px;vertical-align: -3px;margin-right: 5px" src="http://mathablette.fr/imgs/aide.png"/>Cette documentation</span> explique comment créer des documents <span style="color: #e0163c">pfmath</span> et énumère toute la richesse qu'apporte ces documents. Cette documentation est elle-même un document <span style="color: #e0163c">pfmath</span>.	 
+					</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #666666;border-radius: 8px;height: 180px;;background: #DDDDDD;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à PfmathEditor" onclick="window.open('http://mathablette.fr/pfd')">
+					<span style="font-weight: bold"><img title="PfmathEditor" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette0.png"/> PfmathEditor</span> est un éditeur très complet de documents <span style="color: #e0163c">pfmath</span>. Cet éditeur permet de modifier ou créer ses documents <span style="color: #e0163c">pfmath</span> présents sur le disque dur. 
+						</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #006600;border-radius: 8px;height: 180px;background: #DDEEDD;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à DropboxPfmathEditor" onclick="window.open('http://mathablette.fr/dbpfe')">
+						<span style="font-weight: bold"><img title="DropboxPfmathEditor" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette10.png"/> DropboxPfmathEditor</span> est un éditeur de documents <span style="color: #e0163c">pfmath</span>. La particularité de cet éditeur réside dans le fait que les documents <span style="color: #e0163c">pfmath</span> sont stockés dans une Dropbox et accessibles depuis n'importe où. 
+						<a href="https://youtu.be/_4nIPTv99Ig" target="_blank" title="Présentation de DropboxPfmathEditor"><img src="http://mathablette.fr/imgs/video.png" style="width: 20px;vertical-align: -3px" ></a>
+					</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #660000;border-radius: 8px;height: 180px;;background: #EEDDDD;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à PfmathTree" onclick="window.open('http://mathablette.fr/pft')">
+					<span style="font-weight: bold"><img title="PfmathTree" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette11.png"/> PfmathTree</span> est un stockage d'url de documents <span style="color: #e0163c">pfmath</span> stockés dans une Dropbox ou dans Google Drive. Cet outil permet de rendre disponible des documents <span style="color: #e0163c">pfmath</span> enregistrés sur ces unités de stockage en ligne. 
+						</div>
+				</td>
+				
+				
+				
+			</tr>
+			
+		</table>
+		
+	</div>
+	
+	<div style="margin: auto;margin-top: 3px">
+		<table style="width: 100%">
+			<tr>
+				
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #666600;border-radius: 8px;height: 180px;background: #EEEEDD;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à PfmathImage" onclick="window.open('http://mathablette.fr/pfimg')">
+						<span style="font-weight: bold"><img title="PfmathImage" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette0.png"/> PfmathImage</span> permet de mettre en ligne sur le serveur Mathablette une image qui pourra alors être très facilement insérée dans un document <span style="color: #e0163c">pfmath</span>.
+					</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #660066;border-radius: 8px;height: 180px;background: #eeddee;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder PfmathDoc" onclick="window.open('http://mathablette.fr/pfmdoc')">
+						<span style="font-weight: bold"><img title="PfmathDoc" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette0.png"/> PfmathDoc</span> permet de mettre en ligne sur le serveur Mathablette/Pfmath des documents (AlgoScript, AlgoScriptEditor, AlgoDot, ....) qui pourront alors être très facilement insérés dans un document <span style="color: #e0163c">pfmath</span>.
+					</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<div style="padding: 5px;border: 2px solid #000066;border-radius: 8px;height: 180px;;background: #DDDDEE;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à PfmathAdmin" onclick="window.open('http://mathablette.fr/pfa')">
+					<span style="font-weight: bold"><img title="PfmathAdmin" style="width: 16px;vertical-align: -3px" src="http://mathablette.fr/imgs/mathablette11.png"/> PfmathAdmin</span> est un outil complet pour gérer ses documents <span style="color: #e0163c">pfmath</span> : les groupes et les élèves, les questionnaires, les téléversements et un espace de travail en ligne (sur le serveur Mathablette) pour ses documents <span style="color: #e0163c">pfmath</span>. 
+						</div>
+				</td>
+				
+				<td style="width: 25%;vertical-align: top">
+					<!--
+					<div style="padding: 5px;border: 2px solid #660066;border-radius: 8px;height: 180px;background: #EEDDEE;cursor: pointer;text-align: left;padding-left: 10px;padding-right: 10px" title="Cliquer pour accéder à PfmathPage" onclick="window.open('http://mathablette.fr/pfp')">
+						<span style="font-weight: bold"><img title="PfmathPage" style="width: 16px;vertical-align: -3px;margin-right: 5px" src="http://mathablette.fr/imgs/mathablette0.png"/>PfmathPage</span> permet de créer rapidement une page  <span style="color: #e0163c">pfmath</span>.	 
+					</div>
+					-->
+				</td>
+				
+				
+				<td style="width: 25%;vertical-align: top">
+					
+				</td>
+				
+			</tr>
+			
+		</table>
+		
+	</div>
+</body>
+
+</html>
