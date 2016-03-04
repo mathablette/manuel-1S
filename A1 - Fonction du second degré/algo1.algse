@@ -1,0 +1,16 @@
+// Variables et initialisation 
+var u = 6000;
+var n = 0;
+
+// Traitement
+while ( u >= 3000){
+
+  
+  
+}
+n = n + (2012);
+
+// sortie
+algo.outputVar(n);
+
+

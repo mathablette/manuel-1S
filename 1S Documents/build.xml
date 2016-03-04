@@ -27,7 +27,6 @@
 		<delete file="${docs.dir}/${docs.file}.pdf"/>
 		<echoxml file="1s_pdfsam.tmp.xml">
 			<filelist>
-				<file value="${sommaire.dir}/${sommaire.file}.pdf" />
 				<file value="${a1.dir}/${a1.file}.pdf" />
 				<file value="${a2.dir}/${a2.file}.pdf" />
 			</filelist>
