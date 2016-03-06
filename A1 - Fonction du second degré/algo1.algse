@@ -1,16 +1,32 @@
-// Variables et initialisation 
-var u = 6000;
-var n = 0;
+// Coefficients du trinôme
+var a = 1;
+var b = 2;
+var c = 1;
 
-// Traitement
-while ( u >= 3000){
-
-  
-  
+// test si a n'est pas égal à zéro
+if ( a == 0 )
+{
+   algo.output("Ce n'est pas un trinôme (a=0).");
 }
-n = n + (2012);
+else
+{
+	// discriminant
+    var delta = 0;
 
-// sortie
-algo.outputVar(n);
+    // suivant le signe du discriminant
+    if ( delta < 0){
+          
+    }
+    else if ( delta > 0){
+          
+    }
+    else {
+        
+    }
+}
+
+
+
+
 
 
