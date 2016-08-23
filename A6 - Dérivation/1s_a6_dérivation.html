@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Dérivation" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Dérivation" data-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="21"
+data-left="$1_S$-$A_6$"
+data-main-width="900">
+
+<!-- Accroissement moyen -->
+<div class="box" data-title="Accroissement moyen" data-num="$N_1$" data-date="1">
+    <div class="titled hide" data-title="\boxD Définitions" data-color="#444444">
+		$f$ est une fonction définie sur un intervalle $I$ de $\mathbb{R}$.
+$x_1$ et $x_2$ sont deux réels distincts appartenant à  $I$, l'*{bold::accroissement moyen} de $f$ entre $x_1$ et $x_2$ est : 
+
+ vspace{10}       
+<centering-box style="display: inline-block;background: #eeeeee">
+$\displaystyle \frac{\Delta f}{\Delta x}(x_1;x_2) = \frac{f(x_2) - f(x_1)}{x_2-x_1}$
+</centering-box>
+
+vspace{10}
+On peut noter  $x_1 = a$ et $x_2 = a +h$ avec $h \not= 0$, on obtient alors : 
+vspace{10}        
+<centering-box style="display: inline-block;background: #eeeeee">$\displaystyle \frac{\Delta f}{\Delta x}(a) = \frac{f(a+h) - f(a)}{h}$</centering-box>
+    </div>
+     
+    <div class="titled hide" data-title="\boxR Remarque" data-color="#444444">
+       $\frac{\Delta f}{\Delta x}(x_1;x_2) $ est le coefficient directeur de la droite sécante à la courbe représentative $C_f$ de $f$ passant par les points $A(x_1;f(x_1))$ et $B(x_2;f(x_2))$. 
+    </div>    
+        
+    <div class="styled">
+        vspace{10} 
+        Soit la fonction $f$ définie par $f(x) = 3 - 4x$ sur $\mathbb{R}$ : 
+        <div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num" data-valign-num="middle">Calculer $\displaystyle \frac{\Delta f}{\Delta x}(-2;-1)$</div> &
+            <div class="num" data-valign-num="middle">Calculer $\displaystyle \frac{\Delta f}{\Delta x}(2)$ pour $h = 0,75$</div>
+        </div>    
+    </div>
+    
+    
+    <div class="styled">
+         vspace{20} 
+        Soit la fonction $g$ définie par $g(x) = x^2-1$ sur $\mathbb{R}$ : 
+        <div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num" data-valign-num="middle">Calculer $\displaystyle \frac{\Delta g}{\Delta x}(-1;2)$ </div> &
+            <div class="num" data-valign-num="middle">$\displaystyle \frac{\Delta g}{\Delta x}(3)$ pour $h = 0,5$</div>
+        </div>    
+    </div>
+    
+</div>    
+    
+<!-- Nombre dérivé -->
+<div class="box" data-title="Nombre dérivé" data-num="$N_2$" data-date="1">
+    <div class="titled hide" data-title="\boxD Nombre dérivé" data-color="#444444">
+		Si quand $h$ se rapproche de $0$ (on dit que $h$ tend vers $0$ et on note $h \longrightarrow 0$) alors $\frac{\Delta f}{\Delta x}(a)$ tend vers un réel $l$ alors :
+
+vspace{5}
+\num1 la fonction $f$ est *{bold::dérivable} en $a$ 
+
+vspace{5}
+\num2 $l$ est le *{bold::nombre dérivé} de $f$ en $a$ noté $f'(a)$ : 
+   
+vspace{10}        
+<centering-box style="display: inline-block;background: #eeeeee">$\displaystyle \frac{f(a+h) - f(a)}{h} \underset{h \rightarrow 0}{\longrightarrow} f'(a)$</centering-box>
+</div>
+    
+	<div class="styled">
+         vspace{10} 
+        <div class="num"> Soit la fonction $g$ définie par $g(x) = 4 - 3x^2$ sur $\mathbb{R}$. Recopier et compléter le tableau suivant :
+            vspace{10} 
+          <div class="table" cells="*,*|w80;bo1#444444;c" data-table-style="background: #ffffff;margin: auto;border-collapse: collapse">
+            $h$ & $0,1$ & $0,01$ & $0,001$ & $0,0001$ & $0,00001$ ||
+            $ \dfrac{\Delta g}{\Delta x}(2)$  & &  &  &  &  
+         </div>  
+        vspace{10}     
+        $g$ est-elle dérivable en $2$ ? Si oui donner $g'(2)$.    
+        </div>    
+		vspace{30}
+        <div class="num"> Soit la fonction $f$ définie par $f(x) = 6x - 8$ sur $\mathbb{R}$. Recopier et compléter le tableau suivant :
+        vspace{10}     
+          <div class="table" cells="*,*|w80;bo1#444444;c" data-table-style="background: #ffffff;margin: auto;border-collapse: collapse">
+             $h$ & $0,1$ & $0,01$ & $0,001$ & $0,0001$ & $0,00001$  ||
+             $ \dfrac{\Delta f}{\Delta x}(5)$  & &  &  &  & 
+         </div>
+        vspace{10}     
+        $f$ est-elle dérivable en $5$ ? Si oui donner $f'(5)$.    
+        </div>   
+	</div>
+</div>	
+
+
+
+<div class="newpage"></div>
+    
+<!-- Tangente -->
+<div class="box" data-title="Tangente" data-num="$N_3$" data-date="1">
+    <div class="titled hide" data-title="\boxD Tangente" data-color="#444444">
+		Dans le cas où la fonction $f$ est dérivable en $a$, la *{bold::tangente} $\mathcal{T}_a$ à la courbe représentative $C_f$ de $f$ au  point $A(a;f(a))$ est la droite (position limite) de coefficient directeur $f'(a)$ et passant par $A$, son équation réduite est alors :
+        vspace{10}
+<centering-box style="display: inline-block;background: #eeeeee">$\displaystyle \mathcal{T}_a : y = f'(a)(x-a) + f(a)$</centering-box>
+vspace{10} 
+        <div class="table" cells="*,*|vat" data-table-style="margin: auto" style="margin-top: 5px">
+            La représentation graphique de la fonction $f$ définie sur $\R$ et par $f(x) = x^3$ est tracée ci-contre. $f$ est dérivable en $1$ et $f'(1) = 3$. <br>
+            La droite tracée en rouge est la tangente au point $A(1;f(1))$ et a pour équation :
+            <centering-box  style="display: inline-block;background: #eeeeee">$\displaystyle \mathcal{T}_1 : y = f'(1)(x-1) + f(1) = 3x-2$</centering-box>
+            &
+         <div class="figure" data-width="12" data-height="6" style="margin: auto">
+                painterGrid(3)
+                showMark()
+                markUpdate(4,3,1,1,1,1,0,0)
+                f1 = curveFunction('x^3',-10,10,0.0001)
+                lineWidth(f1,2)
+                foreground(f1,'#000000')
+                f2 = curveFunction('3x-2',-10,10,0.0001)
+                lineWidth(f2,2)
+                foreground(f2,'#ff0000')
+                A=point(5,4)
+            </div>   
+        </div>       
+	</div>
+    
+	<div class="styled">
+        vspace{10} 
+        Soit la fonction $g$ définie par $g(x) = x^2-4$ sur $\mathbb{R}$  dont $\mathcal{C}_g$ est la  courbe représentative.
+        vspace{10} 
+		<div class="num"> Recopier et compléter le tableau suivant :
+          <div class="table" cells="*,*|w80;bo1#444444;c" data-table-style="background: #ffffff;margin: auto;border-collapse: collapse">
+             $h$ & $0,1$ & $0,01$ & $0,001$ & $0,0001$ & $0,00001$   ||
+              $ \frac{\Delta g}{\Delta x}(1)$  & &  &  &  & 
+         </div>  
+        vspace{10}     
+        $g$ est-elle dérivable en $1$ ? Si oui donner $g'(1)$.   
+        </div>  
+        vspace{20}    
+        <div class="num"> Donner l'équation de la tangente $\mathcal{T}_1$ de  $\mathcal{C}_g$ en $x=1$ puis tracer $\mathcal{C}_g$ et $\mathcal{T}_1$.</div>
+	</div>
+</div>	
+    
+
+<!-- Fonction dérivée -->
+<div class="box" data-title="Fonction dérivée" data-num="$N_4$" data-date="1">
+    <div class="titled hide" data-title="\boxD Fonction dérivée" data-color="#444444">
+		Si pour tout réel $a \in I$, $f'(a)$ existe, on dit que $f$ est *{bold::dérivable} sur $I$. $I$ est le domaine de dérivabilité qu'on peut note $D_{f'}$.
+
+La *{bold::fonction dérivée}, notée $f'$, est définie sur $D_{f'}$ par :
+        vspace{10}
+<centering-box style="display: inline-block;background: #eeeeee">$\displaystyle f' : x \mapsto f'(x)$</centering-box>
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Dérivée d'une fonction affine" data-color="#444444">
+		Soit $f$ une fonction affine telle que $f(x) = mx+p$. Son ensemble de définition est :  $D_f = \mathbb{R}$. Sa dérivée est   <box  style="display: inline-block;background: #eeeeee">$f'(x) = m$</box> et  $D_{f'}= \mathbb{R}$
+	</div>
+    
+	<div class="styled">
+        Donner la fonction dérivée de : 
+        <div class="table" cells="*,*|w33%;vat" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">$f_1(x) = 5x -8$</div> &
+            <div class="num">$f_2(x) = -9$</div> &
+            <div class="num">$f_3(x) = 9x$</div> ||
+            
+            <div class="num">$f_4(x) = -x$</div> &
+            <div class="num">$f_5(x) =  6+x$</div> &
+            <div class="num">$f_6(x) = 2$</div>
+        </div>
+	</div>
+</div>
+    
+<div class="box" data-title="Onde sur l'eau">
+<div class="styled">
+ On jette une pierre dans un lac qui produit alors des ondes concentriques à la surface de l'eau. Si le rayon de l'onde croît à une vitesse de $5\;m\cdot s^{-1}$, à quelle vitesse croît la surface (circulaire) de cette onde lorsqu'elle a atteint un rayon de $12\;m$ ?   
+</div>    
+</div>    
+      
+  
+<div class="newpage"></div>    
+    
+<!-- Dérivées usuelles -->
+<div class="box" data-title="Dérivées usuelles" data-num="$N_5$" data-date="1">
+	<div class="titled hide" data-title="\boxP Dérivées usuelles" data-color="#444444">
+        $m$ et $p$ sont deux réels et $n$ entier naturel.
+        <div class="table" style="margin-left: 100px"  data-table-class="grey-alternate-header" data-table-style="border-collapse: collapse" cells="*,*|h30;w150;c;bo1#444444">
+        $f(x)$ & $\mathcal{D}_f$ & $f'(x)$ & $\mathcal{D}_{f'}$ ||
+        $f(x) = mx+p$  & $\R$ & $f'(x) = m$ & $\R$ ||  
+            $f(x) = x^2$  & $\R$ & $f'(x) = 2x$ & $\R$  ||  
+            $f(x) = x^n$  & $\R$ & $f'(x) = nx^{n-1}$ & $\R$  ||
+            $f(x) = \dfrac{1}{x}$  & $\R^*$ & $f'(x) = -\dfrac{1}{x^2}$ & $\R^*$  
+            ||
+            $f(x) = \sqrt{x}$  & $[0;+\infty[$ & $f'(x) = \dfrac{1}{2\sqrt{x}}$ & $]0;+\infty[$ 
+            ||
+            $f(x) = \cos{(x)}$  & $\R$ & $f'(x) = -\sin{(x)}$ & $\R$ 
+            ||
+            $f(x) = \sin{(x)}$  & $\R$ & $f'(x) = \cos{(x)}$ & $\R$ 
+        </div>
+	</div>
+   
+    <div class="titled hide" data-title="\boxP Dérivée de la fonction $f(ax+b)$" data-color="#444444">
+        Soit $f$ une fonction dérivable sur un intervalle $I$ de $\R$. Soit $a$ et $b$ deux réels et $g$ une fonction définie par $g(x) = f(ax+b)$. La fonction $g$ est alors dérivable sur $I$ et $g'(x) = [f(ax+b)]' = a\times f'(ax+b)$
+    </div>    
+	
+   
+	<div class="styled">
+        Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 5px">
+            <div class="num" data-valign-num="10px">$\displaystyle f_1(x) = \frac{1}{-3x+7}$</div> &
+            <div class="num">$\displaystyle f_2(x) = \sqrt{2x-9}$</div> &
+            <div class="num">$f_3(x) = x^5$</div> ||
+            <div class="num">$f_4(x) = \sin{(7x-\pi)}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \cos{\Big(\frac{1}{3}x+\frac{\pi}{3}\Big)}$</div> &
+            <div class="num"> $\displaystyle f_6(x) = \sin{(-x-\frac{\pi}{4})}$</div> 
+         </div>
+    </div>
+    
+</div>	      
+    
+<!-- Dérivée d'une somme -->
+<div class="box" data-title="Dérivée d'une somme" data-num="$N_6$" data-date="1">
+   <div class="titled hide" data-title="\boxP Dérivée d'une somme" data-color="#444444">
+        Soient $u$ et $v$ deux fonctions définies et dérivables sur un intervalle $I$ alors la fonction $(u+v)(x) = u(x) + v(x)$ est dérivable sur $I$ et : $\displaystyle (u+v)' (x)= u'(x) + v'(x)$}
+	</div>
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 2cols" data-table-style="border-spacing: 0px 5px">
+            <div class="num" data-valign-num="10px">$\displaystyle f_1(x) = \sqrt{2x-7} + \frac{1}{-8x+7}$</div> &
+            <div class="num">$\displaystyle f_2(x) = \sqrt{2x-9} - \dfrac{1}{9-2x}$</div> ||
+            <div class="num">$f_3(x) = x^5 + \cos{{5-6x}}$</div> &
+            <div class="num">$f_4(x) = \sin{(x-\pi)} + \cos{(6x)}$</div>  ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \cos{\Big(\frac{1}{2}x+\frac{\pi}{6}\Big)} - \sqrt{\pi x - 8}$</div> &
+            <div class="num"> $\displaystyle f_6(x) = \sin{(-2x-\frac{\pi}{3})} + x^9$</div> 
+         </div>
+        </div>
+</div>	   
+    
+<!-- Dérivée du produit par un réel -->
+<div class="box" data-title="Dérivée du produit par un réel" data-num="$N_7$" data-date="1">
+   <div class="titled hide" data-title="\boxP Dérivée du produit par un réel" data-color="#444444">
+        Soit $u$ une fonction définie et dérivable sur un intervalle $I$ et $k$ un réel alors la fonction $(ku)(x) = k\times u(x)$ est dérivable sur $I$ et : $\displaystyle (ku)' (x)= k\times u'(x)$
+	</div>
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 5px">
+            <div class="num">$\displaystyle f_1(x) = -2\sqrt{2x-7}$</div> &
+            <div class="num">$\displaystyle f_2(x) = \dfrac{-8}{9+2x}$</div> &
+            <div class="num">$f_3(x) = -8x^6$</div> ||
+            <div class="num">$f_4(x) = 9\sin{(3x-\pi)} $</div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) =\dfrac{-8}{7x-9}$</div> &
+            <div class="num"> $\displaystyle f_6(x) = -2\cos{(-2x-\frac{\pi}{3})}$</div> 
+         </div>
+        </div>
+</div>	       
+
+<div class="newpage"></div>
+    
+<!-- Dérivée du produit  -->
+<div class="box" data-title="Dérivée du produit" data-num="$N_8$" data-date="1">
+    <div class="titled hide" data-title="\boxP Dérivée du produit" data-color="#444444">
+        Soient $u$ et $v$ deux fonctions définies et dérivables sur un intervalle $I$ alors la fonction $(u\times v)(x) = u(x) \times v(x)$ est dérivable sur $I$ et : $\displaystyle (uv)' (x)= u'(x) \times v(x) + u(x) \times v'(x)$
+
+	</div>
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 25px">
+            <div class="num">$f_1(x) = x^2\sqrt{3x-8}$</div> &
+            <div class="num" data-valign-num="10px">$\displaystyle f_2(x) = (8 - 2\cos{x})\frac{1}{x} $</div> &
+            <div class="num">$f_3(x) = (2\sin{(-8x-2)} - 1)x^2$</div> ||
+            <div class="num" data-valign-num="10px">$\displaystyle f_4(x) = \sqrt{x}\times \frac{1}{x}$ </div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \sin{x}\cos{x}$</div> &
+            <div class="num"> $\displaystyle f_6(x) =(6x - 8)(9x^2 + 2x -5)$</div> ||
+            
+            <div class="num" data-valign-num="10px">$\displaystyle f_7(x) = \frac{1}{x}\times \frac{1}{x}$ </div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_8(x) = \sqrt{2-3x}\sqrt{6x-6}$</div> &
+            <div class="num"> $\displaystyle f_9(x) =\sqrt{x}\cos{(x)}$</div>
+         </div>
+        </div>
+</div>	 
+    
+<!-- Dérivée de l'inverse  -->
+<div class="box" data-title="Dérivée de l'inverse" data-num="$N_9$" data-date="1">
+    <div class="titled hide" data-title="\boxP Dérivée de l'inverse" data-color="#444444">
+       Soit $u$  une fonction définie et dérivable sur un intervalle $I$ telle que pour tout $x\in I$, $u(x) \not= 0$ alors la fonction $\Big(\displaystyle \frac{1}{u}\Big)(x) =  \frac{1}{u(x)}$ est dérivable sur $I$ et : $\displaystyle \Big(\frac{1}{u}\Big)' (x)= -\frac{v'(x)}{v^2(x)}$
+
+	</div>
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 25px">
+            <div class="num" data-valign-num="10px">$\displaystyle f_1(x) = \frac{1}{x^2}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_2(x) = \frac{1}{3x-9} $</div> &
+            <div class="num" data-valign-num="10px">$\displaystyle f_3(x) = \frac{1}{x^3+1}$</div> ||
+            <div class="num" data-valign-num="10px">$\displaystyle f_4(x) = \frac{1}{\sin{x}}$ </div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \frac{1}{\sqrt{7x-9}}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_6(x) = \frac{1}{\cos{(4x-\pi)}}$</div> 
+         </div>
+        </div>
+</div>	   
+    
+<!-- Dérivée du quotient  -->
+<div class="box" data-title="Dérivée du quotient" data-num="$N_{10}$" data-date="1">
+    <div class="titled hide" data-title="\boxP Dérivée du quotient" data-color="#444444">
+      Soient $u$ et $v$ deux fonctions définies et dérivables sur un intervalle $I$ telles que pour tout $x\in I$, $v(x) \not= 0$ alors la fonction $\Big(\displaystyle \frac{u}{v}\Big)(x) =  \frac{u(x)}{v(x)}$ est dérivable sur $I$ et : 
+$\displaystyle \Big(\frac{u}{v}\Big)' (x)= \frac{u'(x) \times v(x) - u(x) \times v'(x)}{v^2(x)}$
+
+	</div>
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 25px">
+            <div class="num" data-valign-num="10px">$\displaystyle f_1(x) = \frac{5x -9}{\sqrt{x}}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_2(x) = \frac{7x+9}{x^6 - 3x^2} $</div> &
+            <div class="num">$\displaystyle f_3(x) = \frac{\sqrt{x}}{9 - 8x}$</div> ||
+            <div class="num" data-valign-num="10px">$\displaystyle f_4(x) = \frac{\sin{x}}{\cos{(8x-8)}}$</div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \frac{\cos^2{7x-9}}{\sin{(x)}}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_6(x) = \frac{(x+1)^2}{(x-1)^3} $</div> 
+            
+            ||
+            <div class="num" data-valign-num="10px">$\displaystyle f_7(x) = \frac{x^2}{\sqrt{x}}$</div>  &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_8(x) = \frac{x^2-1}{x^2+1}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_9(x) = \frac{6x^3-x^2}{2x^2 - 5x^3} $</div> 
+         </div>
+        </div>
+</div>	       
+     
+<div class="newpage"></div>
+    
+    
+<!-- : Dérivée de g(x) = f(u(x) -->
+<div class="box" data-title=": Dérivée de $g(x) = f(u(x)$" data-num="$N_{11}$" data-date="1">   
+    <div class="titled hide" data-title="\boxP : Dérivée de $g(x) = f(u(x)$" data-color="#444444">
+      Soient $f$ une fonction dérivable sur un intervalle $J$ de $\mathbb{R}$ et $u$  une fonction dérivable sur un intervalle $I$ de $\mathbb{R}$ telle que pour tout $x \in I$, $u(x) \in J$. La fonction $g$ définie par $g(x) = f\Big(u(x)\Big)$ est dérivable sur $I$  et :
+        
+        <centering-box style="display: inline-block;background: #eeeeee">$\displaystyle g'(x) = u'(x) \times f'\Big(u(x)\Big)$</centering-box>
+	</div>
+    
+    <div class="titled hide" data-title="\boxP : Dérivée de $f(x) = (u(x))^n$ pour $n &gt; 0$" data-color="#444444">
+      Soient $u$ une fonction dérivable sur un intervalle $I$ de $\mathbb{R}$ et $n$ un entier naturel tel que $n > 0$. La fonction $f$ définie par $f(x) = \Big(u(x)\Big)^n$ est dérivable sur $I$  et : 
+        
+        <centering-box style="display: inline-block;background: #eeeeee">$\displaystyle f'(x) = n \times u'(x) \times \Big(u(x)\Big)^{n-1}$</centering-box>
+	</div>
+    
+     <div class="titled hide" data-title="\boxP : Dérivée de $f(x) = (u(x))^n$ pour $n &lt; 0$" data-color="#444444">
+     Soient $u$ une fonction dérivable sur un intervalle $I$ de $\mathbb{R}$ telle que <box style="display: inline-block">$u(x) \not= 0$</box>  pour tout $x \in I$ et $n$ un entier naturel tel que $n &lt; 0$. La fonction $f$ définie par $f(x) = \Big(u(x)\Big)^n$ est dérivable sur $I$  et : 
+     
+     <centering-box style="display: inline-block;background: #eeeeee">$\displaystyle f'(x) = n \times u'(x) \times \Big(u(x)\Big)^{n-1}$</centering-box>
+	</div>
+         
+     <div class="titled hide" data-title="\boxP : Dérivée de $f(x) = \sqrt{u(x)}$" data-color="#444444">
+     Soient $u$ une fonction dérivable sur un intervalle $I$ de $\mathbb{R}$ telle que <box style="display: inline-block">$u(x) > 0$</box>  pour tout $x \in I$. La fonction $f$ définie par $f(x) = \sqrt{u(x)}$ est dérivable sur $I$  et : 
+         
+         <centering-box style="display: inline-block;background: #eeeeee">$\displaystyle f'(x) = \dfrac{u'(x)}{2\sqrt{u(x)}}$</centering-box>
+	</div>     
+        
+        <div class="styled">
+         Déterminer les dérivées des fonctions suivantes : 
+        <div class="table 3cols" data-table-style="border-spacing: 0px 20px">
+            <div class="num" data-valign-num="10px">$\displaystyle f_1(x) = \frac{1}{x^2-3x+1}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_2(x) =  \sqrt{2x^3 + x^2 - 7}$</div> ||
+            <div class="num"> $\displaystyle f_3(x) = \Big(\frac{1}{x} - 4 + \cos{x}\Big)^2$</div> &
+            <div class="num" data-valign-num="10px">$\displaystyle f_4(x) = \sqrt{\frac{1}{x}+7x^2}$</div>  ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_5(x) = \sqrt{x^7- \sin{x}}$</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_6(x) = \Big(9 + \sqrt{x}  \Big)^2 $</div> ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_7(x) = \cos{(8 -9x)} $</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_8(x) = \frac{3}{\cos{x}+\sin{x}} $</div> ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_9(x) = \sin{(6x^2+9x)} $</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_{10}(x) = \Big( x^3 - 9x^2+6\Big)^2 $</div> 
+            ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_{11}(x) = \sqrt{\sin{(4x - \pi)}} $</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_{12}(x) = \frac{1}{\sqrt{7x - 9}} $</div> 
+            ||
+            <div class="num" data-valign-num="10px"> $\displaystyle f_{13}(x) = \Big( \sqrt{6x -9}{}\Big)^3 $</div> &
+            <div class="num" data-valign-num="10px"> $\displaystyle f_{14}(x) = \Big(\frac{1}{2x-2}\Big)^5 $</div> 
+         </div>
+        </div>
+</div> 
+    
+    
+<div class="newpage"></div>     
+ 
+<div class="box" data-title="Des dérivées">
+        <div class="styled">
+        Donner l'ensemble de dérivabilité de $f$ puis calculer sa dérivée :
+        <div class="table 3cols" data-table-style="border-spacing: 0px 15px">
+            <div class="num" data-valign-num="middle"> $\displaystyle f(x) = (4x-3)^2$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = (3x^2-4x)^3$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = (2x^2-3x+1)^2$ </div>  || 
+            
+            <div class="num" data-valign-num="middle">  $\displaystyle f(x) = (x^3+2x)^2$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = (x^3+4x^2+5)^4$ </div> &
+            <div class="num" data-valign-num="middle">    $\displaystyle f(x) = 2x^2 - (2x-1)^2$ </div> || 
+            
+            <div class="num" data-valign-num="middle">  $\displaystyle f(x) =\frac{2}{(x+1)^3}$</div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\frac{3}{(2x+1)^4}$</div> &
+            <div class="num" data-valign-num="middle">    $\displaystyle f(x) =\frac{4}{(x^3-1)^3}$</div> || 
+            
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\frac{5}{(2x^2+3)^2}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\frac{5}{3(x-1)^4}$ </div> &
+            <div class="num" data-valign-num="middle">    $\displaystyle f(x) =\frac{3}{(3x^2+5)^2}$ </div> || 
+            
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\frac{5}{3(x-2)^4}$</div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =2\Big(\frac{x}{x+1}\Big)^{3}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =2\Big(\frac{x+1}{x+2}\Big)^{-2}$ </div> || 
+            
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =(x-2)^3 + \frac{1}{(x-2)^3}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\cos^3{x}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = 3\cos{x} + 2\sin^2{x}$ </div>  || 
+            
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = 3x^2\cos{7x - 8} $</div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = \frac{\cos{(7-3x)}}{x^2}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) = \frac{x\sin{(3x-4)}}{2x^2+8}$</div> || 
+            
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\sqrt{x}\sin{8x^2-2}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\sin{(8x^2 + 6x)}\sqrt{x-3}$ </div> &
+            <div class="num" data-valign-num="middle">   $\displaystyle f(x) =\sqrt{\cos^2{(6x+2)}}$</div>
+         </div>
+        </div>   
+</div> 
+    
+<div class="box" data-title="Tangente en $a$">
+        <div class="styled">
+        Déterminer l'équation de la tangente à $\mathcal{C}_f$ au point d'abscisse $a$ :
+
+        <div class="table 2cols" data-table-style="border-spacing: 0px 15px">
+            
+            <div class="num" data-valign-num="middle">  $\displaystyle f : x \mapsto -\frac{1}{3}x^3+\frac{1}{2}x^2 $  définie sur $\mathbb{R}$, $a = -1$</div> &
+            <div class="num" data-valign-num="middle"> $\displaystyle f : x \mapsto \frac{x-2}{x+1} $  définie sur $\mathbb{R}\backslash \{ -1\}$, $a = 2$</div> ||
+            <div class="num" data-valign-num="middle">  $\displaystyle f : x \mapsto \frac{x}{x+1} $  définie sur $\mathbb{R}\backslash \{ -1\}$, $\displaystyle a = \frac{1}{3}$ </div> &
+            <div class="num" data-valign-num="middle"> $\displaystyle f : x \mapsto 4x^2 - 3x +2 $  définie sur $\mathbb{R}$, $\displaystyle a = 0$</div> ||
+            <div class="num" data-valign-num="middle"> $\displaystyle f : x \mapsto \frac{3x+1}{2-x}$  définie sur $\mathbb{R}\backslash \{ 2\}$, $\displaystyle a = -1$</div> &
+            <div class="num" data-valign-num="middle"> $\displaystyle f : x \mapsto x\sqrt{x}$  définie sur $\mathbb{R}^{+}$, $\displaystyle a = 1$</div>
+         </div>
+        </div>   
+</div>   
+    
+    
+<div class="box" data-title="Fuite d'eau">
+        <div class="styled">
+        On considère une flaque d'eau circulaire de 1$\;mm$ de profondeur crée par un robinet qui fuit. On note $r(t)$ le rayon (en $cm$) de la flaque en fonction du temps $t$ (en s) et $V(t)$ le volume correspondant (en $cm^3$).
+
+        <div class="num" >Donner la relation entre $V(t)$ et $r(t)$.</div>
+        <div class="num" >En déduire la relation entre $V'(t)$ et $r'(t)$. Que représentent physiquement $V'(t)$ et $r'(t)$ ?</div>
+        <div class="num" >Sachant que le robinet fuit à un débit de $1\;cm^3\cdot s^{-1}$, déterminer la vitesse d'augmentation radiale (du rayon) de la flaque lorsque celle-ci a atteint un volume de $2\;cm^3$.</div>    
+            
+    </div>    
+</div>
+    
+<div class="box" data-title="Coefficient directeur de la tangente">
+        <div class="styled">
+       Soit $\displaystyle f: x \mapsto \frac{x}{x+1}$ définie sur $\mathbb{R}\backslash \{ -1\}$.
+
+
+        vspace{10}Existe-t-il des points de la courbe dont la tangente a pour coefficient directeur $ \frac{1}{4}$ ? Si oui, les déterminer.</div>
+        
+</div>    
+    
+    
+</body>
+</html>

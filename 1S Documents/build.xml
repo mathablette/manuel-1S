@@ -6,17 +6,66 @@
 	<property name="docs.dir" location="${basedir}/1S Documents/" />
 	<property name="docs.file" value="1S_première_s" />
 
-	<!-- Sommaire -->
-	<property name="sommaire.dir" value="${basedir}/1S Documents" />
-	<property name="sommaire.file" value="sommaire" />
 
 	<!-- Chapitre A1 -->
-	<property name="a1.dir" value="${basedir}/A1 - Fonction du second degré" />
-	<property name="a1.file" value="1s_a1_fonction_second_degré" />
+	<property name="a1.dir" value="${basedir}/A1 - Etude de fonction" />
+	<property name="a1.file" value="1s_a1_etude_fonction" />
 
 	<!-- Chapitre A2 -->
-	<property name="a2.dir" value="${basedir}/A2 - Fonctions de référence" />
-	<property name="a2.file" value="1s_a2_fonctions_de_reférence" />
+	<property name="a2.dir" value="${basedir}/A2 - Fonction du second degré" />
+	<property name="a2.file" value="1s_a2_fonction_second_degré" />
+	
+	<!-- Chapitre A3 -->
+	<property name="a3.dir" value="${basedir}/A3 - Fonction inverse" />
+	<property name="a3.file" value="1s_a3_fonction_inverse" />
+	
+	<!-- Chapitre A4 -->
+	<property name="a4.dir" value="${basedir}/A4 - Fonction racine carrée" />
+	<property name="a4.file" value="1s_a4_fonction_racine_carrée" />
+	
+	<!-- Chapitre A5 -->
+	<property name="a5.dir" value="${basedir}/A5 - Fonction valeur absolue" />
+	<property name="a5.file" value="1s_a5_fonction_valeur_absolue" />
+	
+	<!-- Chapitre A6 -->
+	<property name="a6.dir" value="${basedir}/A6 - Dérivation" />
+	<property name="a6.file" value="1s_a6_dérivation" />
+	
+	<!-- Chapitre A7 -->
+	<property name="a7.dir" value="${basedir}/A7 - Applications de la dérivation" />
+	<property name="a7.file" value="1s_a7_applications_dérivation" />
+	
+	<!-- Chapitre A8 -->
+	<property name="a8.dir" value="${basedir}/A8 - Notion de suite" />
+	<property name="a8.file" value="1s_a8_notion_suite" />
+	
+	<!-- Chapitre A9 -->
+	<property name="a9.dir" value="${basedir}/A9 - Comportement global d'une suite" />
+	<property name="a9.file" value="1s_a9_comportement_global_suite" />
+	
+	<!-- Chapitre G1 -->
+	<property name="g1.dir" value="${basedir}/G1 - Vecteurs et droites du plan" />
+	<property name="g1.file" value="1s_g1_vecteurs_droites" />
+	
+	<!-- Chapitre G2 -->
+	<property name="g2.dir" value="${basedir}/G2 - Angles orientés et trigonométrie" />
+	<property name="g2.file" value="1s_g2_angles_orientés_trigonométrie" />
+	
+	<!-- Chapitre G3 -->
+	<property name="g3.dir" value="${basedir}/G3 - Produit scalaire" />
+	<property name="g3.file" value="1s_g3_produit_scalaire" />
+	
+	<!-- Chapitre SP1 -->
+	<property name="sp1.dir" value="${basedir}/SP1 - Statistiques" />
+	<property name="sp1.file" value="1s_sp1_statistiques" />
+	
+	<!-- Chapitre SP2 -->
+	<property name="sp2.dir" value="${basedir}/SP2 - Variables aléatoires" />
+	<property name="sp2.file" value="1s_sp2_variables_aléatoires" />
+	
+	<!-- Chapitre SP3 -->
+	<property name="sp3.dir" value="${basedir}/SP3 - Loi binomiale" />
+	<property name="sp3.file" value="1s_sp3_loi_binomiale" />
 
 
 	<target name="doAll">
@@ -29,6 +78,19 @@
 			<filelist>
 				<file value="${a1.dir}/${a1.file}.pdf" />
 				<file value="${a2.dir}/${a2.file}.pdf" />
+				<file value="${a3.dir}/${a3.file}.pdf" />
+				<file value="${a4.dir}/${a4.file}.pdf" />
+				<file value="${a5.dir}/${a5.file}.pdf" />
+				<file value="${a6.dir}/${a6.file}.pdf" />
+				<file value="${a7.dir}/${a7.file}.pdf" />
+				<file value="${a8.dir}/${a8.file}.pdf" />
+				<file value="${a9.dir}/${a9.file}.pdf" />
+				<file value="${g1.dir}/${g1.file}.pdf" />
+				<file value="${g2.dir}/${g2.file}.pdf" />
+				<file value="${g3.dir}/${g3.file}.pdf" />
+				<file value="${sp1.dir}/${sp1.file}.pdf" />
+				<file value="${sp2.dir}/${sp2.file}.pdf" />
+				<file value="${sp3.dir}/${sp3.file}.pdf" />
 			</filelist>
 		</echoxml>
 		<java jar="/Applications/pdfsam.app/Contents/Resources/Java/lib/pdfsam-console-2.3.1e.jar" fork="true" failonerror="true" output="output">

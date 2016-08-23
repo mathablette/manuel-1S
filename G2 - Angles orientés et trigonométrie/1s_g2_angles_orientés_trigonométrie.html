@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Angles orientés et trigonométie" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Angles orientés et trigonométie" data-font-size="14" data-title-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="45"
+data-left="$1_S$-$G_2$"
+data-main-width="900">
+
+<!-- Cercle trigonométrique -->
+<div class="box" data-title="Cercle trigonométrique" data-num="$N_1$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Définition" data-color="#444444">
+        <div class="table">
+        Dans un repère orthonormé $(O;I;J)$, le *{bold::cercle trigonométrique} $(\mathcal{C})$ est le cercle de centre $O$ et de rayon $1$. Ce cercle est muni d'un sens de parcours appelé *{bold::sens direct} (sens inverse des aiguilles d'une montre). <br>
+        La mesure en *{bold::radian} d'un angle correspond à la longueur de l'arc du cercle trigonométrique qu'il intercepte.  La mesure en radian est *{bold::proportionnelle} à la mesure en degré. vspace{10}
+        Pour repérer un point $M$ du cercle trigonométrique,
+on enroule autour du cercle un axe orienté, gradué, d’origine le point $I$. On peut alors associer, au point $M$, un réel $x$, abscisse d’un point de l’axe qui vient se superposer au point $M$. <br>
+        Quand on fait un tour alors on se retrouve avec le même point sur le cercle trigonométrique. De ce fait le même point $M$ est associé aux réels $x$; $x+2\pi$ ; $x-2\pi$ ; $x+k\times 2\pi$ et $x-k\times 2\pi$ ($k \in \mathbb{Z}$)     
+            &
+        <div class="draw" width='9cm' height='9cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 4,dy: 4,axes: false})
+		//grid(0)
+		circle(0,0,4)
+		point('sqrt(2)/2','sqrt(2)/2','M(x)')
+		dash(0)
+		line(0,0,'sqrt(2)/2','sqrt(2)/2')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,45)
+		arc(0.5,0.5,2.8,30,55)
+		
+		math('\\alpha',0.4,0.25,{fontSize: '12pt'})
+        math('x',1,0.45,{fontSize: '12pt'})    
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.12,{fontSize: '12pt'})
+		math('+','1.5*sqrt(2)/2','1.5*sqrt(2)/2',{fontSize: '12pt'})
+        math('\\widehat{IOM} = \\alpha','0.2','-0.1',{fontSize: '12pt'})    
+	</div>
+        </div>
+        
+	</div>
+    
+   
+   
+	
+   
+	<div class="styled">
+            <div class="num" data-valign-num="middle"> Convertir $\displaystyle \frac{\pi}{5}$, $\displaystyle \frac{5\pi}{2}$ et $\displaystyle \frac{-\pi}{4}$ en degré puis les placer sur le cercle trigonométrique. </div>
+             <div class="num" data-valign-num="middle" >Placer sur le cercle trigonométrique $ -\frac{\pi}{3}$, $ -\frac{\pi}{2}$, $ \frac{11\pi}{8}$, $ -\frac{5\pi}{8}$ et $ \frac{17\pi}{6}$. </div>
+        <div class="num" data-valign-num="2px" >Soit un point $A$ du cercle trigonométrique associé au nombre $-\dfrac{\pi}{2}$. Donner quatre autres nombres qui correspondent au même point $A$. </div>
+	</div>
+</div>
+    
+    
+<!-- Angles orientés -->
+<div class="box" data-title="Angles orientés" data-num="$N_2$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Angles orientés" data-color="#444444">
+        Soient deux vecteurs $\vecteur{u}$ et $\vecteur{v}$. Soient deux points $M$ et $N$ du cercle trigonométrique tels que : $\vecteur{OM}$ et $\vecteur{u}$ sont colinéaires et de même sens et $\vecteur{ON}$ et $\vecteur{v}$ sont colinéaires et de même sens.
+
+L'angle orienté, noté $(\vecteur{u},\vecteur{v})$, entre $\vecteur{u}$ et $\vecteur{v}$ correspond à l'angle formé entre les demi-droites $[OM)$ et $[ON)$.
+     </div>
+    
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+        Un angle orienté à une infinité de mesures différentes en effet pour $k \in \mathbb{Z}$ : $(\vecteur{u},\vecteur{v}) = (\vecteur{u},\vecteur{v}) + k\times 2\pi$
+        vspace{10}
+        L'angle orienté $(\vecteur{u},\vecteur{v})$ a une *{bold::unique} mesure  $\alpha$ dans l'intervalle $]-\pi;\pi]$ appelée *{bold::mesure principale}. On a donc pour  $k \in \mathbb{Z}$ : $(\vecteur{u},\vecteur{v}) = \alpha+ k\times 2\pi$ et pour simplifier $(\vecteur{u},\vecteur{v}) = \alpha$
+     </div>
+        
+   
+	<div class="styled">
+            <div class="num" data-valign-num="0px">  Sur le cercle trigonométrique, placer les points $A$, $B$, $C$ et $D$ tels que $\displaystyle (\vecteur{OI},\vecteur{OA}) = \frac{-\pi}{4}$, $\displaystyle (\vecteur{OA},\vecteur{OB}) = \frac{12\pi}{4}$, $\displaystyle (\vecteur{OA},\vecteur{OC}) = \frac{\pi}{2}$ et $\displaystyle (\vecteur{OC},\vecteur{OD}) = -\frac{21\pi}{2}$. </div>
+             <div class="num" data-valign-num="0px">Déterminer la mesure principale des angles orientés $ -\frac{7\pi}{5}$, $ -\frac{18\pi}{4}$, $ \frac{4\pi}{3}$, $ -\frac{7\pi}{10}$, $ -\frac{21\pi}{4}$, $ \frac{37\pi}{7}$, $ -\frac{2\pi}{3}$ et $ \frac{23\pi}{10}$. </div>
+        <div class="num" data-valign-num="7px">Tracer un carré $ABCD$ de centre $O$ puis donner une mesure des angles orientés $\displaystyle (\vecteur{OA},\vecteur{OA})$, $\displaystyle (\vecteur{OA},\vecteur{OC})$, $\displaystyle (\vecteur{OB},\vecteur{OA})$, $\displaystyle (\vecteur{AO},\vecteur{AD})$, $\displaystyle (\vecteur{CB},\vecteur{CD})$ et $\displaystyle (\vecteur{CA},\vecteur{CB})$ </div>
+	</div>
+</div>    
+
+    
+<div class="newpage"></div> 
+    
+    
+ <!-- Propriétés des angles orientés -->
+<div class="box" data-title="Propriétés des angles orientés" data-num="$N_3$" data-date="1">
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+        <div class="table 2cols">
+        ,, $(\vecteur{u},\vecteur{v}) = -(\vecteur{u},\vecteur{v})$  & ,, $(-\vecteur{u},-\vecteur{v}) = (\vecteur{u},\vecteur{v})$  ||
+        ,, $(-\vecteur{u},\vecteur{v}) = (\vecteur{u},\vecteur{v}) + \pi$  & ,, $(\vecteur{u},-\vecteur{v}) = (\vecteur{u},\vecteur{v}) + \pi$ ||
+        ,,  $(k\vecteur{u},k'\vecteur{v}) = (\vecteur{u},\vecteur{v})$ si $kk' > 0$  & ,,  $(k\vecteur{u},k'\vecteur{v}) = (\vecteur{u},\vecteur{v}) + \pi$ si $kk' &lt; 0$     
+        </div>
+    </div> 
+    
+    <div class="titled hide" data-title="\boxP Relation de Chasles" data-color="#444444">
+        Soient trois vecteurs $\vecteur{u}$, $\vecteur{v}$ et $\vecteur{w}$ non nuls :
+
+        <centering-box style="display: inline-block;background: #eeeeee">$(\vecteur{u},\vecteur{v}) + (\vecteur{v},\vecteur{w})  = (\vecteur{u},\vecteur{w}) $</centering-box>
+    </div> 
+    
+    <div class="titled hide" data-title="\boxP Colinéarité" data-color="#444444">
+        Deux vecteurs $\vecteur{u}$ et $\vecteur{v}$ sont colinéaires si et seulement si  $(\vecteur{u},\vecteur{v})=0$ ou $(\vecteur{u},\vecteur{v}) = \pi$.
+    </div>
+    
+    <div class="styled">
+        Soit $A$, $B$, $C$ et $D$ quatre points tels que  $\displaystyle (\vecteur{AB},\vecteur{AC}) = -\frac{\pi}{5}$ et $\vecteur{BD} = -2\vecteur{AC}$
+
+Donner la mesure principale des angles orientés :
+        <div class="num" data-valign-num="7px"> $\displaystyle (\vecteur{BA},\vecteur{AC})$, $\displaystyle (\vecteur{AC},\vecteur{BA})$, $\displaystyle (\vecteur{AC},\vecteur{AB})$ et $\displaystyle (\vecteur{AB},\vecteur{CA})$. </div>
+        <div class="num" data-valign-num="7px"> $\displaystyle (\vecteur{AC},\vecteur{BD})$ et $\displaystyle (\vecteur{AB},\vecteur{BD})$
+ </div>
+	</div>
+    
+</div>    
+    
+ <!-- Coordonnées -->
+<div class="box" data-title="Coordonnées et cercle trigonométrique" data-num="$N_4$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Définition" data-color="#444444">
+        <div class="table" cells="*,*|vat">
+        On se place dans un repère orthonormé $(O;\vecteur{OI}; \vecteur{OJ})$. Soit $M$ un point sur le cercle trigonométrique tel que $(\vecteur{OI},\vecteur{OM}) = x$ ($x$ est donc la mesure principale de l'angle vecteur $(\vecteur{OI},\vecteur{OM}) $) alors : $M\Big(\cos{(x)};\sin{(x)}\Big)$ ou $M\Big(\cos{x};\sin{x}\Big)$ ou encore <br>
+            $M\Big(\cos{(\alpha)};\sin{(\alpha)}\Big)$ ou $M\Big(\cos{\alpha};\sin{\alpha}\Big)$
+            vspace{20}
+            Pour $x \in \mathbb{R}$ et $k \in \mathbb{Z}$ : 
+
+vspace{5}
+
+,,  $(\cos{x})^2  + (\sin{x})^2 = 1$
+
+vspace{5}
+,, $-1 \leqslant \cos{x} \leqslant 1 $ et $-1 \leqslant \sin{x} \leqslant 1 $ 
+
+vspace{5}
+,, $\cos{(x + k\times 2 \pi)} = \cos{x}$ et $\sin{(x + k\times 2 \pi)} = \sin{x}$
+            vspace{10}
+,, $\tan{(x)} = \dfrac{\sin{(x)}}{\cos{(x)}}$
+
+            &
+        <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('sqrt(2)/2','sqrt(2)/2','M')
+		dash(4)
+		down('sqrt(2)/2')
+		line('sqrt(2)/2','sqrt(2)/2',0,'sqrt(2)/2')
+		dash(0)
+		line(0,0,'sqrt(2)/2','sqrt(2)/2')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,45)
+		math('\\cos{(x)}','sqrt(2)/2-0.25',0,{fontSize: '11pt'})
+		math('\\sin{(x)}',-0.4,'sqrt(2)/2+0.08',{fontSize: '11pt'})
+		math('\\alpha',0.47,0.34,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.15,{fontSize: '12pt'})
+        line(1,-3,1,3)  
+        math('\\widehat{IOM} = \\alpha','0.15','-0.2',{fontSize: '12pt'})       
+        color('#ff0000') 
+        arrow('-')    
+        arc(0,0,3,0,45)
+        line(1,0,1,'pi/4') 
+        math('x',0.85,0.7,{fontSize: '12pt'})    
+	</div>
+            
+        </div>
+                </div>
+
+        
+   
+   
+	
+   
+	<div class="styled">
+        <div class="styled">
+        <div class="num" data-valign-num="0px"> Démontrer que $(\cos{x})^2  + (\sin{x})^2 = 1$. </div>
+        <div class="num" data-valign-num="7px">  Soient $A$ et $B$ tels que $\displaystyle (\vecteur{OI},\vecteur{OA}) = -\frac{3\pi}{4}$ et $\displaystyle (\vecteur{OB},\vecteur{OA}) = \frac{\pi}{5}$. Donner les coordonnées de $A$ et $B$.
+ </div>
+            <div class="num" data-valign-num="7px"> Démontrer que $\displaystyle \cos{\frac{\pi}{3}} = \frac{1}{2}$. 
+ </div>
+             <div class="num" data-valign-num="7px"> Calculer $\displaystyle \sin{\frac{\pi}{3}}$.
+ </div>
+            <div class="num" data-valign-num="10px"> Démontrer que $\displaystyle \cos{\frac{\pi}{4}} = \frac{\sqrt{2}}{2}$. 
+ </div>
+	</div>
+             
+	</div>
+</div>	
+
+<div class="newpage"></div>    
+    
+<div class="box" data-title="Valeurs usuelles de cosinus et sinus" data-num="$N_5$" data-date="1" >
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+        <div class="table 3cols" cells="*,*|c" data-table-style="border-spacing : 0px 40px">
+        <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 20px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('1','0',{name: 'M',left: 0.05,top: 0.05})
+		dash(0)
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 0^\\circ','-0.45','-0.35',{fontSize: '12pt'})  
+         math('x = 0','-0.18','-0.65',{fontSize: '12pt'})      
+           
+	</div>
+        $\cos{(0)} = 1$ ; $\sin{(0)} = 0$
+            
+            &
+            
+            <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('sqrt(3)/2','1/2','M')
+		dash(4)
+		down('1/2')
+		line('sqrt(3)/2','1/2',0,'1/2')
+		dash(0)
+		line(0,0,'sqrt(3)/2','1/2')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,30)
+		math('\\cos{(x)}','sqrt(3)/2-0.25',-0.05,{fontSize: '11pt'})
+		math('\\sin{(x)}',-0.4,'1/2+0.08',{fontSize: '11pt'})
+		math('30^\\circ',0.53,0.24,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 30^\\circ','-0.45','-0.30',{fontSize: '12pt'})  
+         math('x = \\dfrac{\\pi}{6}','-0.18','-0.60',{fontSize: '12pt'})      
+        color('#ff0000') 
+        arrow('-')    
+        math('x',1.02,0.32,{fontSize: '12pt'})    
+	</div>
+        $\cos{(\frac{\pi}{6})} = \dfrac{\sqrt{3}}{2}$ ; $\sin{(\frac{\pi}{6})} = \dfrac{1}{2}$
+            
+            &
+            
+           <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('sqrt(2)/2','sqrt(2)/2','M')
+		dash(4)
+		down('sqrt(2)/2')
+		line('sqrt(2)/2','sqrt(2)/2',0,'sqrt(2)/2')
+		dash(0)
+		line(0,0,'sqrt(2)/2','sqrt(2)/2')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,45)
+		math('\\cos{(x)}','sqrt(2)/2-0.25',0,{fontSize: '11pt'})
+		math('\\sin{(x)}',-0.4,'sqrt(2)/2+0.08',{fontSize: '11pt'})
+		math('45^\\circ',0.47,0.34,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 45^\\circ','-0.45','-0.30',{fontSize: '12pt'})  
+         math('x = \\dfrac{\\pi}{4}','-0.18','-0.60',{fontSize: '12pt'})      
+        color('#ff0000') 
+        arrow('-')    
+        math('x',0.95,0.5,{fontSize: '12pt'})    
+	</div>
+        $\cos{(\frac{\pi}{4})} = \dfrac{\sqrt{2}}{2}$ ; $\sin{(\frac{\pi}{4})} = \dfrac{\sqrt{2}}{2}$  ||
+           <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('1/2','sqrt(3)/2','M')
+		dash(4)
+		down('sqrt(3)/2')
+		line('1/2','sqrt(3)/2',0,'sqrt(3)/2')
+		dash(0)
+		line(0,0,'1/2','sqrt(3)/2')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,60)
+		math('\\cos{(x)}','1/2-0.25',-0.05,{fontSize: '11pt'})
+		math('\\sin{(x)}',-0.4,'sqrt(3)/2+0.08',{fontSize: '11pt'})
+		math('60^\\circ',0.22,0.22,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 60^\\circ','-0.45','-0.30',{fontSize: '12pt'})  
+         math('x = \\dfrac{\\pi}{3}','-0.18','-0.60',{fontSize: '12pt'})      
+        color('#ff0000') 
+        arrow('-')    
+        math('x',0.95,0.52,{fontSize: '12pt'})    
+	</div>
+        $\cos{(\frac{\pi}{3})} = \dfrac{1}{2}$ ; $\sin{(\frac{\pi}{3})} = \dfrac{\sqrt{3}}{2}$
+            
+            &
+            
+            <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('0','1',{name: 'M',top: -0.2})
+		dash(4)
+		down('1')
+		line('0','1',0,'1')
+		dash(0)
+		line(0,0,'0','1')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,90)
+		math('\\cos{(x)}','-0.25',-0.13,{fontSize: '11pt'})
+		math('\\sin{(x)}',-0.45,'1+0.12',{fontSize: '11pt'})
+		math('90^\\circ',0.42,0.53,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 90^\\circ','-0.45','-0.30',{fontSize: '12pt'})  
+         math('x = \\dfrac{\\pi}{2}','-0.18','-0.60',{fontSize: '12pt'})      
+        color('#ff0000') 
+        arrow('-')    
+        math('x',0.85,0.75,{fontSize: '12pt'})    
+	</div>
+        $\cos{(\frac{\pi}{2})} = 0$ ; $\sin{(\frac{\pi}{2})} = 1$
+            
+            &
+            <div class="draw" width='6.5cm' height='6.8cm' style="margin-left: 30px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		mark({dx: 3,dy: 3,axes: false})
+		//grid(0)
+		circle(0,0,3)
+		point('-1','0',{name: 'M',top: -0.15})
+		dash(4)
+		//down('1')
+		//line('0','1',0,'1')
+		dash(0)
+		line(0,0,'-1','0')
+		arrow('->')
+		line(0,0,1,0)
+		line(0,0,0,1)
+		arc(0,0,1.5,0,180)
+		//math('\\cos{(x)}','-0.25',-0.13,{fontSize: '11pt'})
+		//math('\\sin{(x)}',-0.45,'1+0.12',{fontSize: '11pt'})
+		math('180^\\circ',-0.3,0.65,{fontSize: '12pt'})
+		math('O',-0.1,-0.01,{fontSize: '12pt'})
+		math('I',1.05,0.05,{fontSize: '12pt'})
+		math('J',0,1.2,{fontSize: '12pt'})
+        math('\\widehat{IOM} = 180^\\circ','-0.45','-0.30',{fontSize: '12pt'})  
+         math('x = \\pi','-0.18','-0.60',{fontSize: '12pt'})      
+        color('#ff0000') 
+        arrow('-')    
+        math('x',-0.15,1.15,{fontSize: '12pt'})    
+	</div>
+        $\cos{(\pi)} = -1$ ; $\sin{(\pi)} = 0$
+            
+        </div>    
+    </div>  
+    
+    <div class="styled">
+             On se place dans un repère orthonormé $(O;I; J)$. Soit $M$ un point sur le cercle trigonométrique associé au nombre $\dfrac{\pi}{6}$ : $\dfrac{\pi}{6}$ est la longueur de l'arc de cercle de $I$ à $M$. On note $\alpha = \widehat{IOM}$. On pose $A(\cos{(\frac{\pi}{6})};0)$ et $B(0;\sin{(\frac{\pi}{6})})$. vspace{10}
+        <div class="num">Faire une figure.</div>
+        <div class="num">Donner la mesure de $\alpha$ en degré.</div>
+         <div class="num">Démontrer que $OA = BM$</div>
+        <div class="num">Démontrer que $OMJ$ est un triangle isocèle.</div>
+        <div class="num">Démontrer que $\widehat{MOJ} = 60^\circ$</div>
+        <div class="num">Démontrer que $OMJ$ est un triangle équilatéral.</div>
+        <div class="num">Que dire de la droite $(BM)$ dans le triangle $OMJ$ ?</div>
+        <div class="num">En déduire que $B$ est le milieu de $[OJ]$. Donner la longueur $OB$.</div>
+        <div class="num">Calculer la longueur $BM$.</div>
+        <div class="num">Déduire des questions précédentes les valeurs exactes de $\sin{(\frac{\pi}{6})}$ et $\cos{(\frac{\pi}{6})}$</div>
+        
+	</div>
+    
+</div>  
+    
+<div class="newpage"></div>       
+
+<!-- Angles associés -->
+<div class="box" data-title="Angles associés" data-num="$N_6$" data-date="1">
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+        Soit $x \in \mathbb{R}$ :
+        <div class="table 2cols">
+        ,, $\cos{(-x)} = \cos{x}$ & ,, $\sin{(-x)} = -\sin{x}$   ||
+            ,, $\cos{(\pi-x)} = -\cos{x}$ & ,,  $\sin{(\pi-x)} = \sin{x}$   ||
+        ,, $\cos{(\pi+x)} = -\cos{x}$ & ,,  $\sin{(\pi+x)} = -\sin{x}$   ||
+            ,, $\displaystyle \cos{\Big(\frac{\pi}{2}-x\Big)} = \sin{x}$ & ,, $\displaystyle \sin{\Big(\frac{\pi}{2}-x\Big)} = \cos{x}$ ||
+        ,,  $\displaystyle \cos{\Big(\frac{\pi}{2}+x\Big)} = -\sin{x}$ & ,, $\displaystyle \sin{\Big(\frac{\pi}{2}+x\Big)} = \cos{x}$  
+        </div>
+    </div> 
+    
+    
+    <div class="styled">
+        <div class="num" data-valign-num="7px"> Calculer $\displaystyle \cos{\frac{-\pi}{3}}$, $\displaystyle \cos{\frac{4\pi}{3}}$, $\displaystyle \sin{\frac{\pi}{6}}$ et $\displaystyle \sin{\frac{5\pi}{6}}$ </div>
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Calculer $\displaystyle \cos{\frac{3\pi}{4}}$, $\displaystyle \cos{\frac{-3\pi}{4}}$, $\displaystyle \sin{\frac{-\pi}{4}}$ et $\displaystyle \sin{\frac{3\pi}{4}}$
+ </div>
+	</div>
+    
+</div>  
+    
+<!-- Formules de duplication -->
+<div class="box" data-title="Formules de duplication" data-num="$N_7$" data-date="1">
+    <div class="titled hide" data-title="\boxP Formules de duplication" data-color="#444444">
+        Soit $a \in \mathbb{R}$ et $b \in \mathbb{R}$ :
+        <div class="table 2cols">
+        ,, $\cos{(a+b)} = \cos{a}\cos{b} - \sin{a}\sin{b}$  & ,, $\sin{(a+b)} = \sin{a}\cos{b} + \sin{b}\cos{a}$   ||
+            ,, $\cos{(a-b)} = \cos{a}\cos{b} + \sin{a}\sin{b}$  & ,,   $\sin{(a-b)} = \sin{a}\cos{b} - \sin{b}\cos{a}$   ||
+            
+        ,, $\cos{(2a)} = \cos^2{a} - \sin^2{a}$ & ,, $\sin{(2a)} = 1\sin{a} \cos{a}$    ||
+            ,, $\cos{(2a)} = 2\cos^2{a} - 1$ & ,, $\cos{(2a)} = 1 - 2\sin^2{a}$ 
+        </div>
+    </div> 
+    
+    
+    <div class="styled">
+        <div class="num" data-valign-num="7px"> Calculer $\cos{(2x)}$ quand $\displaystyle \cos{x} = -\frac{1}{4}$</div>
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Calculer $\cos{(2x)}$ quand $\displaystyle \sin{x} = -\frac{\sqrt{3}}{3}$</div>
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Calculer $\sin{(2x)}$ quand $\displaystyle \sin{x} = \frac{1}{3}$ et $\displaystyle x \in \Big]\frac{\pi}{2};\pi\Big[$</div>
+        
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Calculer $\sin{(2x)}$ quand $\displaystyle \sin{x} = -\frac{\sqrt{3}}{3}$ et $\displaystyle x \in \Big]-\frac{\pi}{2};0\Big[$</div>
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Exprimer en fonction de $\cos{x}$ et $\sin{x}$, 
+
+$\displaystyle \cos{\Big(x+ \frac{\pi}{4} \Big)} +  \sin{\Big(x+ \frac{\pi}{4} \Big)}$</div>
+        <div class="num" data-valign-num="7px" style="margin-top: 10px">  Exprimer en fonction de $\cos{x}$ et $\sin{x}$, 
+
+$\displaystyle \sin{\Big(\frac{\pi}{3} + x \Big)} -  \sin{\Big( \frac{\pi}{3} - x \Big)}$</div>
+        
+	</div>
+    
+</div>  
+    
+<!-- Equations trigonométriques -->
+<div class="box" data-title="&Eacute;quations trigonométriques" data-num="$N_8$" data-date="1">
+    
+    <div class="styled">
+        <div class="num" data-valign-num="7px"> Résoudre dans $\mathbb{R}$ l'équation $\displaystyle \cos{x} =  \cos{\Big( \frac{\pi}{4}\Big)}$. Puis préciser les solutions contenues dans l'intervalle $]0;2\pi]$.</div>
+        
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Résoudre dans $\mathbb{R}$ l'équation $\displaystyle \cos{x} =  \frac{1}{2}$. Puis préciser les solutions contenues dans l'intervalle $]-\pi;\pi]$.</div>
+        
+        <div class="num" data-valign-num="7px" style="margin-top: 10px"> Résoudre dans $\mathbb{R}$ l'équation $\displaystyle \sin{x} =  \sin{\Big( -\frac{\pi}{8}\Big)}$ puis dans l'intervalle $]0;4\pi]$.
+</div>
+        
+        <div class="num" data-valign-num="10px" style="margin-top: 10px"> Résoudre dans $\mathbb{R}$ l'équation $\displaystyle \sin{x} =  -\frac{\sqrt{3}}{3}$ puis dans l'intervalle $]-\pi;\pi]$.</div>
+        
+	</div>
+    
+</div>
+    
+<div class="newpage"></div>
+    
+<!-- Inéquations trigonométriques -->
+<div class="box" data-title="Inéquations trigonométriques" data-num="$N_9$" data-date="1">
+    
+    <div class="styled">
+        <div class="num" data-valign-num="2px"> Résoudre dans $]-\pi;\pi]$ l'inéquation $\displaystyle \cos{x} \geqslant 0$.  Représenter sur le cercle trigonométrique ces solutions.</div>
+        
+        <div class="num" data-valign-num="10px" style="margin-top: 10px"> Résoudre dans $]-\pi;\pi]$ l'inéquation $\displaystyle \sin{x} > \frac{\sqrt{2}}{2}$. Représenter sur le cercle trigonométrique ces solutions.</div>
+        
+        <div class="num" data-valign-num="10px" style="margin-top: 10px"> Résoudre dans $]-\pi;\pi]$ l'inéquation $\displaystyle \sin{x} \leqslant \frac{1}{2}$. Représenter sur le cercle trigonométrique ces solutions.</div>
+        
+	</div>
+    
+</div>
+    
+<div class="box" data-title="Une construction">
+    
+    <div class="styled">
+        Soient $A$ et $B$ deux points du plan tels que $AB=4\;cm$.
+        
+        <div class="num" data-valign-num="10px"> Construire le point $C$ tel que $\displaystyle (\vecteur{AB},\vecteur{AC}) = \frac{\pi}{4}$ et $AB = AC$.</div>
+        
+        <div class="num" data-valign-num="10px"> Construire le point $D$ tel $ACD$ soit un triangle équilatéral et $\displaystyle (\vecteur{CA},\vecteur{CD}) = \frac{\pi}{3}$. </div>
+        
+        <div class="num" data-valign-num="10px">Construire le point $E$ tel que $\displaystyle (\vecteur{DE},\vecteur{DC}) = \frac{11\pi}{12}$ et $DE=3\; cm$.</div>
+        
+        <div class="num" data-valign-num="10px">Démontrer que les droites $(AB)$ et $(DE)$ sont parallèles.</div>
+        
+        <div class="num" data-valign-num="10px">Construire le point $F$ tel que $A$, $F$ et $C$ soient alignés et $\displaystyle (\vecteur{BF},\vecteur{CD}) = \frac{5\pi}{12}$.</div>
+        
+        <div class="num" data-valign-num="0px">Démontrer yes les droites $(AB)$ et $(BF)$ sont perpendiculaires.</div>
+        
+	</div>
+    
+</div> 
+    
+<div class="box" data-title="Triangle $ABD$">
+    
+    <div class="styled">
+        Soit $A$,$B$,$C$ et $D$ des points du plan tels que : $\displaystyle (\vecteur{AB},\vecteur{AC}) = \frac{\pi}{6}$ et  $\displaystyle (\vecteur{AC},\vecteur{AD}) = \frac{\pi}{3}$.
+Démontrer que le triangle $ABD$ est rectangle.
+        
+	</div>
+    
+</div> 
+    
+<div class="box" data-title="Un petit calcul">
+    
+    <div class="styled">
+        Pour tout nombre réel $x$, calculer : $\displaystyle (\cos{x}+\sin{x})^2 + (\cos{x}-\sin{x})^2$
+	</div>
+    
+</div>  
+    
+<div class="box" data-title="Système d'inéquations">
+    
+    <div class="styled">
+        Résoudre dans $\mathbb{R}$, les systèmes d'inéquations suivants :
+        
+        <table style="width: 100%">
+        <tr>
+            
+            <td>
+                <div class="num" data-valign-num="0px">$\left\{\begin{array}{lcl}
+
+\cos{x} & \geqslant & \displaystyle \frac{1}{2} \\[4mm]
+\sin{x} & \leqslant & \displaystyle \frac{\sqrt{3}}{2} \\
+\end{array}
+\right.
+$</div>
+            </td>
+            
+            <td>
+                <div class="num" data-valign-num="0px">$\left\{\begin{array}{lcl}
+
+\cos{x} & \leqslant & \displaystyle 0 \\[4mm]
+\sin{x} & \geqslant & \displaystyle -\frac{\sqrt{2}}{2} \\
+\end{array}
+\right.
+$</div>
+            </td>
+            
+        </tr>
+        </table>
+        
+         
+        
+	</div>
+    
+</div> 
+    
+<div class="box" data-title="Une équation">
+    
+    <div class="styled">
+       Résoudre dans $\mathbb{R}$ : $ (\sin{(2x)}+1)(2\cos{x} + \sqrt{2}) = 0$
+	</div>
+    
+</div>
+    
+<div class="box" data-title="Points alignés">
+    
+    <div class="styled">
+       Soient $A$, $B$, $C$ et $D$ quatre points tels que : 
+ $\displaystyle (\vecteur{CB},\vecteur{CA}) = \frac{\pi}{3}$ et $\displaystyle (\vecteur{BC},\vecteur{BA}) = \frac{\pi}{2}$.
+        vspace{10}
+Montrer que les points $A$, $C$ et $D$ sont alignés.
+	</div>
+    
+</div>    
+    
+<div class="newpage"></div>
+    
+ <div class="box" data-title="&Eacute;quations trigonométriques">
+    
+    <div class="styled">
+        Résoudre dans $]-\pi;\pi]$ les équations suivantes et placer les solutions sur le cercle trigonométrique :
+        <div class="num" data-valign-num="10px" style="margin-top: 15px">$\displaystyle \cos{(2x)} = -\frac{1}{2}$</div>
+        <div class="num" data-valign-num="10px" style="margin-top: 15px">$\displaystyle \sin{(2x)} = \frac{\sqrt{3}}{2}$</div>
+        <div class="num" data-valign-num="10px" style="margin-top: 15px">$\displaystyle \cos{(2x)} = \frac{\sqrt{2}}{2}$</div>
+         vspace{10}
+	</div>
+    
+</div>  
+    
+    
+<div class="box" data-title="Démonstrations">
+    
+    <div class="styled">
+         <div class="num" data-valign-num="10px" style="margin-top: 15px">Démontrer que $\displaystyle \cos{\Big( \frac{\pi}{4}\Big)} = \frac{\sqrt{2}}{2}$ en déduire que $\displaystyle \sin{\Big( \frac{\pi}{4}\Big)} = \frac{\sqrt{2}}{2}$</div>
+        <div class="num" data-valign-num="10px" style="margin-top: 15px">Démontrer que $\displaystyle \cos{\Big( \frac{\pi}{3}\Big)} = \frac{1}{2}$ en déduire que $\displaystyle \sin{\Big( \frac{\pi}{6}\Big)} =    \frac{1}{2}$ et que $\displaystyle \cos{\Big( \frac{\pi}{6}\Big)} =    \frac{\sqrt{3}}{2}$</div>
+        vspace{10}
+	</div>
+    
+</div>      
+    
+<div class="box" data-title="Triangle magique" >
+    <div class="styled">
+    L'objectif est de résoudre le système d'équations dans $]-\pi;\pi]$ :
+$$\left\{\begin{array}{lcl}
+
+\cos{(3x)} & = & 1 \\
+\sin{(3x)} & = & 0 \\
+\end{array}
+\right.
+$$
+        vspace{15}  
+    <div class="num" data-valign-num="0px"> Méthode $n^\circ 1$ :</div> 
+    <div class="item" data-value="(a)" style="margin-left: 30px">Montrer que les solutions de l'équation $\cos{(3x)} = 1$ dans $\mathbb{R}$ s'écrivent : $\displaystyle x = \frac{2k\pi}{3}$ avec $k \in \mathbb{Z}$</div> 
+    <div class="item" data-value="(b)" style="margin-left: 30px">Montrer que les solutions de l'équation $\sin{(3x)} = 0$ dans $\mathbb{R}$ s'écrivent  : $\displaystyle x = \frac{k\pi}{3}$ avec $k \in \mathbb{Z}$</div>
+    <div class="item" data-value="(c)" style="margin-left: 30px">En déduire les solutions du système d'équations initial. </div> 
+    
+    vspace{25}    
+    <div class="num" data-valign-num="0px"> Méthode $n^\circ 2$ :</div> 
+    <div class="item" data-value="(a)" style="margin-left: 30px">En utilisant les formules d'addition, montrer l'égalité suivante : <br> $\displaystyle \cos{(3x)}=4\cos^3{(x)}-3\cos{(x)}$ quel que soit $x$ réel.</div> 
+    <div class="item" data-value="(b)" style="margin-left: 30px">Montrer que l'équation $\cos{3x} = 1$ est équivalente à $4X^3-3X-1=0$ en posant $X=\cos{(x)}$
+($X \in [-1 ; 1]$).</div>     
+    <div class="item" data-value="(c)" style="margin-left: 30px">Montrer que pour tout nombre réel $X$ : <br>$4X^3-3X-1=(X-1)(4X^2+4X+1)$</div>   
+     <div class="item" data-value="(d)" style="margin-left: 30px"> En déduire les solutions de l'équation : $4X^3-3X-1=0$ et conclure sur les solutions de l'équation : $\cos{(3x)}=1$ dans $]-\pi;\pi]$. </div>  
+    <div class="item" data-value="(e)" style="margin-left: 30px"> Vérifier que les solutions trouvées en *{bold::(d)} sont également solutions de $\sin{(3x)} = 0$. </div>      
+     
+    vspace{25}        
+    <div class="num" data-valign-num="0px"> Représentation graphique :</div>   
+    <div class="item" data-value="(a)" style="margin-left: 30px"> Placer sur le cercle trigonométrique les  réels solutions du système. On les notera $I$,$A$ et $B$. </div> 
+    <div class="item" data-value="(b)" style="margin-left: 30px"> Quelle est la nature du triangle $IAB$ ? Justifier. </div>     
+    </div>
+	
+</div>       
+    
+</body>
+</html>

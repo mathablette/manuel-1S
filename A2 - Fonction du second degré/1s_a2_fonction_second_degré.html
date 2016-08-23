@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Fonction du second degré" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Fonction du second degré" data-font-size="14" data-title-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="6"
+data-left="$1_S$-$A_2$"
+data-main-width="900">
+
+<!-- forme développée -->
+<div class="box" data-title="Forme développée" data-num="$N_1$" data-date="1">
+    <div class="titled hide" data-title="\boxD Définition : Fonction du second degré" data-color="#444444">
+		Une fonction $f$ définie sur $\R$ est une *{bold::fonction polynôme du second degré} ou *{bold::fonction du second degré} si elle est de la forme <box style="display:inline-block;background: #eeeeee">$f(x) = ax^2+bx+c$</box> où $a$, $b$ et $c$ sont des réels tels que $a \not= 0$.
+	</div>
+    
+    <div class="titled hide" data-title="\boxD Définition : Parabole" data-color="#444444">
+        La représentation graphique ou courbe représentative d'une fonction du second degré est une *{bold::parabole}. L'équation de la parabole est :  <box style="display:inline-block;background: #eeeeee">$y = ax^2 + bx + c$</box>
+	</div>
+    
+    <div class="titled hide" data-title="\boxV Vocabulaire" data-color='#444444'  >
+		$\bullet$ L'expression algébrique $ax^2+bx+c$ est appelée *{bold::trinôme du second degré}. vspace{}
+        $\bullet$ L'écriture $f(x) = ax^2+bx+c$ de la fonction $f$ est la *{bold::forme développée de $f$}.
+
+	</div>
+	
+    
+	<div class="styled">
+        Déterminer si les fonctions suivantes sont des fonctions du second degré et donner le cas échéant les trois coefficients $a$, $b$ et $c$ : 
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num"> $f_1(x) = 6 -3x^2 + 2x$</div> &
+            <div class="num"> $f_2(x) = 4 + 7x$</div> &
+             <div class="num"> $f_3(x) = (6x - 7)^2$</div> ||
+            <div class="num"> $f_4(x) = (8+4x)^2$</div> &
+            <div class="num"> $f_5(x) = (3x+7)(3x-7)$</div> &
+             <div class="num">$f_6(x) = 4(2x-3)^2$</div> 
+        </div>
+	</div>
+</div>	
+
+<!-- forme canonique -->
+<div class="box" data-title="Forme canonique" data-date="1" data-num="$N_2$">
+	<div class="titled hide" data-title="\boxT Théorème : Forme canonique" data-color="#444444">
+		La *{bold::forme canonique} de la fonction du second degré $f$ définie par $f(x) = ax^2+bx+c$ est : vspace{}  
+        <box style="display:inline-block;background: #eeeeee">$f(x) = a(x-\alpha)^2 + \beta$</box>  avec $\displaystyle \alpha = -\frac{b}{2a} $ et $\beta = f(\alpha)$. Cette *{bold::forme canonique} est *{bold::unique}. 
+	</div>
+    
+    
+    <div class="styled">
+        Donner la forme canonique des fonctions du second degré  suivantes : 
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num"> $f_1(x) = 4x^2 + 5x + 9$</div> &
+            <div class="num"> $f_2(x) = -3x^2 - 7x  +9$</div> &
+             <div class="num"> $f_3(x) = 7x - x^2 -10$</div> ||
+            <div class="num"> $f_4(x) = 9x^2 + 16 - 24x$</div> &
+            <div class="num"> $f_5(x) = 81 - 49x^2$</div> &
+             <div class="num">$f_6(x) = 7 + \sqrt{140}x +  5x^2$</div> ||
+            <div class="num"> $f_7(x) = 6x^2 - 9x +1$</div> &
+            <div class="num"> $f_8(x) = \frac{x^2}{3} - \frac{x}{6} + 1$</div> &
+             <div class="num">$f_9(x) = 4 -12x + 9x^2$</div> 
+        </div>
+	</div>
+</div>	
+    
+<!-- forme canonique : parabole-->
+<div class="box" data-title="Forme canonique et parabole" data-date="1" data-num="$N_3$">
+	<div class="titled hide" data-title="\boxP Propriété" data-color="#444444">
+		La parabole $C_f$, courbe représentative de la fonction du second degré $f$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$ a pour sommet $S(\alpha;\beta)$
+	</div>
+    
+    <div class="styled">
+        Donner la forme canonique des fonctions du second degré  suivantes : 
+		<div class="table" cells="*,*|w300;center">
+            <draw width='6cm' height='7cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '3cm',Oy: '4cm',cmy: 2})
+		      grid(3)
+              width(3)    
+		      curve('2(x-1)^2-4',-10,10) 
+	       </draw>
+            &
+            <draw width='6cm' height='7cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '3cm',Oy: '3cm',cmy: 2})
+		      grid(3)
+              width(3)    
+		      curve('-2(x+1)^2+2',-10,10) 
+	       </draw>
+            &
+            <draw width='6cm' height='7cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '2cm',Oy: '4cm',cmy: 2})
+		      grid(3)
+              width(3)    
+		      curve('-4(x-2)^2+6',-10,10) 
+	       </draw>
+            ||
+            Parabole $C_{f_1}$ & Parabole $C_{f_2}$ & Parabole $C_{f_3}$
+        </div>
+	</div>
+</div>	    
+
+<div class="newpage"></div>
+
+<!-- Symétrie de la parabole -->
+<div class="box" data-title="Symétrie de la parabole" data-date="1" data-num="$N_4$">
+	<div class="titled hide" data-title="\boxP Propriété : Symétrie de la parabole" data-color="#444444">
+		La parabole $C_f$, courbe représentative de la fonction du second degré $f$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$ est symétrique par rapport à la droite verticale d'équation $x= \alpha$. 
+	</div>
+    
+    <div class="styled">
+        Tracer la courbe représentative des fonctions suivantes en traçant l'axe de symétrie : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $f_1(x) = (x-8)^2+2$</div> &
+            <div class="num"> $f_2(x) = 2(x+1)^2+3$</div> &
+             <div class="num"> $f_3(x) = -2(4+x)^2-3$</div> ||
+            <div class="num"> $f_4(x) = (3x-3)^2$</div> &
+            <div class="num"> $f_5(x) = 6x^2-8x+3$</div> &
+             <div class="num">$f_6(x) = (2x+5)(2x-5)$</div> 
+        </div>
+	</div>
+</div>	
+    
+<!-- Sens de variation -->
+<div class="box" data-title="Sens de variation" data-date="1" data-num="$N_5$">
+	<div class="titled hide" data-title="\boxP Sens de variation" data-color="#444444">
+		On considère la fonction du second degré $f$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$ alors : vspace{}
+        vspace{20}
+        <div class="table 2cols" cells="*,*|c" data-table-style='border-spacing: 0px 5px'>
+        si $a > 0$ & si $a < 0$ ||
+         <drawing width='400' height='150' style="margin-left: 10px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+        math('+\\infty','lastX','lastY+35',{fontSize: '14pt'})    
+		math('+\\infty','w-50','lastY-35',{fontSize: '14pt'})
+        math('+\\infty','lastX','lastY+35',{fontSize: '14pt'})      
+        math('\\alpha','w-180','lastY-35',{fontSize: '14pt'})    
+		
+		math("f",30,'h-60',{fontSize: '14pt'})
+		arrow('->')
+		move(85,'h-80')
+		line(120,60)
+        math("\\beta",'w-180','lastY-10',{fontSize: '14pt'})      
+        move('lastX+25','lastY+10')    
+        line(120,-60) 
+          
+		
+	</drawing>     
+        
+        &
+        
+        <drawing width='400' height='150' style="margin-left: 10px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        math('\\alpha','w-180','lastY',{fontSize: '14pt'})    
+		
+		math("f",30,'h-60',{fontSize: '14pt'})
+		arrow('->')
+		move(85,'h-20')  
+		line(120,-60)
+        math("\\beta",'w-180','lastY-10',{fontSize: '14pt'})      
+        move('lastX+25','lastY+10')    
+        line(120,60) 
+		math('-\\infty','75','h-25',{fontSize: '14pt'}) 
+        math('-\\infty','75+270','h-25',{fontSize: '14pt'})         
+	</drawing>     
+           
+        </div>   
+        
+	</div>
+    
+    
+    
+    <div class="styled">
+        Construire le tableau de variations des fonctions du second degré  suivantes : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $f_1(x) = -2(x-3)^2+2$</div> &
+            <div class="num"> $f_2(x) = 4(x+2)^2+6$</div> &
+             <div class="num"> $f_3(x) = (5x-8)(2-6x)$</div> ||
+            <div class="num"> $f_4(x) = (5x-3)^2$</div> &
+            <div class="num"> $f_5(x) = 9x^2-2x+5$</div> &
+             <div class="num">$f_6(x) = (7x+8)(7x-8)$</div> 
+            ||
+            <div class="num"> $f_7(x) = (x-3)^2$</div> &
+            <div class="num"> $f_8(x) = x^2-x+3$</div> &
+             <div class="num">$f_9(x) = (2x+3)(x-1)$</div> 
+            ||
+            <div class="num"> $f_{10}(x) = (3x+1)^2$</div> &
+            <div class="num"> $f_{11}(x) = x^2-2x+1$</div> &
+             <div class="num">$f_{12}(x) = (2x+4)(x+1)$</div> 
+        </div>
+	</div>
+</div>	 
+    
+    
+<!-- Extremum -->
+<div class="box" data-title="Extremum" data-date="1" data-num="$N_6$">
+	<div class="titled hide" data-title="\boxP Extremum" data-color="#444444">
+		On considère la fonction du second degré $f$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$ alors : vspace{}
+        $f$ admet $\beta$ comme extremum qui est atteint pour $x=\alpha$. <br>
+        ,, C'est un maximum si $a$ est négatif. <br>
+        ,, C'est un minimum si $a$ est positif. <br>
+        
+       
+	</div>
+    
+    
+    
+    <div class="styled">
+        Déterminer l'extremum des fonctions du second degré  suivantes :
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $f_1(x) = -(x-5)^2+1$</div> &
+            <div class="num"> $f_2(x) = 4(x+2)^2+2$</div> &
+             <div class="num"> $f_3(x) = (3x-9)(2-x)$</div> ||
+            <div class="num"> $f_4(x) = (7x-1)^2$</div> &
+            <div class="num"> $f_5(x) = 10x^2-10x+2$</div> &
+             <div class="num">$f_6(x) = (6x+4)(6x-4)$</div> 
+            ||
+            <div class="num"> $f_7(x) = (9x+6)^2$</div> &
+            <div class="num"> $f_8(x) = 6x^2-12x+9$</div> &
+             <div class="num">$f_9(x) = (x+2)(x-2)$</div>
+            ||
+            <div class="num"> $f_{10}(x) = (5x+1)^2$</div> &
+            <div class="num"> $f_{11}(x) = x^2-4x+4$</div> &
+             <div class="num">$f_{12}(x) = (2x+4)(2x-4)$</div> 
+        </div>
+	</div>
+</div>	     
+    
+    
+<div class="newpage"></div>  
+    
+    
+<!-- equation du second degré -->
+<div class="box" data-title="&Eacute;quation du second degré" data-date="1" data-num="$N_7$">
+	<div class="titled hide" data-title="\boxD équation du second degré" data-color="#444444">
+        Une équation du type <box style="display:inline-block;background: #eeeeee">$ax^2 + bx+ c = 0$</box> avec $a$, $b$ et $c$ des nombres réels tels que $a \not=0$ est appelée *{bold::équation du second degré}.
+	</div>
+    
+    <div class="titled hide" data-title="\boxD discriminant" data-color="#444444">
+        <box style="display:inline-block;background: #eeeeee">$\Delta = b^2 - 4ac$</box> est le *{bold::discriminant} du trinôme du second degré $ax^2 + bx+ c$.
+	</div>
+    
+    <div class="styled">
+       Déterminer le discriminant des équations du second degré suivantes : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num">  $4x^2 + 5x -8 = 0$</div> &
+            <div class="num">  $8x - x^2 +2 = 0$</div> &
+             <div class="num">  $4(x+2)^2 - 8 = 0$</div> ||
+            <div class="num">  $-5(x-3)^2 + 1 = 0$</div> &
+            <div class="num"> $4(x+2)^2= -6$</div> &
+             <div class="num"> $(5x-8)(2-6x) = 0$</div> 
+        </div>
+	</div>
+</div>
+    
+    
+<!-- Racines d'une équation du $2^{nd}$ degré -->
+<div class="box" data-title="Racines d'une équation du $2^{nd}$ degré" data-date="1" data-num="$N_8$">
+	<div class="titled hide" data-title="\boxV racines" data-color="#444444">
+		Les solutions de l'équation $ax^2 + bx+ c = 0$ sont appelées *{bold::racines} ou *{bold::zéros}.
+	</div>
+    
+    <div class="titled hide" data-title="\boxT racines quand $\Delta > 0$" data-color="#444444">
+		Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::positif} : vspace{}
+
+L'équation $ax^2 + bx+ c = 0$ possède *{tdu::2 racines} $x_1$ et $x_2$ avec $\displaystyle x_1 = \frac{-b - \sqrt{\Delta}}{2a}$ et $\displaystyle x_2 = \frac{-b + \sqrt{\Delta}}{2a}$  
+	</div>
+    
+    <div class="titled hide" data-title="\boxT racines quand $\Delta = 0$" data-color="#444444">
+		Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::nul}, l'équation $ax^2 + bx+ c = 0$ possède *{tdu::1 racine} $x_0$ avec $\displaystyle x_0 = \frac{-b}{2a}$  
+	</div>
+    
+    <div class="titled hide" data-title="\boxT racines quand $\Delta < 0$" data-color="#444444">
+		Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::négatif},  $ax^2 + bx+ c = 0$ ne possède pas de *{tdu::racine réelle}  
+	</div>
+    
+   
+    <div class="styled">
+        Déterminer les racines (ou zéro) des équations suivantes : 
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num">  $4x^2 - 5x + 1 = 0$</div> &
+            <div class="num"> $8 + 2x -3x^2 = 0$</div> &
+             <div class="num"> $9x^2 -24x + 16 = 0$</div> ||
+            <div class="num">   $(7x+3)(7x-3)= 0$</div> &
+            <div class="num"> $2(x+2)^2= -8$</div> &
+             <div class="num"> $(5x-8)(2-6x) = 0$</div> 
+        </div>
+	</div>
+</div>	
+    
+<!-- Racines et parabole -->
+<div class="box" data-title="Racines et parabole"  data-date="1" data-num="$N_9$">
+	<div class="titled hide" data-title="\boxT Théorème" data-color="#444444">
+		La courbe représentative $C_f$ de  la  fonction $f(x) = ax^2 + bx+ c $  : vspace{}
+
+$\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::positif}, $C_f$ coupe l'axe des abscisses en deux points $\Big(\displaystyle x_1 = \frac{-b - \sqrt{\Delta}}{2a};0\Big)$ et $\Big(\displaystyle x_2 = \frac{-b + \sqrt{\Delta}}{2a};0\Big)$ <br>
+$\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::égal à $0$}, $C_f$ coupe l'axe des abscisses en un seul point $\Big(\displaystyle x_0 = \frac{-b}{2a};0\Big)$ qui est le sommet de la parabole.  <br>
+$\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::négatif}, $C_f$  ne coupe pas l'axe des abscisses. 
+	</div>
+    
+   
+    <div class="styled">
+       Tracer les courbes représentatives des fonctions suivantes et indiquer quand ces représentations graphiques coupent l'axe des abscisses  : 
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%">
+            <div class="num">  $f_1(x) = 7x - 3 +2x^2$</div> &
+            <div class="num"> $f_2(x) = -3x^2 +2x +3$</div> &
+             <div class="num"> $f_3(x) = (6x-2)^2$</div> 
+        </div>
+	</div>
+</div>	     
+ 
+<div class="newpage"></div>      
+    
+<!-- Signe d'un trinôme -->
+<div class="box" data-title="Inéquation du second degré et signe d'un trinôme : forme canonique" data-date="1" data-num="$N_{10}$">
+	
+    <div class="titled hide" data-title="\boxD \boxP Définition et propriétés" data-color="#444444">
+		Soient  $a$, $b$ et $c$ des nombres réels tels que $a \not= 0$ et $f$ la fonction du second degré définie par $f(x) = ax^2+bx+c$ de courbe représentative $\mathcal{C}_f$.
+
+vspace{10}
+Une inéquation du second degré est du type :
+
+vspace{5}
+$\bullet$ $ax^2 + bx + c &lt; 0$ $\rightarrow$ les abscisses $x$ des points de $\mathcal{C}_f$ strictement en *{bold::dessous} de l'axe des abscisses.
+
+vspace{5}
+$\bullet$ $ax^2 + bx + c &gt; 0$ $\rightarrow$ les abscisses $x$ des points de $\mathcal{C}_f$ strictement au  *{bold::dessus} de l'axe des abscisses.
+
+
+vspace{5}
+$\bullet$ $ax^2 + bx + c \leqslant 0$ $\rightarrow$ les abscisses $x$ des points de $\mathcal{C}_f$  en *{bold::dessous} de l'axe des abscisses.
+
+ 
+ vspace{5}
+$\bullet$ $ax^2 + bx + c \geqslant 0$ $\rightarrow$ les abscisses $x$ des points de $\mathcal{C}_f$  au *{bold::dessus} de l'axe des abscisses.
+
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Signe" data-color="#444444">
+		On considère le trinôme $ax^2 + bx +c$ associé à la fonction $f(x) = ax^2 + bx +c$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$ alors $\Delta = -4a\beta$ ($\Delta = 0 \ssi \beta = 0$) :           vspace{10}
+        <div class="table" cells="*,*|c">
+        si $a > 0$ et $\beta > 0$  ($\Delta &lt; 0$) & si $a < 0$ et $\beta \geqslant 0$ ($\Delta \geqslant 0$) ||
+         <drawing width='350' height='100' style="border: 0px solid #444444;background: #ffffff;border-radius: 5px;margin-bottom: 20px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        
+        math('+','190','h-40',{fontSize: '14pt'})  
+		//math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        //math('\\frac{-b}{a}','w-170','lastY',{fontSize: '14pt'}) 
+        
+		math("f(x)",20,'h-40',{fontSize: '14pt'})
+		
+		
+	</drawing>     
+        
+        &
+        
+        <drawing width='450' height='100' style="border: 0px solid #444444;background: #ffffff;border-radius: 5px;margin-bottom: 20px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        math('\\alpha - \\sqrt{\\frac{\\beta}{-a}}','140','lastY-7',{fontSize: '14pt'})  
+        math('\\alpha + \\sqrt{\\frac{\\beta}{-a}}','280','lastY',{fontSize: '14pt'})      
+		
+        math('-','110','h-40',{fontSize: '14pt'})
+        math('+','240','h-40',{fontSize: '14pt'}) 
+        math('-','380','h-40',{fontSize: '14pt'})     
+		width(1)
+        dash(3)
+        line(175,50,175,'h-5') 
+         math('0','170','h-40',{fontSize: '14pt'})   
+        line(330,50,330,'h-5') 
+         math('0','325','h-40',{fontSize: '14pt'})       
+          
+		math("f(x)",20,'h-40',{fontSize: '14pt'})
+            
+            
+		
+		
+	</drawing>     ||
+        si $a < 0$ et $\beta &lt; 0$ ($\Delta &lt; 0$)  & si $a > 0$  et $\beta \leqslant 0$ ($\Delta \geqslant 0$)  ||
+         <drawing width='350' height='100' style="border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        
+        math('-','190','h-40',{fontSize: '14pt'})  
+		//math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        //math('\\frac{-b}{a}','w-170','lastY',{fontSize: '14pt'}) 
+        
+		math("f(x)",20,'h-40',{fontSize: '14pt'})
+		
+		
+	</drawing>     
+        
+        &
+        
+        <drawing width='450' height='100' style="border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(70,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+		
+		math('x',30,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+45','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        math('\\alpha - \\sqrt{\\frac{-\\beta}{a}}','140','lastY-7',{fontSize: '14pt'})  
+        math('\\alpha + \\sqrt{\\frac{-\\beta}{a}}','280','lastY',{fontSize: '14pt'})      
+		
+        math('+','110','h-40',{fontSize: '14pt'})
+        math('-','240','h-40',{fontSize: '14pt'}) 
+        math('+','380','h-40',{fontSize: '14pt'})     
+		width(1)
+        dash(3)
+        line(175,50,175,'h-5') 
+         math('0','170','h-40',{fontSize: '14pt'})   
+        line(330,50,330,'h-5') 
+         math('0','325','h-40',{fontSize: '14pt'})       
+          
+		math("f(x)",20,'h-40',{fontSize: '14pt'})
+            
+            
+		
+		
+	</drawing>     
+           
+        </div>   
+
+	</div>
+    
+   
+    <div class="styled">
+        Construire le tableau de signes des fonctions du second degré  suivantes : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $f_1(x) = -2(x-3)^2+2$</div> &
+            <div class="num"> $f_2(x) = 4(x+2)^2+6$</div> &
+             <div class="num"> $f_3(x) = (5x-8)(2-6x)$</div> 
+            ||
+            <div class="num">  $f_4(x) = -3(x-2)^2+1$</div> &
+            <div class="num"> $f_5(x) = 2(x+1)^2+3$</div> &
+             <div class="num"> $f_6(x) = (3x-6)(2-x)$</div> 
+        </div>
+	</div>
+</div> 
+
+    
+    
+<!-- Forme factorisée -->
+<div class="box" data-title="Forme factorisée" data-date="1" data-num="$N_{11}$">
+	<div class="titled hide" data-title="\boxT Théorème" data-color="#444444">
+		Soit la forme développée de la fonction  $f(x) = ax^2 + bx+ c $  ($a \not= 0$) : <br>
+
+        $\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::positif}, <box style="display:inline-block;background: #dddddd">$f(x) = a(x-x_1)(x-x_2)$</box> <br>
+avec $\displaystyle x_1 = \frac{-b - \sqrt{\Delta}}{2a}$ et $\displaystyle x_2 = \frac{-b + \sqrt{\Delta}}{2a}$ <br>
+
+        $\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::égal à $0$}, <box style="display:inline-block;background: #dddddd">$f(x) = a(x-x_0)^2$</box> 
+avec $\displaystyle x_0 = \frac{-b}{2a}$  <br>
+$\bullet$ Lorsque le discriminant $\Delta = b^2 - 4ac$ est *{bold::négatif}, $f$ ne possède pas de forme factorisée dans $\mathbb{R}$
+	</div>
+    
+   
+    <div class="styled">
+        Factoriser, si c'est possible, les expressions suivantes : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $A = 2x^2 - 8x + 1$</div> &
+            <div class="num"> $B = 9 +3x^2 + 2x$</div> &
+             <div class="num">  $C = 25 - 9x^2$</div> 
+            ||
+            <div class="num">  $D = 5x^2 - 8$</div> &
+            <div class="num"> $E = 7 - 9x^2 + 4x$</div> &
+             <div class="num"> $F = 10x^2 + 4x$</div> 
+	</div>
+	</div>
+</div>
+    
+<div class="newpage"></div>
+  
+    
+    
+<!-- Signe d'un trinôme -->
+<div class="box" data-title="Signe d'un trinôme: forme factorisée" data-date="1" data-num="$N_{12}$">
+	<div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+		On considère le trinôme $ax^2 + bx +c$ associé à la fonction $f(x) = ax^2 + bx +c$ dont la forme factorisée existe : $f(x) = a(x-x_1)(x-x_2)$ avec $x_1 \leqslant x_2$ c'est à dire $\Delta \geqslant 0$ :  vspace{10}
+        ,, Pour $a > 0$
+        <drawing width='550' height='215' style="margin-left: 150px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(120,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+            
+
+		math('x',55,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+70','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        math('x_1','250','lastY',{fontSize: '14pt'})  
+        math('x_2','400','lastY',{fontSize: '14pt'})      
+		
+        math('+','180','h-40',{fontSize: '14pt'})
+        math('-','320','h-40',{fontSize: '14pt'}) 
+        math('+','470','h-40',{fontSize: '14pt'})     
+		width(1)
+        dash(3)
+        line(255,50,255,'h-5') 
+         math('0','250','h-40',{fontSize: '14pt'})   
+        line(405,50,405,'h-5') 
+         math('0','400','h-40',{fontSize: '14pt'})       
+          
+		math("f(x)",40,'h-40',{fontSize: '14pt'})
+        
+        width(2)
+        dash(0)    
+        line(10,'h-50','w-10','h-50')  
+		math("(x-x_2)",30,'h-80',{fontSize: '14pt'})
+        math('-','180','h-80',{fontSize: '14pt'})
+        math('-','320','h-80',{fontSize: '14pt'}) 
+        math('+','470','h-80',{fontSize: '14pt'})  
+        math('0','400','h-80',{fontSize: '14pt'}) 
+            
+        line(10,'h-90','w-10','h-90')  
+		math("(x-x_1)",30,'h-120',{fontSize: '14pt'})
+        math('-','180','h-120',{fontSize: '14pt'})
+        math('+','320','h-120',{fontSize: '14pt'}) 
+        math('+','470','h-120',{fontSize: '14pt'})  
+        math('0','250','h-120',{fontSize: '14pt'})  
+            
+        line(10,'h-130','w-10','h-130')  
+		math("a",55,'h-160',{fontSize: '14pt'})
+        math('+','180','h-160',{fontSize: '14pt'})
+        math('+','320','h-160',{fontSize: '14pt'}) 
+        math('+','470','h-160',{fontSize: '14pt'})      
+		
+	</drawing>
+        
+        vspace{10}
+        ,, Pour $a < 0$
+        <drawing width='550' height='215' style="margin-left: 150px;border: 0px solid #444444;background: #ffffff;border-radius: 5px">
+		move(10,5)
+		down('h-10')
+		right('w-20')
+		up('h-10')
+		left('w-20')
+		
+		move(120,5)
+		down('h-10')
+		move(10,50)
+		right('w-20')
+            
+
+		math('x',55,15,{fontSize: '14pt'})
+		math('-\\infty','lastX+70','lastY',{fontSize: '14pt'})
+		math('+\\infty','w-50','lastY',{fontSize: '14pt'})
+        math('x_1','250','lastY',{fontSize: '14pt'})  
+        math('x_2','400','lastY',{fontSize: '14pt'})      
+		
+        math('-','180','h-40',{fontSize: '14pt'})
+        math('+','320','h-40',{fontSize: '14pt'}) 
+        math('-','470','h-40',{fontSize: '14pt'})     
+		width(1)
+        dash(3)
+        line(255,50,255,'h-5') 
+         math('0','250','h-40',{fontSize: '14pt'})   
+        line(405,50,405,'h-5') 
+         math('0','400','h-40',{fontSize: '14pt'})       
+          
+		math("f(x)",40,'h-40',{fontSize: '14pt'})
+        
+        width(2)
+        dash(0)    
+        line(10,'h-50','w-10','h-50')  
+		math("(x-x_2)",30,'h-80',{fontSize: '14pt'})
+        math('-','180','h-80',{fontSize: '14pt'})
+        math('-','320','h-80',{fontSize: '14pt'}) 
+        math('+','470','h-80',{fontSize: '14pt'})  
+        math('0','400','h-80',{fontSize: '14pt'}) 
+            
+        line(10,'h-90','w-10','h-90')  
+		math("(x-x_1)",30,'h-120',{fontSize: '14pt'})
+        math('-','180','h-120',{fontSize: '14pt'})
+        math('+','320','h-120',{fontSize: '14pt'}) 
+        math('+','470','h-120',{fontSize: '14pt'})  
+        math('0','250','h-120',{fontSize: '14pt'})  
+            
+        line(10,'h-130','w-10','h-130')  
+		math("a",55,'h-160',{fontSize: '14pt'})
+        math('-','180','h-160',{fontSize: '14pt'})
+        math('-','320','h-160',{fontSize: '14pt'}) 
+        math('-','470','h-160',{fontSize: '14pt'})      
+		
+	</drawing>
+
+	</div>
+    
+   
+    <div class="styled">
+        En construisant un tableau des signes de la fonction du second degré associée, résoudre les inéquations suivantes  : 
+        vspace{10}
+		<div class="table" cells="*,*|w33%" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $4x^2 + 5x + 9 &lt; 0$</div> &
+            <div class="num"> $8x^2 - 7x +6 \geqslant 0$</div> &
+             <div class="num"> $9 - 6x^2 +3 > 0$</div> 
+            ||
+            <div class="num">  $8x - x^2 + 6 \leqslant 0$</div> &
+            <div class="num"> $(5x -8)^2 \geqslant 0$</div> &
+             <div class="num"> $(10x+9)(10x-9) &lt; 0$</div> 
+	</div>
+	</div>
+</div> 
+        
+  
+<!-- Inéquation $f(x) \geqslant g(x)$ -->
+<div class="box" data-title="Inéquation $f(x) \geqslant g(x)$">        
+<div class="styled">
+Soient $2$ fonctions $f$ et $g$ définies par $f(x) = x^2-6x+2$ et $g(x) = -2x^2-3x+8$ de courbes représentatives $\mathcal{C}_f$ et $\mathcal{C}_g$. 
+    <div class="num">&Eacute;tudier le signe de $f(x) - g(x)$</div>
+    <div class="num">Résoudre $f(x) \geqslant g(x)$</div>
+    <div class="num">&Eacute;tudier la position de $\mathcal{C}_f$ par rapport à  $\mathcal{C}_g$.</div>
+    <div class="num">Dans un même repère, tracer $\mathcal{C}_f$ et $\mathcal{C}_g$.</div>
+</div>
+</div>   
+
+<!-- Algorithme 1 -->
+<div class="box" data-title="Algorithme : forme canonique">        
+<div class="styled">
+Soit une fonction du second degré $f(x) = ax^2+bx+c$ de forme canonique $f(x) = a(x-\alpha)^2 + \beta$.
+    &Eacute;crire un <dropdown data-id="algse-1" data-class="btn btn-default" label="<i class='fa fa-file-code-o'></i> algorithme" style="margin-left: -2px;margin-right: -2px"></dropdown>  qui détermine les réels $\alpha$ et $\beta$ de la forme canonique d'une fonction du second degré.
+
+<div drop-id="algse-1" style="width: 800px;margin: auto;margin-top: 10px" data-init='true'>
+          <iframe style="margin-top: 0px;border: 1px solid #444444;height: 300px" class="algse" data-file="algo1.algse"></iframe>
+      </div>
+        
+</div>
+</div>   
+
+<!-- Histoire de pont -->
+<div class="box" data-title="Histoire de pont">        
+<div class="styled">
+Un pont est soutenu par un arc parabolique d'une portée de $200\;m$ et d'une hauteur de $80\;m$. Le pont et l'arc se coupent à $40\;m$ de la rive. Quelle est la hauteur du pont ?
+</div>
+</div>   
+
+<div class="newpage"></div> 
+
+<!-- Dans un jardin -->
+<div class="box" data-title="Dans un jardin">        
+<div class="styled">
+À l'intérieur d'un jardin carré dont la longueur du côté est $10$ mètres, un jardinier souhaite installer, le long du bord, une allée en graviers de largeur constante. Comment faire en sorte que l'aire de l'allée soit égale à celle du carré intérieur ?
+</div>
+</div>
+
+<!-- Trinômes -->
+<div class="box" data-title="Trinômes">        
+<div class="styled">
+Déterminer les racines des trinômes suivants : 
+        vspace{10}
+		<div class="table 4cols" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $\displaystyle \frac{3}{2}x - 2x^2 +1$</div> &
+            <div class="num"> $\displaystyle x^2 - \sqrt{5}x +1$</div> &
+             <div class="num">$\displaystyle 7x - 8x^2 + \frac{1}{3}$</div> &
+            <div class="num">  $\displaystyle \sqrt{10}x - \sqrt{2}x^2 + 1$</div> 
+	</div>
+</div>
+</div>
+
+<!-- Inéquations -->
+<div class="box" data-title="Inéquations">        
+<div class="styled">
+Résoudre dans $\mathbb{R}$, les inéquations suivantes :
+        vspace{10}
+		<div class="table 4cols" data-table-style="width: 100%;border-spacing: 0px 10px">
+            <div class="num">  $\displaystyle \frac{3x-7}{2x-9} \geqslant \frac{x+3}{9+3x}$</div> &
+            <div class="num"> $\displaystyle \frac{x+1}{x-1} < \frac{3x+2}{7-2x}$</div> &
+             <div class="num">$\displaystyle \frac{4x-1}{x+9} \leqslant \frac{4x+1}{10-3x}$</div> &
+            <div class="num">  $\displaystyle \frac{x-9}{3x-4} > \frac{5x-9}{4x+3}$</div> 
+	</div>
+</div>
+</div>
+    
+<!-- Une parabole et $3$ points -->
+<div class="box" data-title="Une parabole et $3$ points">        
+<div class="styled">
+La parabole $\mathcal{P}$ coupe l'axe des ordonnées en $A(0 ; 3)$ et passe par $B(1 ; -1)$ et $C(3 ; 1)$. Déterminer son équation sous la forme $y=ax^2+bx+c$ puis sous la forme canonique. Tracer cette parabole.
+</div>
+</div> 
+    
+<!-- Dans un théâtre -->
+<div class="box" data-title="Dans un théâtre">        
+<div class="styled">
+Le directeur d'une salle de théâtre a remarqué qu'à $40$ € la place, il peut compter jusqu'à $500$ spectateurs et que chaque baisse de $2,50$ € lui amène $100$ personnes de plus. 
+
+Soit $x$ le nombre de baisses du prix de la place de $2,50$ €. On modélise cette situation par la fonction $g$.
+
+    <div class="num"> Déterminer l'expression de la fonction $g$. </div>
+    <div class="num">Dresser le tableau de variation de $g$ puis tracer sa courbe représentative dans un repère.</div>
+    <div class="num">Combien doit-il faire payer la place pour avoir une recette maximale ?</div>
+</div>
+</div> 
+    
+<!-- Une belle volée -->
+<div class="box" data-title="Une belle volée">        
+<div class="styled">
+Un tennisman frappe droit devant lui une volée à $1\;m$ du filet  alors que la balle est à $0,9\;m$ de hauteur en $A$. La balle franchit le filet en $B$ à une hauteur de $1,1\;m$ et atteint en $C$ une hauteur maximale de $1,3\;m$.
+La longueur d'un terrain de tennis est $23,77\;m$. La balle sortira-t-elle du cours ?
+</div>
+</div> 
+    
+<!-- Une parabole et une droite -->
+<div class="box" data-title="Une parabole et une droite">        
+<div class="styled">
+Soient $\mathcal{P}$ la parabole d'équation $y=x^2-x+1$ et la droite $(d)$ d'équation $y=4x-3$
+
+    <div class="num">Déterminer, par le calcul, les coordonnées des points d'intersection de $\mathcal{P}$ et $(d)$. </div>
+    <div class="num">Dans un même repère, tracer $\mathcal{P}$ et $(d)$.</div>
+</div>
+</div> 
+    
+<!-- Paramétrage -->
+<div class="box" data-title="Paramétrage">        
+<div class="styled">
+On considère l’équation $(E) : x^2 + 2x + m = 0$. L’objectif de l’exercice est de déterminer pour quelles valeurs de $m$ l’équation $(E)$ admet au moins une solution.
+    <div class="num">Résoudre, dans $\R$, les équations : $x^2 + 2x = 0$ et $x^2 + 2x + 1 = 0$</div>
+    <div class="num">Résoudre, dans $\R$, $(E) : x^2 + 2x + m = 0$.</div>
+</div>
+</div>        
+
+<div class="newpage"></div>      
+    
+
+        
+  
+        
+
+ 
+    
+    
+ 
+    
+<!-- A partir d'une parabole -->
+<div class="box" data-title="A partir d'une parabole">        
+<div class="styled">
+    <div class="table 2cols">
+Le graphique ci-contre donne la courbe représentative d’un trinôme défini sur $\R$ par $f(x)=ax^2 +bx+c$ : 
+   
+    <div class="num">Donner par lecture graphique $f (0)$; $f (−1)$; $f (−2)$.</div>
+    <div class="num">En déduire $a$, $b$ et $c$ puis l’expression de $f$.</div>
+        &
+        
+         <draw width='10cm' height='6cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '6cm',Oy: '3cm',cmy: 1,dy: 2,dx : 2})
+		      grid(3)
+              width(3)    
+		      curve('2(x+1)^2-1',-10,10) 
+	       </draw>
+    </div>    
+</div>
+</div>   
+    
+<!-- A partir canonique -->
+<div class="box" data-title="A partir de la forme canonique">        
+<div class="styled">
+    <div class="table 2cols">
+Ci-contre est donnée la représentation graphique $\mathcal{C}_f$ d’une fonction trinône $f$ définie sur $\R$ par sa forme canonique $f(x) = a(x−\alpha)^2 + \beta$.
+   
+    <div class="num">Lire graphiquement les coordonnées du sommet de la parabole représentant la fonction $f$.</div>
+    <div class="num">Déterminer l’expression de $f$.</div>
+        &
+        
+         <draw width='10cm' height='5cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '3cm',Oy: '3cm',cmy: 1,dy: 0.5,dx : 1})
+		      grid(3)
+              width(3)    
+		      curve('-2(x-3)^2+5',-10,10) 
+	       </draw>
+    </div>    
+</div>
+</div>       
+        
+<!--  -->
+<div class="box" data-title=" ">        
+<div class="styled">
+    <div class="table 2cols">
+On considère la droite $(d)$ d’équation $y = 2x + 3$ et $A$ le point de coordonnées $(1; 1)$. $M$ est un point quelconque de la droite $(d)$ et on note $x$ l’abscisse de $M$. On considère le point $B$ de coordonnées $(0; 3)$. <br>
+On définit la fonction $f$ par : $f(x) = AM^2$.        
+   
+    <div class="num">Justifier que l’ordonnée de $M$ est $y_M = 2x + 3$. Vérifier que $f(x)=5x^2 +6x+5$.</div>
+    <div class="num">Vérifier que l’expression $5 (x + 0, 6)^2 + 3,2$ est la forme canonique du trinôme $f$.</div>
+    <div class="num">Étudier les variations de la fonction $f$. Pour quelle valeur $x_0$ la fonction atteint-elle son extremum ?</div> 
+    <div class="num">$M_0$ est le point de la droite $(d)$ tel que la distance $AM^2$ soit minimale. Justifier que les coordonnées de $M_0$ sont $(−0, 6; 1, 8)$.</div>     
+    <div class="num">Vérifier que $B$ est un point de la droite $(d)$.</div> 
+     <div class="num">Déterminer la nature du triangle $ABM_0$. Que peut-on dire des droites $(AM_0)$ et $(d)$ ?</div>     
+        &
+        
+         <draw width='10cm' height='12cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '6cm',Oy: '7cm',cmy: 1,dy: 1,dx : 1})
+		      grid(3)
+              width(3)    
+		      curve('2x+3',-10,10) 
+              point(-2.3,'2*(-2.3)+3',{name: 'M',top: -0.4})
+              point(1,'1',{name: 'A'})
+              dash(5)
+              line(-2.3,'2*(-2.3)+3',1,1)
+	       </draw>
+    </div>    
+</div>
+</div> 
+    
+<!-- Equations -->
+<div class="box" data-title="&Eacute;quations">        
+<div class="styled">
+Résoudre dans $\mathbb{R}$, les équations suivantes :
+    vspace{10}
+<div class="table 2cols">
+    <div class="num" data-valign-num="middle">$\displaystyle \frac{2x-4}{x-7} = \frac{7x+3}{4+x}$ </div> &
+    <div class="num"  data-valign-num="middle">$\displaystyle \frac{x-8}{3x-7} = \frac{4x+3}{8+2x}$</div>
+</div>  
+    vspace{10}
+</div>
+</div>     
+    
+<div class="newpage"></div>
+    
+     
+<!-- Vases -->
+<div class="box" data-title="Vases">        
+<div class="styled">
+Un artisan fabrique entre $0$ et $60$ vases par jour et estime que le coût de production de $x$ vases est modélisé par la fonction $C$ donnée par $C(x) = x^2 − 10x + 500$. On note $R(x)$ la recette, en euros, correspondant à la vente de $x$ vases fabriqués. vspace{10}Un vase est vendu $50$ €.vspace{10}
+    <div class="num">Exprimer $R(x)$ en fonction de $x$.</div>
+    <div class="num">Calculer le coût, la recette et le bénéfice réalisés lorsque l’artisan vend $50$ vases.</div>
+    <div class="num">Vérifier que le bénéfice, en euros, réalisé par l’artisan est donné par la fonction $B$ dont l’expression est : $B(x) = −x^2 + 60x − 500$.</div>
+    <div class="num">Développe l’expression : $−(x − 30)^2 + 400$. En déduire le nombre de vases à vendre pour réaliser un bénéfice maximum.</div>
+</div>
+</div> 
+    
+    
+<!-- Position relative  -->
+<div class="box" data-title="Position relative">        
+<div class="styled">
+    <div class="table 2cols">
+Voici la droite $(d)$ d’équation $y = 6x + 30$ et la parabole $\mathcal{P}$ représentant la fonction $f$ : $f (x) = −4x^2 + 30x + 10$.        
+   vspace{10}
+    <div class="num">Démontrer, qu’étudier les positions relatives de la droite $(d)$ et de la parabole $\mathcal{P}$ revient à résoudre l’inéquation $−4x^2 + 24x − 20 \geqslant  0$.</div>
+    <div class="num">Vérifier que l’expression $5 (x + 0, 6)^2 + 3,2$ est la forme canonique du trinôme $f$.</div>
+    <div class="num">Vérifier que, pour tout réel $x$ : $−4x^2 + 24x − 20 = −4(x − 3)^2 + 16$.</div> 
+    <div class="num">Résoudre alors l’inéquation $−4x^2 + 24x − 20 \geqslant  0$.</div>     
+    <div class="num">Conclure.</div>     
+        &
+        
+         <draw width='10cm' height='9.5cm' style="margin-left: 10px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		      mark({Ox: '2cm',Oy: '6cm',cmy: 20,dy: 1,dx : 1,cmx: 2})
+		      grid(3)
+              width(3)    
+		      curve('-4x^2 + 30x+10',-10,20) 
+              curve('6x + 30',-10,20) 
+	       </draw>
+    </div>    
+</div>
+</div> 
+    
+  <!-- Une néquation difficile -->
+<div class="box" data-title="Une équation difficile">        
+<div class="styled">
+    On considère l'équation : $\displaystyle \frac{1}{x-1} + \frac{1}{x+1} = 1$
+vspace{10}
+    <div class="num"> Quelles sont les valeurs à exclure des solutions de cette équation ? </div>
+<div class="num"> Démontrer que cette équation revient à résoudre l'équation :
+
+$ (x+1) + (x-1) = (x+1)(x-1)$</div>
+<div class="num"> Quel est l'ensemble des solutions de cette équation.</div>
+</div>
+</div>   
+    
+<!-- Deux paraboles -->
+<div class="box" data-title="Deux paraboles">        
+<div class="styled">
+    
+    Soient $\mathcal{P}$ la parabole d'équation $y=2x^2+x+4$ et $\mathcal{P}'$ la parabole d'équation $y=-x^2-5x+1$
+
+    vspace{10}
+
+<div class="num">  Déterminer, par le calcul, les coordonnées des points d'intersection de $\mathcal{P}$ et $\mathcal{P}'$. </div>
+<div class="num">  Dans un même repère, tracer $\mathcal{P}$ et $\mathcal{P}'$. </div>
+
+    
+
+</div>
+</div>  
+    
+<!-- Algorithme 2 -->
+<div class="box" data-title="Algorithme : Racines d'un trinôme">        
+<div class="styled">
+Soit une fonction du second degré $f(x) = ax^2+bx+c$. <br>
+    &Eacute;crire un <dropdown data-id="algse-1" data-class="btn btn-default" label="<i class='fa fa-file-code-o'></i> algorithme" style="margin-left: -2px;margin-right: -2px"></dropdown>  qui détermine les zéros de l'équation du second degré $f(x) = 0$.
+
+<div drop-id="algse-1" style="width: 800px;margin: auto;margin-top: 10px" data-init='true'>
+          <iframe style="margin-top: 0px;border: 1px solid #444444;height: 300px" class="algse" data-file="algo1.algse"></iframe>
+      </div>
+        
+</div>
+</div>    
+        
+</body>
+</html>

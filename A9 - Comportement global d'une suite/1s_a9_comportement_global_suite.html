@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Comportement global d'une suite" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Comportement global d'une suite" data-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="34"
+data-left="$1_S$-$A_9$"
+data-main-width="900">
+
+<!-- Sens de variations -->
+<div class="box" data-title="Sens de variations" data-num="$N_1$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Suite croissante" data-color="#444444">
+		Une suite $u$ est *{bold::croissante}, si pour tout entier naturel $n$ :  $u_{n+1} \geqslant u_n$ ou $u_{n+1} - u_n \geqslant 0$
+
+vspace{10}
+Dans le cas où les termes de la suite $u$ sont tous strictement positifs : $\displaystyle \frac{u_{n+1}}{u_n} \geqslant 1$ 
+
+    </div>
+    
+    <div class="titled hide" data-title="\boxD Suite décroissante" data-color="#444444">
+		Une suite $u$ est *{bold::décroissante}, si pour tout entier naturel $n$ :  $u_{n+1} \leqslant u_n$ ou $u_{n+1} - u_n \leqslant 0$
+
+vspace{10}
+Dans le cas où les termes de la suite $u$ sont tous strictement positifs : $\displaystyle \frac{u_{n+1}}{u_n} \leqslant 1$ 
+
+    </div>
+    
+    <div class="titled hide" data-title="\boxD Suite monotone" data-color="#444444">
+		Une suite $u$ est *{bold::monotone} si elle est croissante ou décroissante.
+    </div>
+       
+        
+    <div class="styled" style="margin-top: 0px">
+        Les suites suivantes sont-elles monotones ?
+        <div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num"> $u_n = (-1)^n$ pour $n \in \mathbb{N}$</div> &
+            <div class="num"> $u_n = 5n +9$ pour $n \in \mathbb{N}$</div> ||
+            <div class="num"> $\displaystyle u_n = \frac{1}{n+1}$ pour $n \in \mathbb{N}$</div> &
+            <div class="num"> $\displaystyle u_n = \frac{1}{3^n}$ pour $n \in \mathbb{N}$</div> ||
+            <div class="num"> $\displaystyle u_n = n^2-6n+9$ pour $n \in \mathbb{N}$</div> &
+            <div class="num"> $\displaystyle u_n = n^2-8n+18$ pour $n \in \mathbb{N}$</div>
+            </div>
+            
+        </div>    
+ </div>
+    
+  
+<!-- Sens de variations : $u_n = f(n)$ -->
+<div class="box" data-title="Sens de variations : $u_n = f(n)$" data-num="$N_2$" data-date="1">
+    <div class="titled hide" data-title="\boxP Propriété" data-color="#444444">
+		Soit une suite $u$ définie par $u_n = f(n)$ avec $n\in \mathbb{N}$ et $f$ une fonction définie sur $[0;+\infty[$. <br>
+,, Si $f$ est croissante sur $[0;+\infty[$ alors $u$ est croissante. <br>
+,, Si $f$ est décroissante sur $[0;+\infty[$ alors $u$ est décroissante.
+</div>
+    <div class="styled" style="margin-top: 0px">
+        Les suites suivantes sont-elles monotones ?
+        <div class="table" cells="*,*|w50%;vat" data-table-style="width: 100%">
+            <div class="num"> $u_n = 2 \times  n  - 9$ pour $n \in \mathbb{N}$</div> &
+            <div class="num">$u_n = 10-3n$ pour $n \in \mathbb{N}$</div> ||
+            <div class="num"> $\displaystyle u_n = \frac{-2}{4n-4}$ pour $n \in \mathbb{N}$</div> &
+            <div class="num"> $\displaystyle u_n = \sqrt{n+2}$ pour $n \in \mathbb{N}$</div> ||
+            <div class="num"> $\displaystyle u_n = 4n^2-9n+1$ pour $n \in \mathbb{N}$</div> &
+            <div class="num"> $\displaystyle u_n = 4n-9n^2+1$ pour $n \in \mathbb{N}$</div>
+            </div>  
+        </div>  
+</div> 
+    
+<!-- Sens de variation d'une suite arithmétique  -->
+<div class="box" data-title="Sens de variation d'une suite arithmétique" data-num="$N_3$" data-date="1">
+    <div class="titled hide" data-title="\boxP Propriété" data-color="#444444">
+		Soit $u$ une suite arithmétique de raison $r \not= 0$ et de premier terme $u_0$.
+         <div class="table" cells="*,*|bo1#444444;w200;c&*,1|bold;right;par5;b#cccccc;w120" data-table-style="border-collapse: collapse;background: #ffffff">
+         $r$ & $u$    ||
+         $r &gt; 0$ & est croissante  ||
+         $r &lt; 0$ & est décroissante   
+        </div>
+</div>
+    
+	 <div class="styled">
+        <div class="num" style="margin-top: 10px">Soit $(u_n)$ une suite arithmétique de premier terme $\displaystyle u_0 = -8$ et de raison $\displaystyle r = 9$. Etudier la monotonie de $(u_n)$.</div> 
+        <div class="num" data-valign-num="10px" style="margin-top: 10px">Soit $(u_n)$ une suite arithmétique de premier terme $\displaystyle u_0 = 1$ et de raison $\displaystyle r = \frac{1}{6}$. Etudier la monotonie de $(u_n)$.</div>  
+    <div class="num" data-valign-num="10px" style="margin-top: 10px">Soit $(u_n)$ une suite arithmétique de premier terme $\displaystyle u_0 = -7$ et de raison $\displaystyle r = -\frac{11}{2}$. Etudier la monotonie de $(u_n)$.</div> 
+</div>	    
+</div>	    
+    
+<div class="newpage"></div>    
+    
+
+<!-- Sens de variation d'une suite géométrique  -->
+<div class="box" data-title="Sens de variation d'une suite géométrique" data-num="$N_4$" data-date="1">
+    <div class="titled hide" data-title="\boxP Propriété" data-color="#444444">
+		Soit $u$ une suite géométrique de raison $q \not= 0$ et de premier terme $u_0$.
+         <div class="table" cells="*,*|bo1#444444;w200;c&*,1|bold;right;par5;b#cccccc;w120" data-table-style="border-collapse: collapse;background: #ffffff">
+         $u_0$ & $q$ & $u$     ||
+         $u_0 &gt; 0$ & $0 &lt; q &lt; 1$ & est décroissante   ||
+         $u_0 &gt; 0$ & $q &gt; 1$ & est croissante ||
+         $u_0 &lt; 0$ & $0 &lt; q &lt; 1$ & est croissante ||
+         $u_0 &lt; 0$ & $q &gt; 1$ & est décroissante ||
+         & $q &lt; 0$ & n'est pas monotone     
+        </div>
+</div>
+    
+	 <div class="styled">
+        <div class="num" style="margin-top: 0px">Soit $(u_n)$ une suite géométrique de premier terme $\displaystyle u_0 = 1$ et de raison $\displaystyle q = 7$. Etudier la monotonie de $(u_n)$.</div> 
+        <div class="num" data-valign-num="10px" style="margin-top: 0px">Soit $(u_n)$ une suite géométrique de premier terme $\displaystyle u_0 = -7$ et de raison $\displaystyle q = 2$. Etudier la monotonie de $(u_n)$.</div>  
+    
+         
+         <div class="num" data-valign-num="10px" style="margin-top: 0px">Soit $(u_n)$ une suite géométrique de premier terme $\displaystyle u_0 = -1$ et de raison $\displaystyle q = \frac{3}{5}$. Etudier la monotonie de $(u_n)$.</div>
+         
+         <div class="num" data-valign-num="10px" style="margin-top: 0px">Soit $(u_n)$ une suite géométrique de premier terme $\displaystyle u_0 = 5$ et de raison $\displaystyle q = \frac{1}{5}$. Etudier la monotonie de $(u_n)$.</div>
+         
+         <div class="num" data-valign-num="10px" style="margin-top: 0px">Soit $(u_n)$ une suite géométrique de premier terme $\displaystyle u_0 = 5$ et de raison $\displaystyle q = -\frac{9}{5}$. Etudier la monotonie de $(u_n)$.</div>
+</div>	    
+</div>	     
+
+    
+    
+<!-- Suite convergente  -->
+<div class="box" data-title="Suite convergente" data-num="$N_5$" data-date="1">
+    <div class="titled hide" data-title="\boxD Limite et convergence" data-color="#444444">
+		Une suite  $u$  *{bold::converge vers} un réel $l$ quand ses termes $u_n$ se rapprochent de plus en plus vers $l$ lorsque $n$ devient de plus en plus grand. Cela signifie que $u_n$ tend vers le réel $l$ quand $n$ tend vers $+\infty$ et on note : $\underset{n \rightarrow +\infty}{u_{n}} \longrightarrow l$
+        
+        vspace{10}
+        Quand une suite $u$ converge vers le réel $l$, $l$ est appelé la *{bold::limite} de la suite $u$. 
+        vspace{10}
+        Quand une suite $u$ converge vers le réel $l$, on note :  $\underset{n \rightarrow +\infty}{lim} \; u_n = l$
+         vspace{10}
+        Une suite  $u$  est *{bold::divergente} quand elle ne converge pas vers un réel ou bien que ses termes tendent vers $+\infty$ ou $-\infty$. On a donc
+$\underset{n \rightarrow +\infty}{lim} \; u_n = +\infty$  ou $\underset{n \rightarrow +\infty}{lim} \; u_n = -\infty$
+
+</div>
+    
+	 <div class="styled">
+       A l'aide d'une calculatrice, conjecturer la limite éventuelle des suites $u$ : vspace{10}
+         <div class="table 2cols">
+        <div class="num"> $\displaystyle u_n = \frac{2n+1}{n-1} $ pour $n > 1$</div> &
+        <div class="num">$\displaystyle u_n = \frac{2n+1}{n^2+4} $ pour $n \in \mathbb{N}$</div> || 
+             
+    <div class="num"> $\displaystyle u_n = \frac{2n^2-1}{n+1} $ pour $n \in \mathbb{N}$</div>  &
+        <div class="num">$\displaystyle u_n = \frac{5n+1}{3n-2} $ pour $n \in \mathbb{N}$</div> || 
+    
+    <div class="num">$\displaystyle u_0 = 4$ et $\displaystyle u_{n+1} = 2u_n$</div> &
+          <div class="num">$\displaystyle u_0 = 2$ et $\displaystyle u_{n+1} = -\frac{1}{2}u_n$</div> ||
+         
+         <div class="num">$\displaystyle u_0 = 1$ et $\displaystyle u_{n+1} = \frac{5}{u_n}$</div> &
+          <div class="num">$\displaystyle u_n = (-4)^n $ pour $n \in \mathbb{N}$</div> ||
+         
+          <div class="num">$\displaystyle u_n = 2n^2 -5n-2 $ pour $n \in \mathbb{N}$</div> &
+          <div class="num"> $\displaystyle u_n = -3n^3 + 4n^2-1 $ pour $n \in \mathbb{N}$</div> 
+    </div>         
+</div>	    
+</div>
+       
+    
+
+<div class="newpage"></div>
+
+
+     
+    
+<!-- Suite $(a_n)$ -->
+<div class="box" data-title="Suite $(a_n)$">
+    <div class="styled">
+    Ecrire un algorithme permettant d'afficher les $100$ premiers termes de la suite $(a_n)$ définie par : 
+$a_0 = 0$ et $a_{n+1} = a_n +2$. Que remarque-t-on ?
+     
+</div>     
+</div>  
+    
+<!-- Balle rebondissante ?  -->
+<div class="box" data-title="Balle rebondissante">
+    <div class="styled">
+    Une balle rebondissante est telle que chaque rebond a une hauteur égale à $80\%$ du rebond précédent. 
+ <div class="num"> Si on appelle $h_n$ la hauteur en cm du n-ième rebond, montrer que $(h_n)$ est une suite géométrique.</div> 
+    <div class="num"> Étudier les variations de cette suite. Étudier la limite de cette suite.</div>
+    <div class="num"> Au bout de combien de rebonds sa hauteur sera-t-elle inférieure au cinquième de sa hauteur initiale ?</div>    
+    </div>
+</div> 
+    
+<!-- Ecologie   -->
+<div class="box" data-title="Ecologie">
+    <div class="styled">
+    On jette chaque année $160\;kg$ de déchets dans un bois. On estime que $20\%$ de la totalité des déchets présents se dégradent.
+On note $u_n$ la quantité de déchets présents l'année $2014+n$, sachant qu'en $2014$ un grand nettoyage du bois a été effectué et que l'on suppose donc que $u_0 = 0$.
+ <div class="num"> Montrer que $u_{n+1} = 0, 8u_n + 160$ pour tout entier naturel $n$.</div> 
+    <div class="num">Construire les six premiers termes de la suite $(u_n)$ (échelle : $1\;cm$ pour $50\;kg$ sur les deux axes).</div>
+        <div class="num">Conjecturer le sens de variations ainsi que la convergence de la suite.</div>
+    <div class="num"> Que peut-on en déduire quant à l'évolution de la quantité de déchets dans ce bois ?</div>    
+    </div>
+</div>      
+    
+<!-- Filtre lumineux   -->
+<div class="box" data-title="Filtre lumineux">
+    <div class="styled">
+    En traversant une plaque de verre teintée, un rayon lumineux perd $23\%$ de son intensité lumineuse.
+On superpose $n$ plaques de verre identiques et on note $i$ l'intensité du rayon à la sortie de la n-ème plaque exprimée en candela.
+ <div class="num"> $i_0$ étant l'intensité lumineuse du rayon avant son entrée dans la première plaque de verre et $i_1$ l'intensité à la sortie de cette plaque de verre, exprimer $i_1$ en fonction de $i_0$.</div> 
+    <div class="num">Quelle est la nature de la suite $(i_n)$ ? Exprimer $i_n$ en fonction de $n$ et de $i_0$. </div>
+    <div class="num"> Etudier les variations et la convergence de la suite $(i_n)$.</div> 
+    <div class="num">  Déterminer l'intensité initiale d'un rayon dont l'intensité après avoir traversé $4$ plaques teintées est égale à $15$ candelas.</div> 
+        <div class="num"> Combien faut-il au minimum qu'un rayon traverse de plaques pour que son intensité lumineuse soit divisée par $5$ ?</div> 
+    </div>
+</div> 
+    
+<div class="exo" data-title="Compte rémunéré" >
+
+  <div class="styled">
+     Au premier janvier 2015, on place $1500$ € sur un compte rémunéré. Cette rémunération représente $1\%$ de la somme disponible sur ce compte *{bold::par mois}. A partir de février on place $100$ € de plus chaque premier du mois. Soit $(u_n)$ la suite dont le terme $u_n$ représente  la somme disponible sur ce compte au mois $n+1$. On a donc $u_0 = 1500$
+
+      <div class="num">Démontrer que $u_1 = 1615$ et que $u_2 = 1731,15$. Calculer $u_3$. Que représente $u_3$ dans le contexte de l'exercice ?</div>
+      <div class="num">Démontrer que $(u_n)$ n'est ni une suite arithmétique ni une suite géométrique.</div>
+    <div class="num">Déterminer la forme récurrente de $(u_n)$. Démontrer que $(u_n)$ est croissante et donner sa limite</div>
+      <div class="num">Ecrire un algorithme permettant de déterminer le plus petit entier $n$ pour que le capital de ce compte soit au moins de $2200$ €</div>
+     <div class="num">En dressant un tableau donner la valeur de $n$ de la question précédente puis le mois auquel la somme de $2200$ € sera atteinte.</div>   
+  </div>  
+ </div>  
+     
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Loi binomiale" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Loi binomiale" data-font-size="14" data-title-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="65"
+data-left="$1_S$-$SP_3$"
+data-main-width="900">
+
+<!-- Répétitions indépendantes -->
+<div class="box" data-title="Répétitions indépendantes" data-num="$N_1$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxP Arbre pondéré" data-color="#444444">
+        Dans le cadre où on répète $n$ fois de suite, de manière *{bold::identique} et de façon *{bold::indépendante} la même expérience aléatoire, les règles principales des arbres pondérés sont : <br>
+
+,, chaque chemin de l'arbre correspond à un résultat dont la probabilité est le produit des probabilités inscrites sur les branches qui constituent le chemin. <br>
+
+
+,, la probabilité d'un événement est la somme des probabilités associées aux chemins qui permettent de réaliser l'événement.
+       
+        
+        
+        <draw width='600' height='500' style="margin-left: 130px;border: 1px solid #444444;background: #ffffff;border-radius: 5px;margin-top: 10px">
+		text('$\\Omega$',5,'h/2-22.5',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeeeff',node: 'A'})
+		text('$A$','lastX+250',80,{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'B'})
+		text('$B$','lastX','h-125',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'C'})
+		set('lx1','lastX')
+		set('lx2','lx1+(w-3*60)/3')
+		text('$A$','lastX+250',15,{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'D'})
+		text('$B$','lastX','h-375',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'E'})
+		text('$A$','lastX','h-190',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'F'})
+		text('$B$','lastX','h-60',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'G'})
+		
+		
+		connector('A','B',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_1$',textOffsetY : -30})
+		connector('A','C',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_2$', textOffsetX : -25})
+		
+		connector('B','D',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_1$',textOffsetY : -25})
+		connector('B','E',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_2$', textOffsetX : -25})
+		
+		connector('C','F',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_1$',textOffsetY : -25})
+		connector('C','G',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p_2$', textOffsetX : -25})
+	</draw>
+        
+    </div> 
+    
+    
+    <div class="styled">
+    On dispose d'une urne contenant $100$ boules : $40$ boules rouges (R) et $60$ boules noires (N). On effectue trois tirages successifs avec remise. <br>
+    Il s'agit bien de la même expérience aléatoire répétée $3$ fois de manière *{bold::identique} (avec remise) et de façon *{bold::indépendante} (le résultat du premier tirage n'influence pas le deuxième tirage etc...).   
+    <div class="num"> Lors du premier tirage, quelle est la probabilité d'obtenir une boule Noire ?</div>
+    <div class="num"> Lors du premier tirage, quelle est la probabilité d'obtenir une boule Rouge ?</div>  
+    <div class="num"> On suppose que lors du premier tirage, une boule Rouge a été choisie :</div>   
+    <div class="item" data-value="a)" style="margin-left: 50px"> Quelle est la probabilité d'obtenir une boule Noire lors du deuxième tirage ?</div>  
+    <div class="item" data-value="b)" style="margin-left: 50px"> Quelle est la probabilité d'obtenir une boule Rouge lors du deuxième tirage ?</div>   <div class="num">On suppose que lors du premier tirage, une boule Noire a été choisie et lors du deuxième tirage une boule Rouge a été choisie :</div>   
+    <div class="item" data-value="a)" style="margin-left: 50px"> Quelle est la probabilité d'obtenir une boule Noire lors du dernier tirage ?</div>  
+    <div class="item" data-value="b)" style="margin-left: 50px"> Quelle est la probabilité d'obtenir une boule Rouge lors du dernier tirage ?</div>      
+     <div class="num">Construire un arbre pondéré représentant les trois tirages.</div> 
+    <div class="num">Quelle est la probabilité d'obtenir trois boules rouges ?</div> 
+    <div class="num">Quelle est la probabilité d'obtenir, dans cet ordre, une boule noire, une boule rouge et une boule noire ?</div> 
+    <div class="num"> Quelle est la probabilité d'obtenir, au bout des trois tirages, deux boules rouges et une boule noire ?</div>     
+    </div>
+</div>
+
+
+<div class="newpage"></div>    
+    
+<!-- Loi de Bernoulli -->
+<div class="box" data-title="Loi de Bernoulli" data-num="$N_2$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Epreuve de Bernouilli" data-color="#444444">
+        Lorsque l'univers fini $\Omega$ d'une expérience aléatoire est de cardinal $2$ c'est à dire que l'expérience aléatoire n'a que $2$ issues, on parle d'une *{bold::épreuve de Bernoulli}.
+
+vspace{10}
+On note ces deux issues $S$ (pour Succès) et $\overline{S}$ (pour échec). Si l'issue $S$ a une probabilité $p$ ($0 \leqslant p \leqslant 1$), on peut écrire :
+        
+        <div class="table" cells="*,*|bo1#444444;w150;c&*,1|bold;right;par5;b#dddddd" data-table-style="border-collapse: collapse">
+        Issue & $S$ & $\overline{S}$ ||
+        Probabilité & $p$ & $1-p$    
+        </div>
+        
+    </div>
+    
+    <div class="titled hide" data-title="\boxD Loi de Bernouilli" data-color="#444444">
+        La variable aléatoire $X$ prenant la valeur $1$ en cas de succès et $0$ n'en cas d'échec suit la *{bold::loi de Bernoulii de paramètre $p$} : 
+
+        
+        <div class="table" cells="*,*|bo1#444444;w170;c&*,1|bold;right;par5;b#dddddd" data-table-style="border-collapse: collapse">
+        Issue & $S$ & $\overline{S}$ ||
+        $X$ & $1$ & $0$ ||
+        Loi & $P(X=1)=p$ & $P(X=0)=1-p$     
+        </div>
+        
+    </div>
+    
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+        Soit $X$ une variable aléatoire suivant la loi de Bernoulli de paramètre $p$ : vspace{5}
+
+,, $E(X) = p$ hspace{50} ,, $V(X) = p(1-p)$ hspace{50} ,, $\sigma(X) = \sqrt{p(1-p)}$
+    </div>
+    
+    <div class="styled">
+    Chaque matin, Alain passe à la boulangerie. Une fois sur cinq, il prend deux pains au chocolat et, le reste du temps, il en prend un seul.
+
+    <div class="num">On étudie le nombre de viennoiseries qu’Alain a pris ce matin. Expliquer pourquoi on est dans la situation d’une épreuve de Bernoulli.</div>
+    <div class="num"> Alain paie toujours avec une pièce de $2$ €. On note $X$ la variable aléatoire donnant la somme d’argent qui lui est rendue ce matin. Quelle loi suit $X$ sachant qu’un pain au chocolat coûte $1$ € ?</div>     
+    </div>
+    
+</div>   
+    
+<!-- Schéma de Bernoulli -->
+<div class="box" data-title="Schéma de Bernoulli" data-num="$N_3$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Epreuve de Bernouilli" data-color="#444444">
+        On considère une épreuve de Bernoulli dont la probabilité de succès est $p$. La répétition $n$ fois (où $n \in \mathbb{N}^*$), de façon indépendante, de cette épreuve de Bernoulli est appelée *{bold::schéma de Bernoulli} de paramètres $n$ et $p$.
+        
+        <draw width='400' height='240' style="margin-left: 220px;border: 1px solid #444444;background: #ffffff;border-radius: 5px">
+		text('$\\Omega$',5,'h/2-22.5',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeeeff',node: 'A'})
+		text('$S$','lastX+150',40,{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'B'})
+		text('$\\overline{S}$','lastX','h-85',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'C'})
+		set('lx1','lastX')
+		set('lx2','lx1+(w-3*60)/3')
+		text('$S$','lastX+150',15,{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'D'})
+		text('$\\overline{S}$','lastX','h-175',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'E'})
+		text('$S$','lastX','h-110',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#eeffee',node: 'F'})
+		text('$\\overline{S}$','lastX','h-60',{fontSize: '12pt',css: 'bo1#444444;br5;w60;c;h45;lh45;b#ffeeee',node: 'G'})
+		
+		
+		connector('A','B',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p$',textOffsetY : -25})
+		connector('A','C',{posA: 'mr',posB: 'ml',arrow: '->',text: '$1-p$', textOffsetX : -30})
+		
+		connector('B','D',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p$',textOffsetY : -25})
+		connector('B','E',{posA: 'mr',posB: 'ml',arrow: '->',text: '$1-p$', textOffsetX : -25})
+		
+		connector('C','F',{posA: 'mr',posB: 'ml',arrow: '->',text: '$p$',textOffsetY : -25})
+		connector('C','G',{posA: 'mr',posB: 'ml',arrow: '->',text: '$1-p$', textOffsetX : -25})
+	</draw>
+    </div>
+    
+     <div class="styled">
+    <div class="num"> Construire une arbre pondéré correspondant à un schéma de Bernoulli de paramètres $1$ et $0,25$.</div>
+    <div class="num"> Construire une arbre pondéré correspondant à un schéma de Bernoulli de paramètres $2$ et $0,6$.</div> 
+        <div class="num"> Construire une arbre pondéré correspondant à un schéma de Bernoulli de paramètres $3$ et $0,4$.</div>
+    <div class="num"> Construire une arbre pondéré correspondant à un schéma de Bernoulli de paramètres $4$ et $0,1$.</div>  
+    </div>
+    
+</div> 
+    
+<div class="newpage"></div> 
+    
+<!-- Coefficient binomial -->
+<div class="box" data-title="Coefficient binomial" data-num="$N_4$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Coefficient binomial" data-color="#444444">
+       On considère un schéma de Bernoulli de paramètres $n$ et $p$ et un entier $k$ avec $0 \leqslant k \leqslant n$. L'entier $\cb{n}{k}$, appelé *{bold::coefficient binomial} et se lisant "$k$ parmi $n$", désigne le nombre de chemins de l'arbre correspondant à $k$ succès.
+    </div>
+    
+     <div class="styled">
+    <div class="num"> On considère un schéma de Bernoulli de paramètres $2$ et $0,3$. Construire un arbre pondéré puis déterminer $\cb{2}{1}$ et $\cb{2}{2}$ </div>
+    <div class="num" style="margin-top: 10px">  On considère un schéma de Bernoulli de paramètres $3$ et $0,9$. Construire un arbre pondéré puis déterminer $\cb{3}{1}$, $\cb{3}{2}$ et $\cb{3}{3}$ </div> 
+        <div class="num" style="margin-top: 10px">  On considère un schéma de Bernoulli de paramètres $4$ et $0,4$. Construire un arbre pondéré puis déterminer $\cb{4}{1}$, $\cb{4}{2}$, $\cb{4}{3}$ et $\cb{4}{4}$</div>
+    <div class="num" data-valign-num="7px" style="margin-top: 10px"> Déterminer à l'aide de la calculatrice : 
+ $\cb{15}{6}$, $\cb{15}{12}$, $\cb{15}{9}$, $\cb{20}{10}$, $\cb{20}{5}$</div>  
+    </div>
+    
+</div>   
+    
+    
+<!-- Coefficient binomial -->
+<div class="box" data-title="Propriétés des coefficients binomiaux" data-num="$N_5$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxN  Notation factoriel $n$" data-color="#444444">
+       Pour un entier naturel $n \geqslant 1$, le nombre $1\times 2 \times 3 \cdots \times n$ se dit *{bold::factoriel $n$} et se note $n!$ : $n! = 1\times 2 \times 3 \cdots \times n$
+    </div>
+    
+    <div class="titled hide" data-title="\boxP  Propriétés des coefficients binomiaux" data-color="#444444">
+       Soient $n$ et $k$ deux entiers naturels avec $0 \leqslant k \leqslant n-1$ : <br>
+        <div class="table 2cols" data-table-style="border-spacing: 0px 20px">
+,,  $\cb{0}{0} = \cb{n}{0} =  \cb{n}{n} = 1$
+&
+,, $\cb{n}{k} = \cb{n}{n-k}$
+
+||
+            
+,, $\cb{n}{k}  + \cb{n}{k+1}= \cb{n+1}{k+1}$
+            &
+,, $\displaystyle \cb{n}{k}  = \frac{n!}{k!(n-k)!}$
+            
+</div>            
+    </div>
+    
+     <div class="styled">
+    <div class="num"> Pour $0 \leqslant n \leqslant 6$ et $0 \leqslant k \leqslant n$, construire le *{bold::triangle de Pascal} donnant les coefficients binomiaux $\cb{n}{k}$. </div>
+    <div class="num" style="margin-top: 15px">   Calculer $7!$ ; $8!$ </div> 
+        <div class="num" style="margin-top: 10px" data-valign-num="15px"> Calculer $\cb{5}{3}$ ,  $\cb{6}{3}$ et $\cb{7}{4}$ </div>
+    <div class="num" data-valign-num="7px" style="margin-top: 15px"> Donner $\cb{9}{0}$ et $\cb{9}{9}$ </div> 
+    <div class="num" data-valign-num="7px" style="margin-top: 15px"> On donne $\cb{9}{3} = 84$  et $\cb{9}{2} = 36$. Donner $\cb{9}{6}$ et $\cb{9}{7}$ puis $\cb{10}{7}$</div>      
+    </div>
+    
+</div>
+    
+<div class="newpage"></div> 
+    
+<!-- Loi binomiale -->
+<div class="box" data-title="Loi binomiale" data-num="$N_6$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD \boxP Loi binomiale" data-color="#444444">
+       On considère un schéma de Bernoulli de paramètres $n$ et $p$.
+On dit que la variable aléatoire $X$ donnant le nombre de succès obtenus sur les $n$ épreuves suit la *{bold::loi binomiale} de paramètres $n$ et $p$, notée $\mathfrak{B}(n ; p)$. vspace{10}
+        
+        Soit $X$ une variable aléatoire suivant la loi binomiale $\mathfrak{B}(n ; p)$ :
+
+        <centering-box style="display: inline-block;background: #eeeeee">
+$P(X=k) = \cb{n}{k}p^k(1-p)^{n-k}$</centering-box>
+
+    </div>
+    
+     <div class="styled">
+         La variable aléatoire $X$ suit $\mathfrak{B}(6 ; 0,4)$. A l'aide de la calculatrice, déterminer :
+         <div class="table 3cols">
+             <div class="num">$P(X=2)$</div>  & <div class="num">$P(X=0)$</div> & <div class="num">$P(X \leqslant 4)$</div> ||     
+             <div class="num">$P(X \leqslant 6)$</div>  & <div class="num">$P(X &gt; 3)$</div> & <div class="num">$P(X &lt; 8)$</div> 
+         </div>
+    </div>
+    
+</div> 
+    
+<!-- Propriété de la loi binomiale -->
+<div class="box" data-title="Propriétés de la loi binomiale" data-num="$N_7$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+       
+        Soit $X$ une variable aléatoire suivant la loi binomiale $\mathfrak{B}(n ; p)$ :
+
+        <centering-box style="display: inline-block;background: #eeeeee">
+$E(X) = np$
+
+$V(X) = np(1-p)$
+
+et $\sigma(X) = \sqrt{np(1-p)}$</centering-box>
+
+    </div>
+    
+     <div class="styled">
+         <div class="num"> La variable aléatoire $X$ suit $\mathfrak{B}(8 ; 0,3)$. Déterminer $E(X)$, $V(X)$ et $\sigma(X)$.</div>
+         <div class="num"> La variable aléatoire $Y$ suit $\mathfrak{B}(90 ; 0,01)$. Déterminer $E(Y)$, $V(Y)$ et $\sigma(Y)$.</div>
+         <div class="num"> La variable aléatoire $Z$ suit $\mathfrak{B}(10 ; 0,9)$. Déterminer $E(Z)$, $V(Z)$ et $\sigma(Z)$.</div>
+         <div class="num">  La variable aléatoire $T$ suit $\mathfrak{B}(3 ; 0,99)$. Déterminer $E(T)$, $V(T)$ et $\sigma(T)$.</div>
+    </div>
+    
+</div>   
+    
+<!-- Intervalle de fluctuation -->
+<div class="box" data-title="Intervalle de fluctuation" data-num="$N_8$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Intervalle de fluctuation" data-color="#444444">
+       
+        Soient $X$ une variable aléatoire suivant la loi binomiale $\mathfrak{B}(n ; p)$ et $a$ et $b$ deux réels. On dit que $[a;b]$ est un *{bold::intervalle de fluctuation au seuil de $95\%$ ou $0,95$} du nombre de succès quand : $P(X \in [a;b]) \leqslant 0,95$ vspace{10}
+        ,, Cela signifie que quand on réalise l'expérience, il y a plus de $95\%$ de chance que le nombre de succès soit dans l'intervalle $[a ; b]$. <br>
+
+,, On peut définir de la même manière un intervalle de fluctuation au seuil  de $99\%$. <br>
+
+,, Pour un seuil donné, il existe plusieurs intervalles de fluctuation.
+    </div>
+    
+    <div class="titled hide" data-title="\boxP Propriété fondamentale" data-color="#444444">
+       L'intervalle $[a;b]$ où : <br>
+
+,, $a$ est le plus entier tel que $P(X \leqslant a) > 0,025$ <br>
+
+,, $b$ est le plus entier tel que $P(X \leqslant b )\geqslant 0,975$ <br>
+
+est un *{bold::intervalle de fluctuation au seuil de $95\%$}.
+    </div>
+    
+     <div class="styled">
+         <div class="num"> On considère une variable aléatoire $X$ suivant la loi $\mathfrak{B}(10 ; 0,6)$. Donner l'intervalle de fluctuation au seuil de $95\%$ du nombre de succès.
+</div>
+         <div class="num"> On considère une variable aléatoire $Y$ suivant la loi $\mathfrak{B}(9 ; 0,1)$. Donner l'intervalle de fluctuation au seuil de $95\%$ du nombre de succès.</div>
+         <div class="num"> On considère une variable aléatoire $Z$ suivant la loi $\mathfrak{B}(98 ; 0,7)$. Donner l'intervalle de fluctuation au seuil de $95\%$ du nombre de succès.</div>
+         <div class="num"> On considère une variable aléatoire $T$ suivant la loi $\mathfrak{B}(500 ; 0,35)$. Donner l'intervalle de fluctuation au seuil de $95\%$ du nombre de succès.</div>
+    </div>
+    
+</div> 
+    
+<div class="newpage"></div>
+    
+<!-- Intervalle de fluctuation et fréquence -->
+<div class="box" data-title="Intervalle de fluctuation et fréquence" data-num="$N_9$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxP Fréquence" data-color="#444444">
+       Soient $X$ une variable aléatoire suivant la loi binomiale $\mathfrak{B}(n ; p)$ et $a$ et $b$ deux réels. Pour la variable aléatoire $\displaystyle F = \frac{1}{n}X = \frac{X}{n}$, donnant la fréquence de succès, l'intervalle $\displaystyle \Big[ \frac{a}{n} ; \frac{b}{n} \Big] $ est un intervalle de fluctuation au seuil de $95\%$ de cette fréquence $F$ quand $[a;b]$ est aussi un intervalle de fluctuation au seuil de $95\%$ pour $X$.
+    </div>
+    
+    <div class="titled hide" data-title="Application" data-color="#444444">
+      On considère une population dans laquelle la proportion d'un certain caractère est $p$.
+Si la population est suffisamment grande, quand on prélève un échantillon de $n$ individus, on peut considérer que le nombre d'individus ayant le caractère suit une *{bold::loi binomiale} de paramètres $n$ et $p$. Ainsi, l'intervalle de fluctuation au seuil de $95\%$ : <br>
+
+,, du nombre d'individus ayant le caractère dans l'échantillon est $[a;b]$ <br>
+
+,, de la fréquence du caractère dans l'échantillon est $\displaystyle \Big[ \frac{a}{n} ; \frac{b}{n} \Big] $
+    </div>
+    
+     <div class="styled">
+         <div class="num"> On considère une variable aléatoire $X$ suivant la loi $\mathfrak{B}(39 ; 0,01)$. Donner l'intervalle de fluctuation au seuil de $95\%$ de la fréquence  de succès.
+</div>
+         <div class="num"> On considère une variable aléatoire $Y$ suivant la loi $\mathfrak{B}(100 ; 0,95)$. Donner l'intervalle de fluctuation au seuil de $95\%$  de la fréquence  de succès.</div>
+         <div class="num"> On considère une variable aléatoire $T$ suivant la loi $\mathfrak{B}(50 ; 0,5)$. Donner l'intervalle de fluctuation au seuil de $95\%$  de la fréquence  de succès.</div>
+    </div>
+    
+</div>  
+    
+<div class="box" data-title="Dans une usine">
+<div class="styled">
+ Une usine produit des grille-pain, certains étant défectueux, et on suppose que la probabilité qu'un grille-pain soit défectueux est égale à $0, 03$.
+
+
+On prélève au hasard un échantillon de $100$ grille-pain dans la production d'une journée et on admet que cette production est suffisamment importante pour que l'on assimile ce prélèvement à un tirage avec remise de $100$ grille-pain.
+
+On considère la variable aléatoire $X$ qui, à ce prélèvement de $100$ grille-pain, associe le nombre de grille-pain défectueux.  Tous les résultats seront arrondis au centième.
+
+<div class="num">Justifier que la variable aléatoire $X$ suit une loi binomiale dont on précisera les paramètres.</div>
+<div class="num">  Quelle est la probabilité qu'il y ait $96$ grille-pain en bon état dans ce prélèvement ?</div>
+<div class="num">  Quelle est la probabilité de l'événement "au moins trois grille-pain sont défectueux" ?</div>
+<div class="num"> Calculer l'espérance de la variable aléatoire $X$. Interpréter ce résultat dans le cadre de l'énoncé.</div>
+<div class="num"> Calculer $P(X \leqslant E(X))$.</div>
+
+   
+</div>    
+</div> 
+    
+<div class="box" data-title="Filles et garçons">
+<div class="styled">
+D'après des études statistiques, il naît plus de garçons que de filles en France.
+
+Lors d'une naissance, la probabilité que le bébé soit un garçon est de $0, 51$.
+
+
+Pour une famille de six enfants (on suppose qu'il n'y a pas de jumeaux), on note $X$ la variable aléatoire donnant le nombre de filles.
+
+
+<div class="num">Déterminer la loi de probabilité de $X$.  Déterminer la probabilité que cette famille n'ait que des garçons.</div>
+<div class="num">Déterminer la probabilité que cette famille ait autant de garçons que de filles.</div>
+
+   
+</div>    
+</div> 
+    
+    
+<div class="box" data-title="Etudiants en mathématiques">
+<div class="styled">
+Dans une promotion de $123$ étudiants en mathématiques, $7$ ont déclaré ne pas pratiquer d'activité sportive régulière.
+
+Cette promotion est-elle représentative de la population globale des étudiants dans laquelle $22\%$ des individus ont une activité sportive régulière ?
+</div>    
+</div>     
+    
+<div class="newpage"></div>
+    
+<div class="box" data-title="Ascenseur en panne">
+<div class="styled">
+Un ascenseur tombe en panne avec une probabilité de $0, 015$ chaque jour et une réparation coûte $500$ €.
+
+On suppose que la panne (ou non) de l'ascenseur est indépendante de celles des jours précédents.
+
+
+<div class="num">Quelle est la probabilité que l'ascenseur tombe exactement une fois en panne durant le mois de janvier ?</div>
+<div class="num"> En moyenne, combien peut-on prévoir de dépenses de réparation pour une année ?</div>
+
+   
+</div>    
+</div>   
+    
+<div class="box" data-title="Donneurs de sang">
+<div class="styled">
+$39\%$ de la population française est du groupe sanguin A+. On cherche à savoir si cette proportion est la même parmi les donneurs de sang.
+
+On note $X$ la variable aléatoire donnant le nombre de personnes de groupe A+ dans un échantillon de $183$ personnes prises au hasard dans la population française.
+
+
+<div class="num">Sous quelle hypothèse X suit-elle une loi binomiale ? Pourquoi cette hypothèse est-elle raisonnable ? On admet que cette hypothèse est vérifiée, préciser alors les paramètres de $X$.</div>
+<div class="num">  On interroge $183$ donneurs de sang et, parmi eux, $34\%$ sont du groupe A+. Les donneurs de sang sont-ils représentatifs de la population française sur ce critère ?</div>
+   
+</div>    
+</div>       
+    
+<div class="box" data-title="Porteurs de lunettes">
+<div class="styled">
+$70\%$ des Français portent des lunettes (source : ifop).
+
+
+<div class="num">On considère la variable aléatoire $X$ donnant le nombre de porteurs de lunettes dans un échantillon de $200$ Français pris au hasard. Quelle loi suit  $X$ ? Justifier.</div>
+<div class="num">   En déduire l'intervalle de fluctuation au seuil de $95 \%$  du nombre de porteurs de lunettes dans cet échantillon puis de la fréquence correspondante.</div>
+<div class="num"> On se place dans une rue piétonne dans laquelle, sur $200$ passants, $146$ portent des lunettes. Cette rue est-elle représentative de la population sur ce critère ?</div>
+   
+</div>    
+</div>  
+
+    
+<div class="box" data-title="Jeux d'échec">
+<div class="styled">
+Lamine joue aux échecs contre un ordinateur et la probabilité qu'il gagne une partie est $0,65$.
+
+Il décide de jouer sept parties contre l'ordinateur.
+
+On suppose que le résultat de chaque partie est indépendant des autres.
+
+On note $X$ la variable aléatoire donnant le nombre de parties qu'il gagne contre l'ordinateur sur les sept.
+
+
+<div class="num">Expliquer pourquoi $X$ suit une loi binomiale dont on précisera les paramètres $n$ et $p$.</div>
+<div class="num">Quelle est la probabilité qu'il gagne exactement trois parties ?</div>
+<div class="num">Quelle est la probabilité qu'il gagne plus de la moitié des parties ?</div>
+<div class="num">Il décide de changer le niveau de difficulté en "expert" et la probabilité qu'il gagne une partie contre l?ordinateur devient $0, 05$. Il décide de jouer à nouveau une série de sept parties contre l'ordinateur. Quelle est la probabilité qu'il en gagne au moins une ?</div>   
+</div>    
+</div>   
+    
+    
+<div class="box" data-title="Malformation cardiaque">
+<div class="styled">
+En utilisant sa base de données, la sécurité sociale estime que $10\%$ de la population française présente à la naissance une malformation cardiaque de type anévrisme.
+
+Elle décide alors de lancer une enquête de santé publique, sur ce problème d'anévrisme, sur un échantillon de $400$ personnes, prises au hasard dans la population française.
+
+On note $X$ la variable aléatoire comptabilisant le nombre de personnes de l'échantillon présentant une malformation cardiaque de type anévrisme. On considère la variable aléatoire F, définie par 
+
+$ F=\frac{X}{400}$.
+
+
+
+<div class="num">Définir la loi de la variable aléatoire $X$. Déterminer $P(X = 35)$.</div>
+<div class="num">Déterminer la probabilité que $30$ personnes de ce groupe, au moins, présentent une malformation cardiaque de type anévrisme.</div>
+<div class="num"> Déterminer l'intervalle de fluctuation de la variable aléatoire $F$ au seuil de $95\%$. Dans l'échantillon considéré, $60$ personnes présentent une malformation cardiaque de type anévrisme. Que peut-on dire ?</div>    
+</div>    
+</div>       
+    
+    
+</body>
+</html>

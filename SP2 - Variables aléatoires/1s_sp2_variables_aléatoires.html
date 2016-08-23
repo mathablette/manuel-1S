@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script id="pfmath"  hash="__#HASH#__" type="text/javascript" src="http://mathablette.fr/lib/pfmath.js"></script>
+</head>
+
+<body  data-type="animation" data-title="Variables aléatoires discrètes" data-right="page $n^\circ #n$" data-after-animation="true" data-main-title="1S - Variables aléatoires discrètes" data-font-size="14" data-title-font-size="14" data-init="list" data-main-style="framed" 
+data-start-page="61"
+data-left="$1_S$-$SP_2$"
+data-main-width="900">
+
+<!-- Variable aléatoire discrète et loi discrète de probabilité -->
+<div class="box" data-title="Variable aléatoire discrète et loi discrète de probabilité" data-num="$N_1$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD \boxN Variable aléatoire discrète" data-color="#444444">
+      Soit $\Omega = \{e_1;e_2;\cdots;e_p\}$ l'univers fini d'une expérience aléatoire. Son cardinal vaut $p$.
+
+
+Une *{bold::variable aléatoire discrète} $X$ sur $\Omega$ est une fonction qui à chaque issue élémentaire $e_{i}$ ($1 \leqslant i \leqslant p$) associe un nombre réel $x_j$ ($1 \leqslant j \leqslant n$).  vspace{10}
+        
+        L'évènement "$X$ prend la valeur $x_j$" est noté $(X = x_j)$ et est formé de toutes les issues élémentaires $e_i$ de $\Omega$ ayant pour image $x_j$.
+        
+	</div>
+    
+     <div class="titled hide" data-title="\boxD Loi discrète de probabilité" data-color="#444444">
+      Soit $X$ une variable aléatoire discrète prenant les valeurs $\{x_1;x_2;\cdots;x_n\}$. Lorsqu'à chaque valeur $x_j$ ($1 \leqslant j \leqslant n$) on associe la probabilité de l'évènement $(X = x_j)$, on définit la *{bold::loi de probabilité} de $X$.
+
+On représente généralement une loi de probabilité sous forme de tableau :
+         
+         <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#dddddd" data-table-style="border-collapse: collapse">
+        $x_j$ & $x_1$ & $x_2$ & $\cdots$ & $x_n$ ||
+         $P(X = x_j)$ & $p_1$ & $p_2$ & $\cdots$ & $p_n$   
+        </div>
+        Il faut vérifier que $\displaystyle p_1 + p_2 + \cdots + p_n = \sum_{j=1}^{j=n} p_i = 1$
+	</div>
+    
+   
+   
+	
+   
+	<div class="styled">
+        <div class="num" data-valign-num="top">Une urne contient cinq jetons indiscernables au toucher numérotés de $1$ à $5$. Un joueur participe à la loterie en payant $2$ €, ce qui lui donne le droit de prélever au hasard un jeton dans l'urne. <br>
+,, Si le numéro est pair, il gagne en euros le double de la valeur indiquée par le jeton. <br>
+,, Si le numéro est impair, il perd sa mise. <br>
+            Soit $X$ la variable aléatoire égale au "gain algébrique". Déterminer la loi de probabilité de $X$ (sous forme de tableau).</div>
+            <div class="num" data-valign-num="top"> On lance deux dés équilibrés à $6$ faces et on note $S$ la variable aléatoire donnant la somme des deux résultats obtenus.
+
+Déterminer la loi de probabilité de $S$ sous forme de tableau.</div>
+             <div class="num" data-valign-num="top" style="margin-top: 5px">
+        Une boulangerie industrielle utilise une machine pour fabriquer des pains  devant peser normalement $500\;g$. Seuls les pains pesant au moins $490\;g$ vont être commercialisés.  On note $X$ la variable aléatoire donnant les masses possibles des pains en grammes.
+
+On donne la loi de probabilité de $X$ : 
+                 
+                 <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+        $x_j$ & $480$ & $490$ & $500$ & $510$ & $520$ ||
+         $P(X = x_j)$ & $0,08$ & $0,29$ & $0,41$ & $0,12$ & $0,1$   
+        </div>
+
+
+        </div>
+        <div class="item" data-value="a)" style="margin-left:50px">Quelle est la probabilité qu'un pain pèse au moins $500\;g$ ?</div>
+        <div class="item" data-value="b)" style="margin-left:50px">Quelle est la probabilité qu'un pain soit commercialisé ?</div>
+	</div>
+</div>	
+    
+    
+<!-- Espérance -->
+<div class="box" data-title="Espérance" data-num="$N_2$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Espérance mathématique" data-color="#444444">
+      Soit $X$ une variable aléatoire discrète prenant les valeurs $\{x_1;x_2;\cdots;x_n\}$ associées aux probabilités  $\{p_1;p_2;\cdots;p_n\}$. L'*{bold::espérance} ou *{bold::moyenne} de $X$, notée $E(X)$, est :
+
+        <centering-box style="display: inline-block;background: #eeeeee">
+$\displaystyle E(X) = p_1x_1 + p_2x_2 + \cdots + p_nx_n =  \sum_{i=1}^{i=n}p_ix_i$
+        </centering-box>
+
+Lorsque $X$ désigne le gain dans un jeu de hasard par exemple, $E(X)$ est le gain moyen que l'on peut *{bold::espérer}.
+      
+Un jeu est *{bold::équitable} lorsque l'espérance du gain vaut $0$ et  *{bold::défavorable} quand elle est négative.        
+	</div>
+    
+    
+   
+	<div class="styled">
+        Le tableau suivant donne la loi de probabilité du gain algébrique $X$ (variable aléatoire) d'un jeu de hasard :
+                 
+                 <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+        $x_j$ & $-2$ & $-1$ & $0$ & $1$ & $2$ ||
+         $P(X = x_j)$ & $0,1$ & $0,25$ & $0,4$ & $0,2$ & $0,05$   
+        </div>
+
+Calculer $E(X)$ et donner la nature de ce jeu.
+        </div>
+        
+</div>	    
+
+ <div class="newpage"></div>
+    
+    
+<!-- Variance et écart-type -->
+<div class="box" data-title="Variance et écart-type" data-num="$N_3$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Variance et écart-type" data-color="#444444">
+      Soit $X$ une variable aléatoire discrète prenant les valeurs $\{x_1;x_2;\cdots;x_n\}$ associées aux probabilités  $\{p_1;p_2;\cdots;p_n\}$. La *{bold::variance} de $X$, notée $V(X)$, est :
+
+
+        <centering-box style="display: inline-block;background: #eeeeee">
+$\displaystyle V(X) = p_1(x_1-E(X))^2  + \cdots + p_n(x_n - E(X))^2 = \sum_{i=1}^{i=n}p_i(x_i-E(X))^2 = E(X^2)  -  E(X)^2$
+        </centering-box>
+       vspace{10}
+        
+        L'*{bold::écart-type} de $X$, notée $\sigma(X)$, est :
+
+        <centering-box style="display: inline-block;background: #eeeeee">$\sigma(X) = \sqrt{V(X)}$</centering-box>
+
+	</div>
+    
+    
+   
+	<div class="styled">
+        On donne les lois de probabilités du gain algébrique $X$ et $Y$ (variables aléatoires) de deux jeux :
+                 
+                 <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+        $x_j$ & $-5$ & $-1$ & $0$ & $1$ & $3$ ||
+         $P(X = x_j)$ & $0,2$ & $0,3$ & $0,1$ & $0,1$ & $0,3$   
+        </div>
+        
+        vspace{10}
+        
+        <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+        $y_j$ & $-3$ & $-1$ & $0$ & $1$ & $2$ ||
+         $P(Y = y_j)$ & $0,1$ & $0,4$ & $0,2$ & $0,2$ & $0,1$   
+        </div>
+
+Quel jeu peut-on conseiller au joueur ?
+        </div>
+        
+</div> 
+    
+    
+<!-- Transformation affine -->
+<div class="box" data-title="Transformation affine" data-num="$N_4$" data-date="1">
+    
+    <div class="titled hide" data-title="\boxD Transformation affine" data-color="#444444">
+      Soient $X$ une variable aléatoire discrète prenant les valeurs $\{x_1;x_2;\cdots;x_n\}$.
+
+Pour $a \in \mathbb{R}$ et $b \in \mathbb{R}$, on peut définir une autre variable aléatoire, en associant à chaque issue donnant la valeur $x_j$, le nombre $ax_j+b$. On note cette variable aléatoire $aX+b$. 
+
+	</div>
+    
+    <div class="titled hide" data-title="\boxP Propriétés" data-color="#444444">
+      <centering-box style="display: inline-block;background: #eeeeee">$E(aX+b) = aE(X)+b$ hspace{20} et hspace{20} $V(aX+b) = a^2V(X)$ </centering-box>
+
+	</div>
+    
+    
+   
+	<div class="styled">
+        <div class="num">Pour une variable aléatoire $X$, on donne $E(X) = 3$ et $V(X) = 16$. On pose la variable aléatoire $Y = -2X+5$. Calculer  $E(Y)$, $V(Y)$ et $\sigma(Y)$. </div>
+        
+        <div class="num">Un coiffeur se déplace à domicile. On note $X$ le nombre de rendez-vous sur une journée. $X$ est une variable aléatoire dont la loi de probabilité est donnée par :
+        
+            <div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+        $x_j$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ ||
+         $P(X = x_j)$ & $3\%$ & $9\%$ & $15\%$ & $38\%$ & $18\%$ & $17\%$   
+        </div>
+            
+            Chaque rendez-vous lui rapporte $30$ €, et ses frais de fonctionnement quotidiens s'élèvent à $15$ €. On note $Y$ son gain journalier. $Y$ est une variable aléatoire.
+        </div>
+        
+       <div class="item" data-value="a)" style="margin-left:50px"> Calculer $E(X)$ et $V(X)$.</div>
+        <div class="item" data-value="b)" style="margin-left:50px">Quelle relation lie $X$ et $Y$ ? Calculer $E(Y)$, $V(Y)$ et $\sigma(Y)$.</div>
+        </div>
+        
+</div>     
+
+    
+<div class="box" data-title="Bons d'achat">
+<div class="styled">
+On distribue au hasard $150$ bons d'achat à la sortie d'une parfumerie.
+
+Parmi les bons d'achat offerts : <br>
+$\bullet$ $5$ donnent droit à $20$ € de réduction;
+
+<br>
+$\bullet$ $10$ donnent droit à $10$ € de réduction;
+
+<br>
+$\bullet$ $40$ donnent droit à $5$ € de réduction;
+
+<br>
+$\bullet$ les autres donnent droit à $2$ € de réduction.
+
+<br>
+Soit $X$ la variable aléatoire qui donne le montant de la réduction offerte pour un bon d'achat distribué.
+ 
+    vspace{10}
+    Donner la loi de probabilité de $X$ puis calculer $E(X)$ et $V(X)$.
+</div>    
+</div> 
+    
+    
+    
+<div class="newpage"></div>
+    
+<div class="box" data-title="Espérance et variance">
+<div class="styled">
+La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau ci-dessous.    
+<div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+       $x_j$ & $2$ & $2,5$ & $3$ & $3,5$ ||
+     $P(X=x_j)$ & $0,3$ & $p$ & $20\%$ & $\frac{3}{10}$   
+</div>
+Calculer $p$ puis calculer  $E(X)$ et $V(X)$.   
+</div>    
+</div> 
+    
+    
+<div class="box" data-title="Roulette">
+<div class="styled">
+La roulette comporte $37$ cases numérotées de $0$ à $36$. Les entiers pairs sont sur des cases noires, les entiers impairs sont sur des cases rouges mais $0$ est sur une case verte. Un joueur veut participer, il a deux stratégies possibles. 
+
+<br>
+
+$\bullet$ *{bold::Stratégie $1$} :
+
+Le joueur mise $5$ euros sur un numéro entre $1$ et $36$. S'il gagne il remporte $35$ fois sa mise et récupère sa mise, sinon il perd sa mise.
+
+vspace{10}
+
+$\bullet$ *{bold::Stratégie $2$} :
+
+Le joueur mise $5$ euros sur une couleur (noir ou rouge). S'il gagne il remporte $1$ fois sa mise et récupère sa mise, sinon il perd sa mise.
+
+vspace{10}
+
+Calculer l'espérance et l'écart-type du gain du joueur dans les deux cas. Commenter. 
+</div>    
+</div> 
+    
+<div class="box" data-title="Deux jeux">
+<div class="styled">
+On propose deux jeux dont les règles sont décrites ci-dessous.
+
+<br>
+$\bullet$ Jeu $n^\circ 1$ :
+On lance un dé cubique équilibré numéroté de $1$ à $6$. Si on obtient $5$ ou $6$, on gagne $2$ euros, sinon on perd $1$ euro. Ensuite on lance une pièce équilibrée, si on obtient pile on gagne $1$ euro, sinon on ne gagne rien.
+
+<br>
+$\bullet$ Jeu $n^\circ 2$ :
+On lance un dé tétraédrique équilibré numéroté de $1$ à $4$. Si on obtient $4$, on gagne $3$ euros, sinon on perd $1$ euro. Ensuite, on lance une pièce équilibrée, si on obtient pile on gagne $2$ euros, sinon on perd $1$ euro.
+
+<br>
+<div class="num"> Déterminer les lois de probabilité des variables aléatoires $X$ et $Y$ donnant le gain de chacun de ces jeux.</div>
+    <div class="num"> Quel est le meilleur jeu à choisir pour un joueur ? </div>
+
+</div>    
+</div>
+    
+    
+<div class="box" data-title="Réponses au hasard">
+<div class="styled">
+Un exercice est composé de cinq questions pour lesquelles, on doit répondre obligatoirement par "vrai" ou "faux". Une réponse juste rapporte $2$ points, une réponse fausse retire $1$ point. En cas de score final négatif, la note est ramenée à zéro.
+On note $X$ la variable aléatoire qui donne la note d'un candidat ayant répondu au hasard.
+    
+<div class="num"> Déterminer la loi de probabilité de $X$.</div>
+<div class="num"> Quelle note peut espérer le candidat ? </div>
+<div class="num"> On décide de ramener la note de chaque candidat sur $20$. Quelle note peut espérer alors le candidat ? </div>
+</div>    
+</div> 
+    
+    
+<div class="box" data-title="Vente de fauteuils">
+<div class="styled">
+Un commerçant vend entre $0$ et $5$ fauteuils d'un modèle donné par jour. Soit $X$ la variable aléatoire qui indique le nombre de fauteuils vendus quotidiennement. $X$ suit la loi de probabilité suivante :
+    
+<div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+     $x_i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ ||
+      $P(X=x_i)$ & $0,1$ & $18\%$ & $0,23$ & $\frac{4}{10}$  & $a$ & $0,05$    
+</div>
+<div class="num"> Calculer $a$ puis $E(X)$.</div>
+<div class="num"> Le vendeur perçoit une commission de $100$ € par fauteuil. De plus, il a des frais qui s'élèvent à $25$ € par jour. Déterminer le salaire qu'il peut espérer sur un mois où il travaille $20$ jours. </div>
+    
+</div>    
+</div>    
+    
+<div class="newpage"></div>
+    
+<div class="box" data-title="Un dé truqué">
+<div class="styled">
+Un dé tétraédrique a été truqué de telle sorte que
+
+ $p_2 = p_4 = 2p_1 = 2p_3$ (où $p_i$ est la probabilité d'apparition du résultat $i$).
+
+Un joueur lance ce dé. S'il obtient un résultat pair, il perd $x$ euros, sinon il gagne $y$ euros. Calculer $x$ et $y$ pour que le jeu soit équitable et que la variance du gain soit égale à $8$.
+</div>    
+</div>     
+    
+ <div class="box" data-title="Plusieurs pièces">
+<div class="styled">
+<div class="num">  Un jeu consiste à lancer $3$ fois une pièce parfaitement équilibrée. Le joueur gagne $100$ euros s'il obtient trois fois pile. Sinon il perd $1$ euro. Soit $X$ la variable aléatoire donnant le gain algébrique du joueur.</div>
+<div class="item" data-value="a)" style="margin-left: 50px">Représenter à l'aide d'un arbre les issues de cette expérience aléatoire.</div>
+<div class="item" data-value="b)" style="margin-left: 50px">Donner la loi de probabilité de $X$.</div> 
+<div class="item" data-value="c)" style="margin-left: 50px">Le jeu est-il favorable au joueur ?</div>     
+<div class="num">  Dans cette question, la pièce est lancée $n$ fois, $n$ étant un nombre entier naturel non nul. Le joueur gagne $100$ euros s'il obtient $n$ fois pile ; sinon le joueur perd $1$ euro. On note $X_n$ la variable aléatoire donnant le gain algébrique du joueur. </div>
+<div class="item" data-value="a)" style="margin-left: 50px">Démontrer que $\displaystyle P(X_n = 100)= \frac{1}{2^n}$ puis donner la loi de probabilité de $X_n$.</div>
+<div class="item" data-value="b)" style="margin-left: 50px">Calculer $E(X_n)$.</div> 
+<div class="item" data-value="c)" style="margin-left: 50px">À l'aide de la calculatrice, déterminer le plus petit entier naturel $n$ tel que le jeu soit défavorable au joueur.</div>   
+     
+</div>    
+</div> 
+    
+    
+
+    
+<div class="box" data-title="Feux tricolores">
+<div class="styled">
+Paul effectue en voiture le même trajet tous les jours. Sur sa route, il y a trois feux.
+Une étude statistique, portant sur le nombre $X$ de feux rouges a permis d'établir les résultats suivants :
+    <br>
+<div class="table" cells="*,*|bo1#444444;w100;c&*,1|bold;right;par5;b#cccccc" data-table-style="border-collapse: collapse;background: #ffffff">
+     $x_j$ & $0$ & $1$ & $2$ & $3$  ||
+     $P(X=x_j)$ & $\frac{1}{10}$ & $0,3$ & $0,4$ & $20\%$    
+</div>
+<br>    
+<div class="num"> Calculer $E(X)$ et  $V(X)$.</div>
+<div class="num"> Le trajet sans aucun arrêt dure $15\; min$ et chaque feu rouge rallonge la durée du trajet de $2\;min$.
+Soit $T$ la variable aléatoire qui donne la durée du trajet de Paul. </div>
+    <div class="item" data-value="a)" style="margin-left: 50px"> Quelle relation lie $X$ et $T$ ?</div>
+<div class="item" data-value="b)" style="margin-left: 50px">En déduire $E(T)$ et $V(T)$.</div> 
+</div>    
+</div> 
+    
+<div class="box" data-title="Dans un parc d'attraction">
+<div class="styled">
+Un parc d'attractions propose une carte d'entrée pour la journée au prix de $30$ €.
+Cette carte donne accès à des attractions avec un prix unique de $2$ € par attraction. Une étude statistique a permis d'obtenir le tableau suivant :
+    <br>
+<div class="table" cells="*,*|bo1#444444;w80;c&*,1|bold;right;par5;b#cccccc;w200" data-table-style="border-collapse: collapse;background: #ffffff">
+     Nombre d'attractions & $2$ & $3$ & $4$ & $5$ & $6$   ||
+     $\%$ de clients & $10$ & $25$ & $35$ & $25$ & $5$    
+</div>
+    <br>
+    Soit $X$ la variable aléatoire qui donne le nombre d'attractions choisies par un visiteur pris au hasard.
+
+<br>
+On note $S$ la variable aléatoire qui donne la somme totale qu'il dépense.
+
+<div class="num"> Quelle relation lie $X$ et $S$ ?</div>
+<div class="num">Calculer $E(X)$ et en déduire $E(S)$.</div> 
+<div class="num">Le parc a des frais d'organisation qui s'élèvent en moyenne à $25$ € par client. Avec $200$ visiteurs par jour, quel bénéfice peut espérer le gérant sur un an, en ouvrant le parc $365$ jours ?</div>     
+</div>    
+</div>  
+    
+       
+</body>
+</html>
